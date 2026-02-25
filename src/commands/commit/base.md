@@ -1,9 +1,3 @@
----
-description: "Prompt and workflow for generating conventional commit messages. Guides users to create standardized, descriptive commit messages in line with the Conventional Commits specification, including instructions, examples, and validation."
-tools: ["execute/runInTerminal", "execute/getTerminalOutput"]
-agent: agent
----
-
 # Conventional Commit Messages
 
 This guide helps you create standardized, descriptive commit messages following the [Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/).
