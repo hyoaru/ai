@@ -1,11 +1,10 @@
-.PHONY: link
+.PHONY: build link unlink
+
+build:
+	@./scripts/build.sh
 
 link:
-	@echo "Installing AI configurations..."
-	@./.link.sh
-	@echo "Installation complete."
+	@./scripts/link.sh
 
 unlink:
-	@echo "Removing AI configurations..."
-	@./.link.sh remove
-	@echo "Removal complete."
+	@./scripts/link.sh remove

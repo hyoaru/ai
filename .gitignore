@@ -1,0 +1,11 @@
+# Distribution output
+dist/
+
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+*.swp
+*.swo
+*~
