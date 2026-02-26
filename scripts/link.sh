@@ -20,7 +20,6 @@ FILES=(
   "dist/copilot/agents/cloudformation-security-analyst.md:$HOME/Library/Application Support/Code/User/prompts/cloudformation-security-analyst.agent.md"
   "dist/copilot/commands/commit.md:$HOME/Library/Application Support/Code/User/prompts/commit.prompt.md"
 
-  # TODO: OpenCode - add paths when available
   "dist/opencode/commands/commit.md:$HOME/.config/opencode/commands/commit.md"
 )
 
