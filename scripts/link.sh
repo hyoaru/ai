@@ -18,6 +18,7 @@ PROJECT_ROOT=$(cd $SCRIPT_DIR/.. && pwd)
 FILES=(
   # GitHub Copilot (VS Code)
   "dist/copilot/agents/cloudformation-security-analyst.md:$HOME/Library/Application Support/Code/User/prompts/cloudformation-security-analyst.agent.md"
+  "dist/copilot/agents/least-privilege-policy-action-generator.md:$HOME/Library/Application Support/Code/User/prompts/least-privilege-policy-action-generator.agent.md"
   "dist/copilot/commands/commit.md:$HOME/Library/Application Support/Code/User/prompts/commit.prompt.md"
 
   "dist/opencode/commands/commit.md:$HOME/.config/opencode/commands/commit.md"
