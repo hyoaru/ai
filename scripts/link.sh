@@ -20,8 +20,14 @@ FILES=(
   "dist/copilot/agents/cloudformation-security-analyst.md:$HOME/Library/Application Support/Code/User/prompts/cloudformation-security-analyst.agent.md"
   "dist/copilot/agents/least-privilege-policy-action-generator.md:$HOME/Library/Application Support/Code/User/prompts/least-privilege-policy-action-generator.agent.md"
   "dist/copilot/commands/commit.md:$HOME/Library/Application Support/Code/User/prompts/commit.prompt.md"
+  "dist/copilot/commands/grill-me.md:$HOME/Library/Application Support/Code/User/prompts/grill-me.prompt.md"
+  "dist/copilot/commands/to-prd.md:$HOME/Library/Application Support/Code/User/prompts/to-prd.prompt.md"
+  "dist/copilot/commands/to-issues.md:$HOME/Library/Application Support/Code/User/prompts/to-issues.prompt.md"
 
   "dist/opencode/commands/commit.md:$HOME/.config/opencode/commands/commit.md"
+  "dist/opencode/commands/grill-me.md:$HOME/.config/opencode/commands/grill-me.md"
+  "dist/opencode/commands/to-prd.md:$HOME/.config/opencode/commands/to-prd.md"
+  "dist/opencode/commands/to-issues.md:$HOME/.config/opencode/commands/to-issues.md"
 )
 
 # Process each file mapping
