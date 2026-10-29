@@ -1,4 +1,4 @@
-Agent configuration as code.
+# Agent configuration as code
 
 One directory per harness at the repo root, each mirroring the paths that
 harness reads from `$HOME`. Today that is OpenCode only; Codex and Claude Code
@@ -121,27 +121,3 @@ The `mv` does not delete skills removed upstream; prune those by hand.
 ```sh
 cp skills/no-ai-slop/{SKILL.md,eval.md} opencode/.config/opencode/skills/no-ai-slop/
 ```
-
-### Gitignored
-
-Runtime files the app writes, kept out of git:
-
-- `.config/opencode/service.json` — contains a credential
-- `.config/opencode/.ponytail-active` — current ponytail mode
-
-`cli.json` is tracked on purpose: it holds TUI settings worth versioning. The
-app rewrites it on settings changes, which shows up as a normal diff.
-
-### Notes
-
-- No `stow` for this package. The whole directory is one symlink; per-file
-  links would break whenever the app rewrites a file.
-- App upgrades may add runtime files here. Check `git status` afterwards and
-  extend the ignore file if needed.
-- Deleting this repository directory deletes the live configuration.
-
-## Adding a harness
-
-Create `<harness>/` at the repo root, mirroring the paths that harness reads
-from `$HOME`, then symlink the directory into place. Keep each harness's
-runtime state out of git with a local `.gitignore`.
