@@ -95,29 +95,3 @@ All three are MIT licensed and vendored here as plain files.
 interrogate a plan, `to-spec` and `to-tickets` to split the work, `implement`
 and `tdd` to build it, `code-review` and `pr` to close it out. Run
 `setup-matt-pocock-skills` once per repo that uses that flow.
-
-### Updating
-
-**ponytail** (npm):
-
-```sh
-opencode plugin update
-```
-
-**mattpocock/skills** — the installer always writes to `~/.agents/skills`, so
-move the result back into this repo:
-
-```sh
-npx skills@latest add mattpocock/skills -a opencode --global --yes
-mv ~/.agents/skills/* opencode/.config/opencode/skills/
-rmdir ~/.agents/skills ~/.agents
-git add -A opencode/.config/opencode/skills && git commit -m "chore(skills): update mattpocock/skills"
-```
-
-The `mv` does not delete skills removed upstream; prune those by hand.
-
-**no-ai-slop**:
-
-```sh
-cp skills/no-ai-slop/{SKILL.md,eval.md} opencode/.config/opencode/skills/no-ai-slop/
-```
