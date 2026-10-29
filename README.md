@@ -53,6 +53,7 @@ into `/commands`; skills never become slash commands.
 | `/caveman-compress` | Compress a memory file, keep a backup |
 | `/caveman-stats` | Token usage for the session |
 | `/caveman-help` | Quick reference |
+| `/impeccable` | Design critique, audit, polish, live variants |
 
 ### Plugins
 
@@ -78,7 +79,7 @@ ponytail is registered by package name rather than by file.
 
 ### Skills
 
-42 skill directories in `skills/<name>/SKILL.md`. Skills are loaded by the
+44 skill directories in `skills/<name>/SKILL.md`. Skills are loaded by the
 model through the `skill` tool, on demand. They are not slash commands.
 
 Three sources:
@@ -88,8 +89,10 @@ Three sources:
 | caveman suite | 9 | `caveman*`, `megacave`, `ultracave`, `cavecrew` |
 | [no-ai-slop](https://github.com/petergyang/no-ai-slop) | 1 | removes AI writing patterns |
 | [mattpocock/skills](https://github.com/mattpocock/skills) | 32 | engineering and productivity workflows |
+| [taste-skill](https://github.com/Leonxlnx/taste-skill) | 1 | page design with browser checks |
+| [impeccable](https://github.com/pbakaus/impeccable) | 1 | design vocabulary, critique and slop detector |
 
-All three are MIT licensed and vendored here as plain files.
+All are MIT except `impeccable` (Apache-2.0). All vendored here as plain files.
 
 Catalogue below lists every skill.
 
@@ -165,6 +168,13 @@ Catalogue below lists every skill.
 |---|---|---|
 | `codebase-design` | Deep-module vocabulary | designing an interface |
 | `domain-modeling` | Sharpens glossary and ADRs | terminology drift |
+
+**Frontend design**
+
+| Skill | What | When |
+|---|---|---|
+| `design-taste-frontend` | Deals an art direction, real photos, browser check | build or redesign a page |
+| `impeccable` | 24 commands: critique, polish, audit, live variants | steer or review existing UI |
 
 **Context and research**
 
