@@ -29,7 +29,7 @@ opencode/.config/opencode/
 ├── agents/                    # 3 subagents (cavecrew)
 ├── commands/                  # 8 custom slash commands
 ├── plugins/caveman/           # local caveman plugin
-└── skills/                    # 48 skills
+└── skills/                    # 46 skills
 ```
 
 ### Agents
@@ -78,7 +78,7 @@ ponytail is registered by package name rather than by file.
 
 ### Skills
 
-48 skill directories in `skills/<name>/SKILL.md`. Skills are loaded by the
+46 skill directories in `skills/<name>/SKILL.md`. Skills are loaded by the
 model through the `skill` tool, on demand. They are not slash commands.
 
 Three sources:
@@ -87,7 +87,7 @@ Three sources:
 |---|---|---|
 | caveman suite | 9 | `caveman*`, `megacave`, `ultracave`, `cavecrew` |
 | [no-ai-slop](https://github.com/petergyang/no-ai-slop) | 1 | removes AI writing patterns |
-| [mattpocock/skills](https://github.com/mattpocock/skills) | 38 | engineering and productivity workflows |
+| [mattpocock/skills](https://github.com/mattpocock/skills) | 36 | engineering and productivity workflows |
 
 All three are MIT licensed and vendored here as plain files.
 
@@ -175,7 +175,6 @@ and `tdd` to build it, `code-review` and `pr` to close it out. Run
 | Skill | What | When |
 |---|---|---|
 | `handoff` | Compact conversation into a handoff doc | switching agent |
-| `claude-handoff` | Hand off to a fresh background agent | continuing later |
 | `chief-of-staff` | Long goal, subagents in one session | multi-hour task |
 
 **Repo tooling**
@@ -186,7 +185,6 @@ and `tdd` to build it, `code-review` and `pr` to close it out. Run
 | `setup-ts-deep-modules` | dependency-cruiser package boundaries | TS monorepo |
 | `migrate-to-shoehorn` | Replace `as` in tests with shoehorn | TS tests |
 | `scaffold-exercises` | Exercise dirs with solutions | course content |
-| `git-guardrails-claude-code` | Block dangerous git commands | Claude Code hooks only |
 | `wizard` | Bash wizard for human-only steps | infra, secrets, dashboards |
 | `teach` | Teach a concept over sessions | learning something |
 | `wait-what` | Re-pitch a message that missed | "didn't land" |
