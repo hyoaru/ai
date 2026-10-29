@@ -1,6 +1,8 @@
 {
   "plugin": [
-    "./plugins/caveman/plugin.js",
-    "./plugins/ponytail/.opencode/plugins"
+    "./plugins/caveman/plugin.js"
+  ],
+  "plugins": [
+    "@dietrichgebert/ponytail"
   ]
 }
