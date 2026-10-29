@@ -29,7 +29,7 @@ opencode/.config/opencode/
 ├── agents/                    # 3 subagents (cavecrew)
 ├── commands/                  # 8 custom slash commands
 ├── plugins/caveman/           # local caveman plugin
-└── skills/                    # 48 skills
+└── skills/                    # 44 skills
 ```
 
 ### Agents
