@@ -29,7 +29,7 @@ opencode/.config/opencode/
 ├── agents/                    # 3 subagents (cavecrew)
 ├── commands/                  # 8 custom slash commands
 ├── plugins/caveman/           # local caveman plugin
-└── skills/                    # 16 skills
+└── skills/                    # 48 skills
 ```
 
 ### Agents
@@ -78,22 +78,21 @@ ponytail is registered by package name rather than by file.
 
 ### Skills
 
-16 skill directories in `skills/<name>/SKILL.md`. Skills are loaded by the
+48 skill directories in `skills/<name>/SKILL.md`. Skills are loaded by the
 model through the `skill` tool, on demand. They are not slash commands.
 
 Three sources:
 
 | Source | Count | Notes |
 |---|---|---|
-| caveman suite | 6 | `caveman*`, `megacave`, `ultracave`, `cavecrew` |
+| caveman suite | 9 | `caveman*`, `megacave`, `ultracave`, `cavecrew` |
 | [no-ai-slop](https://github.com/petergyang/no-ai-slop) | 1 | removes AI writing patterns |
-| [mattpocock/skills](https://github.com/mattpocock/skills) | 9 | engineering and productivity workflows |
+| [mattpocock/skills](https://github.com/mattpocock/skills) | 38 | engineering and productivity workflows |
 
 All three are MIT licensed and vendored here as plain files.
 
-Nine of these come from `mattpocock/skills`: `grilling`, `tdd`,
-`diagnosing-bugs`, `code-review`, `pr`, `retro`, `research`, `handoff` and
-`writing-for-agents`.
+Full catalogue: `### Catalogue` below is pending a prune review; the
+directory listing is authoritative.
 
 ### Catalogue
 
