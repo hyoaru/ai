@@ -78,7 +78,7 @@ ponytail is registered by package name rather than by file.
 
 ### Skills
 
-48 skill directories in `skills/<name>/SKILL.md`. Skills are loaded by the
+42 skill directories in `skills/<name>/SKILL.md`. Skills are loaded by the
 model through the `skill` tool, on demand. They are not slash commands.
 
 Three sources:
@@ -87,7 +87,7 @@ Three sources:
 |---|---|---|
 | caveman suite | 9 | `caveman*`, `megacave`, `ultracave`, `cavecrew` |
 | [no-ai-slop](https://github.com/petergyang/no-ai-slop) | 1 | removes AI writing patterns |
-| [mattpocock/skills](https://github.com/mattpocock/skills) | 38 | engineering and productivity workflows |
+| [mattpocock/skills](https://github.com/mattpocock/skills) | 32 | engineering and productivity workflows |
 
 All three are MIT licensed and vendored here as plain files.
 
