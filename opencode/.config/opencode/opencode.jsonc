@@ -1,6 +1,6 @@
 {
   "plugin": [
     "./plugins/caveman/plugin.js",
-    "./ponytail/.opencode/plugins"
+    "./plugins/ponytail/.opencode/plugins"
   ]
 }
