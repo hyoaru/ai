@@ -1,6 +1,16 @@
-# ai
+Agent configuration as code.
 
-Personal OpenCode configuration, kept in git.
+One directory per harness at the repo root, each mirroring the paths that
+harness reads from `$HOME`. Today that is OpenCode only; Codex and Claude Code
+would slot in beside it as `codex/` and `claude/` when needed.
+
+```
+ai/
+├── README.md
+└── opencode/.config/opencode/     # linked to ~/.config/opencode
+```
+
+## OpenCode
 
 `~/.config/opencode` is a symlink to this directory, so the app reads and writes
 these files directly. Edit either path; there is no copy step.
@@ -9,7 +19,7 @@ these files directly. Edit either path; there is no copy step.
 ln -s ~/ai/opencode/.config/opencode ~/.config/opencode
 ```
 
-## Layout
+### Layout
 
 ```
 opencode/.config/opencode/
@@ -21,8 +31,6 @@ opencode/.config/opencode/
 ├── plugins/caveman/           # local caveman plugin
 └── skills/                    # 48 skills
 ```
-
-## What is installed
 
 ### Agents
 
@@ -88,7 +96,7 @@ interrogate a plan, `to-spec` and `to-tickets` to split the work, `implement`
 and `tdd` to build it, `code-review` and `pr` to close it out. Run
 `setup-matt-pocock-skills` once per repo that uses that flow.
 
-## Updating
+### Updating
 
 **ponytail** (npm):
 
@@ -114,7 +122,7 @@ The `mv` does not delete skills removed upstream; prune those by hand.
 cp skills/no-ai-slop/{SKILL.md,eval.md} opencode/.config/opencode/skills/no-ai-slop/
 ```
 
-## Gitignored
+### Gitignored
 
 Runtime files the app writes, kept out of git:
 
@@ -124,10 +132,16 @@ Runtime files the app writes, kept out of git:
 `cli.json` is tracked on purpose: it holds TUI settings worth versioning. The
 app rewrites it on settings changes, which shows up as a normal diff.
 
-## Notes
+### Notes
 
 - No `stow` for this package. The whole directory is one symlink; per-file
   links would break whenever the app rewrites a file.
 - App upgrades may add runtime files here. Check `git status` afterwards and
   extend the ignore file if needed.
 - Deleting this repository directory deletes the live configuration.
+
+## Adding a harness
+
+Create `<harness>/` at the repo root, mirroring the paths that harness reads
+from `$HOME`, then symlink the directory into place. Keep each harness's
+runtime state out of git with a local `.gitignore`.
