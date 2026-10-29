@@ -27,7 +27,7 @@ opencode/.config/opencode/
 ├── opencode.jsonc             # plugin registration
 ├── cli.json                   # TUI settings, written by the app
 ├── agents/                    # 3 subagents (cavecrew)
-├── commands/                  # 8 custom slash commands
+├── commands/                  # 9 custom slash commands
 ├── plugins/caveman/           # local caveman plugin
 └── skills/                    # 44 skills
 ```
