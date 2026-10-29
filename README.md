@@ -91,10 +91,11 @@ Three sources:
 
 All three are MIT licensed and vendored here as plain files.
 
-Full catalogue: `### Catalogue` below is pending a prune review; the
-directory listing is authoritative.
+Catalogue below lists every skill.
 
 ### Catalogue
+
+**Voice and brevity**
 
 | Skill | What | When |
 |---|---|---|
@@ -103,17 +104,83 @@ directory listing is authoritative.
 | `megacave` | Classical Chinese register | `/megacave` |
 | `caveman-commit` | Conventional commit, compressed | write a commit |
 | `caveman-review` | One line per finding | review a diff |
+| `caveman-compress` | Shrink a memory file, keep a backup | `AGENTS.md` too long |
+| `caveman-stats` | Token and cache usage | check spend |
+| `caveman-help` | Command card | reminder |
 | `cavecrew` | Route work to cavecrew subagents | keep main context small |
+
+**Writing**
+
+| Skill | What | When |
+|---|---|---|
 | `no-ai-slop` | Strip AI writing patterns, or detect them | draft sounds like AI |
 | `writing-for-agents` | Write skills, `AGENTS.md`, `CLAUDE.md` | authoring agent docs |
-| `grilling` | Relentless interview about a plan | stress-test thinking |
+| `writing-fragments` | Mine raw fragments, no structure | early ideation |
+| `writing-shape` | Shape material paragraph by paragraph | drafting an article |
+| `writing-beats` | Assemble material into a journey of beats | structuring a piece |
+
+**Think and decide**
+
+| Skill | What | When |
+|---|---|---|
+| `grilling` | Relentless interview primitive | stress-test thinking |
+| `grill-me` | Same, non-code use | refine a plan |
+| `grill-with-docs` | Grill, building glossary and ADRs | plan needs shared language |
+| `ask-matt` | Router: which skill fits | unsure what to use |
+| `loop-me` | Grill specs for workspace workflows | designing a workflow |
+| `to-questionnaire` | Turn a blocked decision into a questionnaire | answer needs someone else |
+
+**Spec and tickets**
+
+| Skill | What | When |
+|---|---|---|
+| `setup-matt-pocock-skills` | Configure tracker, labels, doc layout | once per repo, first |
+| `to-spec` | Synthesize conversation into a spec | conversation settled |
+| `to-tickets` | Split plan or spec into tracer-bullet tickets | ready to break down work |
+| `triage` | Move issues and PRs through triage states | backlog needs sorting |
+| `wayfinder` | Map work too big for one session | multi-session epic |
+
+**Build**
+
+| Skill | What | When |
+|---|---|---|
+| `implement` | Build one spec or ticket | work defined |
+| `implement-spec` | Whole spec, parallel subagents | big spec |
 | `tdd` | Red-green-refactor, vertical slices | test-first work |
 | `diagnosing-bugs` | Reproduce, minimise, instrument, fix, regress | hard bug or perf drop |
+| `prototype` | Throwaway prototype | "does this model feel right" |
+
+**Review and close**
+
+| Skill | What | When |
+|---|---|---|
 | `code-review` | Standards and spec axes, parallel subagents | review branch or PR |
 | `pr` | PR body shape, before/after evidence | writing a PR |
 | `retro` | Improve the agent environment after a session | end of session |
-| `research` | Cited Markdown from primary sources | need facts gathered |
+| `improve-codebase-architecture` | Survey deepening opportunities | every few days |
+
+**Design**
+
+| Skill | What | When |
+|---|---|---|
+| `codebase-design` | Deep-module vocabulary | designing an interface |
+| `domain-modeling` | Sharpens glossary and ADRs | terminology drift |
+
+**Context and research**
+
+| Skill | What | When |
+|---|---|---|
 | `handoff` | Compact conversation into a handoff doc | switching agent |
+| `chief-of-staff` | Long goal, subagents in one session | multi-hour task |
+| `wait-what` | Re-pitch a message that missed | "didn't land" |
+| `research` | Cited Markdown from primary sources | need facts gathered |
+
+**Learning and ops**
+
+| Skill | What | When |
+|---|---|---|
+| `teach` | Teach a concept over sessions | learning something |
+| `wizard` | Bash wizard for human-only steps | infra, secrets, dashboards |
 
 **Ponytail** (npm plugin, not in `skills/`)
 
