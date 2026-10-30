@@ -29,7 +29,7 @@ opencode/.config/opencode/
 ├── agents/                    # 3 subagents (cavecrew)
 ├── commands/                  # 9 custom slash commands
 ├── plugins/caveman/           # local caveman plugin
-└── skills/                    # 46 skills
+└── skills/                    # 47 skills
 ```
 
 ### Agents
@@ -79,7 +79,7 @@ ponytail is registered by package name rather than by file.
 
 ### Skills
 
-46 skill directories in `skills/<name>/SKILL.md`. Skills are loaded by the
+47 skill directories in `skills/<name>/SKILL.md`. Skills are loaded by the
 model through the `skill` tool, on demand. They are not slash commands.
 
 Three sources:
@@ -92,7 +92,8 @@ Three sources:
 | [taste-skill](https://github.com/Leonxlnx/taste-skill) | 1 | page design with browser checks |
 | [impeccable](https://github.com/pbakaus/impeccable) | 1 | design vocabulary, critique and slop detector |
 | [svg-diagram](https://github.com/bybit-exchange/svg-diagram) | 1 | hand-written SVG diagrams plus a zero-dependency linter |
-| local | 1 | `labview-project-reader`, wraps [junior941230/labview-vi-reader](https://github.com/junior941230/labview-vi-reader) |
+| local | 1 | `labview-project-reader`, vendors [junior941230/labview-vi-reader](https://github.com/junior941230/labview-vi-reader) |
+| [awesome-copilot](https://github.com/github/awesome-copilot) | 1 | ImageMagick recipes for resize, convert, metadata |
 
 All are MIT except `impeccable` (Apache-2.0). All vendored here as plain files.
 
@@ -193,6 +194,7 @@ Catalogue below lists every skill.
 | `wait-what` | Re-pitch a message that missed | "didn't land" |
 | `research` | Cited Markdown from primary sources | need facts gathered |
 | `labview-project-reader` | Reads `.vi`, `.lvclass`, `.lvproj` without LabVIEW | legacy LabVIEW project |
+| `image-manipulation-image-magick` | ImageMagick: resize, convert, batch, metadata | image batch work |
 
 **Learning and ops**
 
