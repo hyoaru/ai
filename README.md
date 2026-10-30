@@ -29,7 +29,7 @@ opencode/.config/opencode/
 ├── agents/                    # 3 subagents (cavecrew)
 ├── commands/                  # 9 custom slash commands
 ├── plugins/caveman/           # local caveman plugin
-└── skills/                    # 44 skills
+└── skills/                    # 45 skills
 ```
 
 ### Agents
@@ -79,7 +79,7 @@ ponytail is registered by package name rather than by file.
 
 ### Skills
 
-44 skill directories in `skills/<name>/SKILL.md`. Skills are loaded by the
+45 skill directories in `skills/<name>/SKILL.md`. Skills are loaded by the
 model through the `skill` tool, on demand. They are not slash commands.
 
 Three sources:
@@ -91,6 +91,7 @@ Three sources:
 | [mattpocock/skills](https://github.com/mattpocock/skills) | 32 | engineering and productivity workflows |
 | [taste-skill](https://github.com/Leonxlnx/taste-skill) | 1 | page design with browser checks |
 | [impeccable](https://github.com/pbakaus/impeccable) | 1 | design vocabulary, critique and slop detector |
+| [svg-diagram](https://github.com/bybit-exchange/svg-diagram) | 1 | hand-written SVG diagrams plus a zero-dependency linter |
 
 All are MIT except `impeccable` (Apache-2.0). All vendored here as plain files.
 
@@ -175,6 +176,12 @@ Catalogue below lists every skill.
 |---|---|---|
 | `design-taste-frontend` | Deals an art direction, real photos, browser check | build or redesign a page |
 | `impeccable` | 24 commands: critique, polish, audit, live variants | steer or review existing UI |
+
+**Diagrams**
+
+| Skill | What | When |
+|---|---|---|
+| `svg-diagram` | House style for hand-written SVG: layout, colour, `svg-lint` | flowchart or architecture figure |
 
 **Context and research**
 
