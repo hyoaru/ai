@@ -1,22 +1,16 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-CACHE="${LABVIEW_VI_READER:-${XDG_CACHE_HOME:-$HOME/.cache}/labview-vi-reader}"
 SELF="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+VENDOR="$(cd "$SELF/../vendor" && pwd)"
 
-if [[ ! -f "$CACHE/vi_summary.py" ]]; then
-  mkdir -p "$(dirname "$CACHE")"
-  git clone --depth 1 https://github.com/junior941230/labview-vi-reader.git "$CACHE"
-fi
-
-cmd="${1:-}"
-shift || true
-
-case "$cmd" in
+case "${1:-}" in
   vi)
-    exec python3 "$CACHE/vi_summary.py" "$@"
+    shift
+    exec python3 "$VENDOR/vi_summary.py" "$@"
     ;;
   class|private)
+    shift
     exec python3 "$SELF/lv_private.py" "$@"
     ;;
   *)

@@ -11,13 +11,9 @@ Read LabVIEW files as data, not as opaque binaries. No LabVIEW runtime required.
 
 `scripts/lv.sh` wraps `junior941230/labview-vi-reader`, a pylabview fork with LabVIEW 2017–2026 support.
 
-First use clones it to:
+The fork is vendored at `vendor/` (upstream commit `d705ae3`), so nothing is cloned or downloaded at runtime. `vendor/README.upstream.md` and `vendor/LICENSE` are upstream copies.
 
-```text
-${XDG_CACHE_HOME:-$HOME/.cache}/labview-vi-reader
-```
-
-Override with `LABVIEW_VI_READER=/path/to/labview-vi-reader`.
+Pillow is not needed to read files. Only icon modification needs it.
 
 ## Workflow
 

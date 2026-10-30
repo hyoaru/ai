@@ -69,10 +69,10 @@ def main() -> int:
         for parent in parents:
             print(f"- {parent}")
 
-    reader = Path(os.environ.get("LABVIEW_VI_READER", Path.home() / ".cache" / "labview-vi-reader"))
+    reader = Path(__file__).resolve().parent.parent / "vendor"
     if not (reader / "pylabview").exists():
         print(f"private data: {ctl}")
-        print("pylabview unavailable; install labview-vi-reader to extract field names")
+        print(f"pylabview missing at {reader}")
         return 0
 
     env = os.environ.copy()
