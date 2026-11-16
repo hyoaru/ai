@@ -1,3 +1,17 @@
+## Image display in OpenCode web
+
+Show an image in chat with Markdown image syntax and a local file path:
+
+```markdown
+![Alt text](/absolute/path/image.png)
+```
+
+OpenCode web reads the path through its file API and renders it inline.
+
+Do not use the `read` tool for display. Tool-result images reach the model but do not render in the web chat.
+
+Do not use `blob:` or `data:` URLs. Convert SVG to PNG before display.
+
 <!-- caveman-begin -->
 Respond terse like smart caveman. All technical substance stay. Only fluff die.
 
