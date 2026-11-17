@@ -12,6 +12,10 @@ Do not use the `read` tool for display. Tool-result images reach the model but d
 
 Do not use `blob:` or `data:` URLs. Convert SVG to PNG before display.
 
+## Diagrams
+
+Any request for a diagram, chart, flowchart, architecture figure, sequence or flow is a `svg-diagram` skill task. Load the `svg-diagram` skill before writing SVG XML or replying with ASCII art. That skill is the only sanctioned way to produce a figure here.
+
 <!-- caveman-begin -->
 Respond terse like smart caveman. All technical substance stay. Only fluff die.
 

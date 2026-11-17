@@ -1,6 +1,6 @@
 ---
 name: svg-diagram
-description: SVG diagramming conventions blending a technical look with CJK-friendly typography. Use when creating flowcharts, architecture diagrams, and similar SVG figures. For one-shot generation, prefer invoking it from a subagent so the main context does not have to carry this skill plus the SVG XML; for multi-round tweaking, use it directly in the main context.
+description: Hand-authored SVG diagrams — architecture, flowchart, sequence, data-flow, lifecycle, org chart, timeline. Load this skill whenever you draw, sketch, plot, or visualize anything as a figure, and always before writing SVG XML. Triggers - "draw a diagram", "svg", "diagram", "flowchart", "architecture diagram", "sequence diagram", "make a chart", "visualize this", "picture of the flow", "replace this ascii art", "figure for the README/docs". Never answer a diagram request with ASCII art or Mermaid prose. Ships a CJK-safe font stack and a bundled SVG linter. For one-shot generation, prefer invoking it from a subagent so the main context does not carry this skill plus the SVG XML; for multi-round tweaking, use it directly in the main context.
 ---
 
 # SVG Diagramming Conventions
@@ -413,6 +413,33 @@ Vertical text: `<text writing-mode="tb">vertical text</text>`
 | AI / analysis | #f3e8ff | #a855f7 | #6b21a8 |
 | Sensitive / warning | #fce7f3 | #ec4899 | #9d174d |
 
+### Accessibility and output portability
+
+Screen readers and non-browser renderers are first-class consumers. Both fail silently, so verify them by hand.
+
+```xml
+<svg width="800" height="500" viewBox="0 0 800 500" role="img" aria-labelledby="d-title">
+  <title id="d-title">Request flow from gateway to billing</title>
+  <desc>Gateway forwards auth, then billing charges, then webhook fires.</desc>
+```
+
+- **`<title>` is mandatory**, first child of `<svg>`. Add `role="img"` and `aria-labelledby` pointing at its id. Add `<desc>` when the structure is not obvious from the title.
+- Keep text as real `<text>` elements, never outlined to paths, so it stays selectable, searchable, and screen-reader readable.
+- Contrast: body text ≥4.5:1, large text and strokes ≥3:1 against their fill. Never encode meaning by color alone — add a label or shape difference so it survives grayscale.
+- Scaled-up diagrams: add `vector-effect="non-scaling-stroke"` to connectors and borders, else stroke widths grow with the scale factor.
+- Dark mode: only when the document has one. Use `currentColor` for text and strokes, or add `@media (prefers-color-scheme: dark)` swapping the background, text, and border tokens. Never hardcode pure `#000` or `#fff`.
+
+Renderer compatibility — order of trust is presentation attributes > inline `<style>` > external CSS:
+
+| Renderer | Constraint |
+|----------|-----------|
+| Browser | Everything works |
+| resvg | Solid filters, no webfonts, no external resources |
+| librsvg (Linux tools, GNOME) | Older versions ignore `<style>` — critical styling must also be a presentation attribute |
+| Office / chat previews | Often strips `<style>` and filters — keep a plain-attribute fallback |
+
+Never use `<foreignObject>`; it is the least supported feature in SVG.
+
 ## Arrowhead definitions
 
 Use a notched arrowhead rather than a plain triangle — it reads better:
@@ -545,6 +572,10 @@ svg += f'<text>{svg_escape(team_name)}</text>'
 - [ ] Top and bottom viewBox margins comparable (20–25px, measured from the top of the title)
 - [ ] Left and right viewBox padding symmetric (use `<g transform="translate(dx,0)">` to shift if not)
 - [ ] Special characters escaped (`&` → `&amp;`, `<` → `&lt;`)
+- [ ] `<title>` is the first child of `<svg>`, with `role="img"` and matching `aria-labelledby`
+- [ ] Body text ≥4.5:1 contrast, large text and strokes ≥3:1, meaning survives grayscale
+- [ ] No `<foreignObject>`; critical styling duplicated as presentation attributes for renderers that drop `<style>`
+- [ ] Diagrams that will be scaled declare `vector-effect="non-scaling-stroke"`
 - [ ] Every element inside the visible viewBox (bottom = bottom edge of the lowest element + 25px)
 - [ ] Every connector has a clear meaning (labeled, or its source and target are inferable from context)
 - [ ] Dashed grouping boxes styled consistently (dasharray, corner radius, fill, padding, title font size)
