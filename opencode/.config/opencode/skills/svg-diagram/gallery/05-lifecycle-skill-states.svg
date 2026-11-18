@@ -1,70 +1,55 @@
-<svg viewBox="18 0 716 199.5" width="716" xmlns="http://www.w3.org/2000/svg">
+<svg width="716" height="207.5" viewBox="0 0 716 207.5" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="d05-title">
+  <title id="d05-title">The life of a skill in this repo</title>
+  <desc>Five states left to right: Draft, Dogfooded, Linted, Published, Deprecated. Solid arrows carry the forward transitions; a dashed loop returns Published to Draft for revision.</desc>
   <style>
-    text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    text { font-family: system-ui, sans-serif; }
   </style>
   <defs>
-    <marker id="arrow-blue" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
-      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#3b82f6"/>
-    </marker>
-    <marker id="arrow-orange" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
-      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#f59e0b"/>
-    </marker>
-    <marker id="arrow-purple" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
-      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#a855f7"/>
-    </marker>
-    <marker id="arrow-green" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
-      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#22c55e"/>
+    <!-- Accent arrow: the lifecycle is the one story-carrying flow here -->
+    <marker id="arrow-accent" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#1d4ed8"/>
     </marker>
   </defs>
 
-  <!-- Light canvas, so the diagram reads as a white card on a dark page -->
-  <rect x="18" y="0" width="716" height="199.5" fill="#ffffff"/>
+  <rect x="0" y="0" width="716" height="207.5" fill="#ffffff"/>
 
-  <!-- Title, centred on the row of states rather than on the viewBox -->
-  <text x="376" y="34" font-size="16" fill="#1e293b" text-anchor="middle">The life of a skill in this repo</text>
+  <!-- Title centred on the row of states (22..694), not the viewBox -->
+  <text x="358" y="40" font-size="24" font-weight="650" fill="#0f172a" text-anchor="middle">The life of a skill in this repo</text>
 
-  <!-- One row of states: five 112×36 boxes at a 140px pitch, so every gap is 28px.
-       Row top y=76, bottom y=112, mid height y=94. -->
-  <!-- Forward transitions: collinear at the row's mid height, each stroked in the colour
-       of the state it leaves. start = source right edge + 5, end = target left edge - 11 -->
-  <path d="M157,94 L 169,94" fill="none" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
-  <path d="M297,94 L 309,94" fill="none" stroke="#f59e0b" stroke-width="1.5" marker-end="url(#arrow-orange)"/>
-  <path d="M437,94 L 449,94" fill="none" stroke="#a855f7" stroke-width="1.5" marker-end="url(#arrow-purple)"/>
-  <path d="M577,94 L 589,94" fill="none" stroke="#22c55e" stroke-width="1.5" marker-end="url(#arrow-green)"/>
+  <!-- One row of states: five 112x38 pills (rx=18 reads as state, not part) at a 140px pitch.
+       Row top y=80, bottom y=118, mid y=99. Baseline = 80 + 19 + 12.5x0.35 = 103.4.
+       Deprecated alone takes the failure token: a dead end, not a category colour. -->
+  <rect x="22" y="80" width="112" height="38" rx="18" fill="#ffffff" stroke="#d8dee6"/>
+  <text x="78" y="103.4" font-size="12.5" fill="#0f172a" text-anchor="middle">Draft</text>
+  <rect x="162" y="80" width="112" height="38" rx="18" fill="#ffffff" stroke="#d8dee6"/>
+  <text x="218" y="103.4" font-size="12.5" fill="#0f172a" text-anchor="middle">Dogfooded</text>
+  <rect x="302" y="80" width="112" height="38" rx="18" fill="#ffffff" stroke="#d8dee6"/>
+  <text x="358" y="103.4" font-size="12.5" fill="#0f172a" text-anchor="middle">Linted</text>
+  <rect x="442" y="80" width="112" height="38" rx="18" fill="#ffffff" stroke="#d8dee6"/>
+  <text x="498" y="103.4" font-size="12.5" fill="#0f172a" text-anchor="middle">Published</text>
+  <rect x="582" y="80" width="112" height="38" rx="18" fill="#ffffff" stroke="#dc2626"/>
+  <text x="638" y="103.4" font-size="12.5" fill="#dc2626" text-anchor="middle">Deprecated</text>
 
-  <!-- States are rounder than an ordinary component box (rx=18 against the usual 6), so the
-       row reads as a set of states rather than a set of parts.
-       Label baseline = box y + height/2 + 12 × 0.35 -->
-  <rect x="40" y="76" width="112" height="36" rx="18" fill="#dbeafe" stroke="#3b82f6"/>
-  <text x="96" y="98" font-size="12" fill="#1e40af" text-anchor="middle">Draft</text>
-  <rect x="180" y="76" width="112" height="36" rx="18" fill="#fef3c7" stroke="#f59e0b"/>
-  <text x="236" y="98" font-size="12" fill="#b45309" text-anchor="middle">Dogfooded</text>
-  <rect x="320" y="76" width="112" height="36" rx="18" fill="#f3e8ff" stroke="#a855f7"/>
-  <text x="376" y="98" font-size="12" fill="#6b21a8" text-anchor="middle">Linted</text>
-  <rect x="460" y="76" width="112" height="36" rx="18" fill="#d1fae5" stroke="#22c55e"/>
-  <text x="516" y="98" font-size="12" fill="#166534" text-anchor="middle">Published</text>
-  <rect x="600" y="76" width="112" height="36" rx="18" fill="#fce7f3" stroke="#ec4899"/>
-  <text x="656" y="98" font-size="12" fill="#9d174d" text-anchor="middle">Deprecated</text>
+  <!-- Forward transitions, collinear at the row's mid height: start = source right + 5, end = target left - 11.
+       State semantics, so the dashed loop below keeps its dash. -->
+  <path d="M139,99 L 151,99" fill="none" stroke="#1d4ed8" stroke-width="1.5" marker-end="url(#arrow-accent)"/>
+  <path d="M279,99 L 291,99" fill="none" stroke="#1d4ed8" stroke-width="1.5" marker-end="url(#arrow-accent)"/>
+  <path d="M419,99 L 431,99" fill="none" stroke="#1d4ed8" stroke-width="1.5" marker-end="url(#arrow-accent)"/>
+  <path d="M559,99 L 571,99" fill="none" stroke="#1d4ed8" stroke-width="1.5" marker-end="url(#arrow-accent)"/>
 
-  <!-- Transition names sit 10px above the box tops. A 28px gap cannot hold a phrase this
-       long without crowding a box wall, and a name lifted clear of the row's vertical band
-       belongs to the arrow directly beneath it. -->
-  <text x="166" y="66" font-size="10" fill="#64748b" text-anchor="middle">used on a real task</text>
-  <text x="306" y="66" font-size="10" fill="#64748b" text-anchor="middle">0 errors, 0 warnings</text>
-  <text x="446" y="66" font-size="10" fill="#64748b" text-anchor="middle">merged</text>
-  <text x="586" y="66" font-size="10" fill="#64748b" text-anchor="middle">superseded</text>
+  <!-- Transition names, 10px uppercase, lifted clear of the row band (ink 62.5..72.5, boxes start 80).
+       Each name belongs to the arrow directly beneath it. -->
+  <text x="148" y="70" font-size="10" letter-spacing="0.5" fill="#94a3b8" text-anchor="middle">USED ON A REAL TASK</text>
+  <text x="288" y="70" font-size="10" letter-spacing="0.5" fill="#94a3b8" text-anchor="middle">0 ERRORS, 0 WARNINGS</text>
+  <text x="428" y="70" font-size="10" letter-spacing="0.5" fill="#94a3b8" text-anchor="middle">MERGED</text>
+  <text x="568" y="70" font-size="10" letter-spacing="0.5" fill="#94a3b8" text-anchor="middle">SUPERSEDED</text>
 
-  <!-- A published skill going back for revision, painted last so no state box can hide it.
-       It leaves the bottom of Published, runs west at y=150 — 38px below the row, so it
-       keeps well outside the 20px a detour owes the boxes it passes — and re-enters the
-       bottom of Draft.
-       Two segments joined at (320,150): the first arrives travelling west out of (380,150)
-       and the second leaves west toward (260,150), so the tangent runs straight through the
-       join instead of turning a corner.
-       The last control point is (96,150), directly below the end point, which is what makes
-       the arrowhead land pointing up into the box above it. -->
-  <path d="M516,117 C 516,150 380,150 320,150 C 260,150 96,150 96,123" fill="none" stroke="#a855f7" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#arrow-purple)"/>
-  <!-- Below the curve, 25px under its lowest point: a curve label wants 15px of clear space
-       and the glyph box reaches 7.5px above its own baseline. -->
-  <text x="304" y="175" font-size="10" fill="#64748b" text-anchor="middle">revision</text>
+  <!-- Revision loop, painted last so no state box hides it. Leaves Published's bottom (118+5),
+       runs west at y=156, 38px below the row, and re-enters Draft's bottom at 118+11.
+       Join at (220,156) is tangent-continuous: both segments travel west through it.
+       Last control point (78,156) shares the end point's x, so the head lands plumb, pointing up.
+       Dashed: state semantics, the one dashed stroke allowed here. -->
+  <path d="M498,123 C 498,156 300,156 220,156 C 160,156 78,156 78,129" fill="none" stroke="#1d4ed8" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#arrow-accent)"/>
+  <!-- Below the curve: glyph top 172.5 clears the loop's lowest sampled point (about 155.6) by 17px -->
+  <text x="288" y="180" font-size="10" letter-spacing="0.5" fill="#94a3b8" text-anchor="middle">REVISION</text>
 </svg>

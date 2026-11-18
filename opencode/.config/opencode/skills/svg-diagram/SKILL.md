@@ -1,6 +1,6 @@
 ---
 name: svg-diagram
-description: Hand-authored SVG diagrams — architecture, flowchart, sequence, data-flow, lifecycle, org chart, timeline. Load this skill whenever you draw, sketch, plot, or visualize anything as a figure, and always before writing SVG XML. Triggers - "draw a diagram", "svg", "diagram", "flowchart", "architecture diagram", "sequence diagram", "make a chart", "visualize this", "picture of the flow", "replace this ascii art", "figure for the README/docs". Never answer a diagram request with ASCII art or Mermaid prose. Ships a CJK-safe font stack and a bundled SVG linter. For one-shot generation, prefer invoking it from a subagent so the main context does not carry this skill plus the SVG XML; for multi-round tweaking, use it directly in the main context.
+description: Hand-authored SVG diagrams — architecture, flowchart, sequence, data-flow, lifecycle, org chart, timeline. Load this skill whenever you draw, sketch, plot, or visualize anything as a figure, and always before writing SVG XML. Triggers - "draw a diagram", "svg", "diagram", "flowchart", "architecture diagram", "sequence diagram", "make a chart", "visualize this", "picture of the flow", "replace this ascii art", "figure for the README/docs". Never answer a diagram request with ASCII art or Mermaid prose. Ships a bundled SVG linter. For one-shot generation, prefer invoking it from a subagent so the main context does not carry this skill plus the SVG XML; for multi-round tweaking, use it directly in the main context.
 ---
 
 # SVG Diagramming Conventions
@@ -340,13 +340,13 @@ SVG has no z-index — **elements painted later sit on top**. Order them like th
 
 Before placing text, estimate its right edge and confirm it does not intrude on neighboring elements:
 
-| Font size | Latin char width (approx.) | CJK char width (approx.) |
-|-----------|---------------------------|--------------------------|
-| 8px | 4.5px | 8px |
-| 9px | 5.0px | 9px |
-| 10px | 5.5px | 10px |
-| 11px | 6.0px | 11px |
-| 12px | 7.0px | 12px |
+| Font size | Latin char width (approx.) |
+|-----------|---------------------------|
+| 8px | 4.5px |
+| 9px | 5.0px |
+| 10px | 5.5px |
+| 11px | 6.0px |
+| 12px | 7.0px |
 
 **Estimation formulas**:
 - `text-anchor="start"`: right edge ≈ x + char count × char width
@@ -407,15 +407,15 @@ A label describing an arc or curve must not sit on the path itself (the line wou
 
 Use exactly two type roles per diagram set — one **display face** for titles, one **workhorse face** for everything else. Any coherent pair works (a serif display face reads editorial; a sans display face reads technical). Do not hardcode brand fonts; pick the pair once per document set and stay with it.
 
-**Every SVG must still declare a CJK-capable fallback chain in `<style>`** — this is a rendering requirement, not taste:
+**Every SVG declares its font in `<style>`** so text renders with the intended face instead of the renderer default:
 
 ```xml
 <style>
-  text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+  text { font-family: system-ui, sans-serif; }
 </style>
 ```
 
-Fallback order: macOS (PingFang SC) → Windows (Microsoft YaHei) → Linux (Noto Sans CJK SC) → system default. **`Noto Sans CJK SC` must be kept**, otherwise server-side rendering on Linux falls back to a font with no CJK coverage.
+Keep the declaration even when every renderer you test has a good default — chat previews and office converters strip attributes first and `<style>` second, and the strip order is not the same everywhere.
 
 Type scale (sizes are fixed; faces are swappable):
 

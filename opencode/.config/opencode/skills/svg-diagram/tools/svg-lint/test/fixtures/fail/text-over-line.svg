@@ -2,7 +2,7 @@
 <!-- the label baseline 32 coincides exactly with the connector at y=32: the line runs through the glyphs -->
 <svg viewBox="0 0 272 108" width="272" xmlns="http://www.w3.org/2000/svg">
   <style>
-    text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    text { font-family: system-ui, sans-serif; }
   </style>
   <path d="M22,32 L 250,32" fill="none" stroke="#94a3b8" stroke-width="1.5"/>
   <text x="136" y="32" font-size="10" fill="#64748b" text-anchor="middle">on the line</text>

@@ -1,6 +1,6 @@
 <svg viewBox="55 0 648 150" width="648" xmlns="http://www.w3.org/2000/svg">
   <style>
-    text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    text { font-family: system-ui, sans-serif; }
   </style>
   <defs>
     <marker id="arrow-blue" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">

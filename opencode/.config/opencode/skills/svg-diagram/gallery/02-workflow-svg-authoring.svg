@@ -1,70 +1,74 @@
-<svg viewBox="183 0 443 436" width="443" xmlns="http://www.w3.org/2000/svg">
+<svg width="443" viewBox="183 0 443 476" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="d-title">
+  <title id="d-title">The authoring loop</title>
+  <desc>Read the request, compute layout numbers, emit SVG, run svg-lint; a clean verdict delivers, otherwise one repair hint is applied and the gate re-lints.</desc>
   <style>
-    text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    text { font-family: system-ui, sans-serif; }
   </style>
   <defs>
-    <marker id="arrow-blue" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
-      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#3b82f6"/>
+    <!-- Structural connector marker: hairline token -->
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#94a3b8"/>
     </marker>
-    <marker id="arrow-orange" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
-      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#f59e0b"/>
+    <!-- Accent marker: the one passing verdict, gate to delivery -->
+    <marker id="arrow-accent" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#1d4ed8"/>
     </marker>
-    <marker id="arrow-green" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
-      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#22c55e"/>
-    </marker>
-    <marker id="arrow-purple" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
-      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#a855f7"/>
-    </marker>
-    <marker id="arrow-pink" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
-      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#ec4899"/>
+    <!-- Failure marker: the rejected verdict and the repair loop -->
+    <marker id="arrow-fail" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#dc2626"/>
     </marker>
   </defs>
 
-  <!-- Layer 0: light canvas, so the diagram reads as a white card on a dark page -->
-  <rect x="183" y="0" width="443" height="436" fill="#ffffff"/>
+  <!-- Ground; viewBox origin 183 keeps 22px margins around content x=205..604 -->
+  <rect x="183" y="0" width="443" height="476" fill="#ffffff"/>
 
-  <!-- Title -->
-  <text x="404" y="34" font-size="16" fill="#1e293b" text-anchor="middle">The authoring loop</text>
+  <!-- Title block: content centre x=404.5, title baseline 40, subtitle title+24 -->
+  <text x="404.5" y="40" font-size="24" font-weight="650" fill="#0f172a" text-anchor="middle">The authoring loop</text>
+  <text x="404.5" y="64" font-size="12.5" fill="#64748b" text-anchor="middle">Draft, emit, lint and repair until the gate passes</text>
 
-  <!-- Main column: x=205..395, centre 300; six 36px boxes at a 64px pitch (28px gaps) -->
-  <!-- Layer 2: ordinary connectors. start = source edge + 5, end = target edge - 11 -->
-  <path d="M300,99 L 300,111" fill="none" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
-  <path d="M300,163 L 300,175" fill="none" stroke="#f59e0b" stroke-width="1.5" marker-end="url(#arrow-orange)"/>
-  <path d="M300,227 L 300,239" fill="none" stroke="#a855f7" stroke-width="1.5" marker-end="url(#arrow-purple)"/>
-  <path d="M300,291 L 300,303" fill="none" stroke="#a855f7" stroke-width="1.5" marker-end="url(#arrow-purple)"/>
-  <path d="M300,355 L 300,367" fill="none" stroke="#22c55e" stroke-width="1.5" marker-end="url(#arrow-green)"/>
-  <!-- Failure branch: decision right edge 395 -> repair box left edge 424 -->
-  <path d="M400,332 L 413,332" fill="none" stroke="#ec4899" stroke-width="1.5" marker-end="url(#arrow-pink)"/>
+  <!-- Main column: x=205..395, centre 300; six 38px cards at a 65px pitch (27px gaps).
+       Baselines: box y + 19 + 12.5 x 0.35 -->
+  <!-- Ordinary connectors: start = bottom edge + 5, line ends 11 short of the next card -->
+  <path d="M300,131 L 300,142" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M300,196 L 300,207" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M300,261 L 300,272" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M300,326 L 300,337" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <!-- Passing verdict: the one accent edge -->
+  <path d="M300,391 L 300,402" fill="none" stroke="#1d4ed8" stroke-width="1.5" marker-end="url(#arrow-accent)"/>
+  <!-- Failure branch: decision right edge 395 to repair left edge 424 -->
+  <path d="M400,367 L 413,367" fill="none" stroke="#dc2626" stroke-width="1.5" marker-end="url(#arrow-fail)"/>
 
-  <!-- Layer 3: boxes and their labels; baseline = box y + 18 + 12 × 0.35 -->
-  <rect x="205" y="58" width="190" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
-  <text x="300" y="80" font-size="12" fill="#1e40af" text-anchor="middle">Read the request</text>
-  <rect x="205" y="122" width="190" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
-  <text x="300" y="144" font-size="12" fill="#b45309" text-anchor="middle">Compute layout numbers</text>
-  <rect x="205" y="186" width="190" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
-  <text x="300" y="208" font-size="12" fill="#b45309" text-anchor="middle">Emit SVG</text>
-  <rect x="205" y="250" width="190" height="36" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
-  <text x="300" y="272" font-size="12" fill="#6b21a8" text-anchor="middle">svg-lint</text>
-  <!-- Decision node: the only passing verdict is spelled out, so no legend is needed -->
-  <rect x="205" y="314" width="190" height="36" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
-  <text x="300" y="336" font-size="12" fill="#6b21a8" text-anchor="middle">0 errors, 0 warnings?</text>
-  <rect x="205" y="378" width="190" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
-  <text x="300" y="400" font-size="12" fill="#166534" text-anchor="middle">Deliver — frozen</text>
+  <!-- Cards -->
+  <rect x="205" y="88" width="190" height="38" rx="6" fill="#ffffff" stroke="#d8dee6"/>
+  <text x="300" y="111.4" font-size="12.5" fill="#0f172a" text-anchor="middle">Read the request</text>
+  <rect x="205" y="153" width="190" height="38" rx="6" fill="#ffffff" stroke="#d8dee6"/>
+  <text x="300" y="176.4" font-size="12.5" fill="#0f172a" text-anchor="middle">Compute layout numbers</text>
+  <rect x="205" y="218" width="190" height="38" rx="6" fill="#ffffff" stroke="#d8dee6"/>
+  <text x="300" y="241.4" font-size="12.5" fill="#0f172a" text-anchor="middle">Emit SVG</text>
+  <rect x="205" y="283" width="190" height="38" rx="6" fill="#ffffff" stroke="#d8dee6"/>
+  <text x="300" y="306.4" font-size="12.5" fill="#0f172a" text-anchor="middle">svg-lint</text>
+  <!-- Decision node: the gate, emphasized with the border-strong token -->
+  <rect x="205" y="348" width="190" height="38" rx="6" fill="#ffffff" stroke="#c3ccd8"/>
+  <text x="300" y="371.4" font-size="12.5" fill="#0f172a" text-anchor="middle">0 errors, 0 warnings?</text>
+  <rect x="205" y="413" width="190" height="38" rx="6" fill="#ffffff" stroke="#d8dee6"/>
+  <text x="300" y="436.4" font-size="12.5" fill="#0f172a" text-anchor="middle">Deliver — frozen</text>
   <!-- Failure branch target -->
-  <rect x="424" y="314" width="180" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
-  <text x="514" y="336" font-size="12" fill="#9d174d" text-anchor="middle">Apply one repair hint</text>
+  <rect x="424" y="348" width="180" height="38" rx="6" fill="#ffffff" stroke="#d8dee6"/>
+  <text x="514" y="371.4" font-size="12.5" fill="#0f172a" text-anchor="middle">Apply one repair hint</text>
 
-  <!-- Branch labels, lifted clear of the boxes' vertical bands -->
-  <text x="409" y="311" font-size="10" fill="#64748b" text-anchor="middle">no</text>
-  <text x="312" y="364" font-size="10" fill="#64748b">yes</text>
+  <!-- Branch labels: "no" sits just above the box tops so its glyph box clears
+       both cards; "yes" hangs 12px right of its arrow, mid-run -->
+  <text x="409.5" y="344" font-size="10" fill="#dc2626" text-anchor="middle">no</text>
+  <text x="312" y="400" font-size="10" fill="#1d4ed8">yes</text>
 
   <!-- Side notes for the two steps that happen before any SVG exists -->
-  <text x="410" y="80" font-size="10" fill="#64748b">subject, nodes, connectors</text>
-  <text x="410" y="133" font-size="10" fill="#64748b">height = 3 × font-size</text>
-  <text x="410" y="148" font-size="10" fill="#64748b">spacing 25-30px</text>
+  <text x="410" y="111" font-size="11" fill="#64748b">subject, nodes, connectors</text>
+  <text x="410" y="165" font-size="11" fill="#64748b">height = 3 × font-size</text>
+  <text x="410" y="180" font-size="11" fill="#64748b">spacing 25-30px</text>
 
-  <!-- Layer 4: cross-layer loop-back, painted last so no box can hide it.
-       cp2.y = end.y and cp2.x > end.x, so the arrow lands pointing left. -->
-  <path d="M514,309 C 514,240 514,204 406,204" fill="none" stroke="#a855f7" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#arrow-purple)"/>
-  <text x="532" y="270" font-size="10" fill="#64748b">re-lint</text>
+  <!-- Failure loop back, painted last so no card hides it. Dashed because the loop
+       is true state semantics. cp2.y = end.y and cp2.x > end.x, so the head lands
+       pointing left into the Emit SVG card. -->
+  <path d="M514,343 C 514,290 514,237 406,237" fill="none" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#arrow-fail)"/>
+  <text x="532" y="293" font-size="10" fill="#dc2626">re-lint</text>
 </svg>

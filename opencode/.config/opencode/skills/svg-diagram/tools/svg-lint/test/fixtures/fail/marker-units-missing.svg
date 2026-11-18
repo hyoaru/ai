@@ -1,6 +1,6 @@
 <!-- markerUnits absent and refX written as 0: at stroke-width=2 the arrowhead both doubles and shifts -->
 <svg viewBox="0 0 272 120" width="272" xmlns="http://www.w3.org/2000/svg">
-  <style>text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }</style>
+  <style>text { font-family: system-ui, sans-serif; }</style>
   <defs>
     <marker id="arrow" markerWidth="8" markerHeight="8" refX="0" refY="4" orient="auto">
       <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>

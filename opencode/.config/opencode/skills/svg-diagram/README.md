@@ -4,7 +4,7 @@ A house style for hand-written SVG diagrams your agent can follow — the layout
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Agent Skills](https://img.shields.io/badge/Agent-Skills-7C3AED.svg)](https://github.com/vercel-labs/skills)
-[![svg-lint: 12 checks](https://img.shields.io/badge/svg--lint-12%20checks-22c55e.svg)](#the-lint-gate)
+[![svg-lint: 11 checks](https://img.shields.io/badge/svg--lint-11%20checks-22c55e.svg)](#the-lint-gate)
 
 ![A Markdown doc goes through the svg-diagram skill and comes out as assets/arch.svg](assets/house-style.svg)
 
@@ -77,7 +77,7 @@ A self-call that leaves its lifeline and curves back to it, its second control p
 
 ### From a data API to a document figure
 
-CJK labels sized from the CJK column of the width table — one full font size per character, 12px rather than 7.
+Labels sized from the width table's Latin column — every card width is derived from its character count.
 
 ![A data flow from a metrics API through escaping to an SVG figure in a document](gallery/04-dataflow-metrics-to-doc.svg)
 
@@ -98,12 +98,6 @@ A dashed border only where the contents are actually drawn — `gallery/` and `a
 A one-to-many fan-out whose branch curves keep each second control point level with the end point, so every arrowhead lands pointing right.
 
 ![One install command fanning out to five agent skill directories](gallery/07-workflow-install-surfaces.svg)
-
-### Why the font stack cannot be dropped
-
-A contrast pair built from two semantic triples: the working paths in green, the branch that fails in pink.
-
-![Three platforms rendering CJK text correctly, and a fourth showing missing glyphs](gallery/08-reference-cjk-fonts.svg)
 
 ### Tiered model routing behind one gateway
 
@@ -126,7 +120,7 @@ A dashed group box around exactly the steps that repeat. The return edge is pain
 | Connectors | A straight `L` only when the two ends are co-axial, a `C` or `Q` curve for anything that turns, and no right-angle elbows |
 | Arrowheads | A notched marker with `markerUnits="userSpaceOnUse"`, sized to the line's stroke width, starting 5px clear of the source and ending 11px short of the target |
 | Text | Baseline at `box y + height/2 + font-size × 0.35` to centre inside a box, and at least 10px of clearance from a straight connector — 15px from a curve, with the label above a downward bend and below an upward one |
-| Fonts | a display face + workhorse face pair (any coherent choice), 24px titles, 12.5px body, 11px secondary, 10px labels, over a stack that keeps `Noto Sans CJK SC` so Linux rendering doesn't fall back to tofu |
+| Fonts | a display face + workhorse face pair (any coherent choice), 24px titles, 12.5px body, 11px secondary, 10px labels |
 | Colours | Five semantic fill/stroke/text triples applied through presentation attributes — no CSS classes, no media queries |
 | Escaping | `&`, `<`, `>`, `"` and `'` escaped in text and attributes, and anything from a database or an API escaped before it's concatenated into the file |
 
@@ -140,7 +134,7 @@ The full rules — the character width tables, the role arrowheads (structural, 
 - **Zero dependencies.** `svg-lint` is plain Node with no packages. It runs in a fresh clone, with no install step and no lockfile.
 - **Placed, not auto-laid-out.** The skill hands the agent the arithmetic — box height, baseline offset, arrow clearance, block spacing — so every element lands somewhere chosen rather than somewhere a layout engine picked.
 - **Findings name the fix.** A failure reports the value it found and the value it should hold: `viewBox: 11 → 20–25`, not "the margin looks wrong".
-- **CJK-safe by default.** A mandatory font stack, plus separate character-width tables for Latin and CJK, so labels are checked for overflow before they're placed.
+- **Overflow-checked by default.** A character-width table prices every label before it is placed, so overflow is caught in the file, not on screen.
 - **Reviewable as text.** Every coordinate is a literal, annotated with a comment explaining why it holds that value, so a change to a diagram reads as a diff instead of a re-render.
 - **Plain SVG out.** No runtime, no viewer, no JavaScript. It renders in a README, a docs site, a PDF and a terminal preview.
 
@@ -160,14 +154,14 @@ printf '%s' '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width=
 node tools/svg-lint/bin/svg-lint.mjs /tmp/broken.svg
 ```
 
-That reports 3 errors and 7 warnings and exits 1: the unescaped `&`, the missing font stack, the missing white canvas rect, an off-palette fill, four viewBox margins outside the 20–25px range, and asymmetric margins on both axes. Each finding carries the id of the check that raised it and a repair line:
+That reports 2 errors and 7 warnings and exits 1: the unescaped `&`, the missing white canvas rect, an off-palette fill, four viewBox margins outside the 20–25px range, and asymmetric margins on both axes. Each finding carries the id of the check that raised it and a repair line:
 
 ```
-  1:1  error  No <style> rule declares font-family for text  [font-stack/missing-font-stack]
-         repair: font-family: absent → 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif · SKILL.md marks this non-negotiable
+  1:114  error    Raw "&" found; escape it as &amp;  [xml-escaping/unescaped-ampersand]
+         repair: & → &amp; · an unescaped & makes the whole SVG fail to render
 ```
 
-The 12 checks cover XML escaping, viewBox clipping, the font stack, box height, baseline offset, block spacing, arrow markers, text overflow, overlap, light-background fallback, palette conformance and connector geometry. A thirteenth id, `document-model`, raises no findings of its own. It's how the model layer reports what it couldn't read, so the geometry checks never draw conclusions from coordinates they got wrong.
+The 11 checks cover XML escaping, viewBox clipping, box height, baseline offset, block spacing, arrow markers, text overflow, overlap, light-background fallback, palette conformance and connector geometry. A twelfth id, `document-model`, raises no findings of its own. It's how the model layer reports what it couldn't read, so the geometry checks never draw conclusions from coordinates they got wrong.
 
 > `0 errors, 0 warnings` is the only pass; a warning is a failure.
 
@@ -184,7 +178,7 @@ Before you open a PR, use the skill for a real task in a fresh session. If the a
 Diagrams committed here must pass clean, and the test suite has to stay green:
 
 ```bash
-npm run lint:svg:all   # the 11 SVGs this repo ships
+npm run lint:svg:all   # the 10 SVGs this repo ships
 npm test               # 984 tests
 ```
 

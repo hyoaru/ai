@@ -5,7 +5,6 @@
 // order whatever this list says.
 import { xmlEscaping } from './checks/xml-escaping.mjs';
 import { viewboxClipping } from './checks/viewbox-clipping.mjs';
-import { fontStack } from './checks/font-stack.mjs';
 import { boxHeight } from './checks/box-height.mjs';
 import { baselineOffset } from './checks/baseline-offset.mjs';
 import { blockSpacing } from './checks/block-spacing.mjs';
@@ -19,7 +18,6 @@ import { connectorGeometry } from './checks/connector-geometry.mjs';
 export const CHECKS = [
   xmlEscaping,
   viewboxClipping,
-  fontStack,
   boxHeight,
   baselineOffset,
   blockSpacing,
