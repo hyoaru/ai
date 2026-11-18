@@ -84,7 +84,7 @@ viewBox height = bottom y of content + margin
 **Recommended margin**: 20–25px
 
 ```xml
-<!-- Example: 16px title, 20px margin -->
+<!-- Example: 24px serif title at baseline 40, 22px margin -->
 <!-- title y = 20 + 16×0.75 ≈ 32 -->
 <!-- content bottom 270px, viewBox height = 270 + 25 = 295 -->
 <svg viewBox="0 0 680 295" ...>
@@ -364,6 +364,11 @@ Check before placing: text right edge + 10px < left edge of the neighbor to its 
 <text x="154" y="138" font-size="9" text-anchor="middle">4K tokens (= mini-batch)</text>
 ```
 
+### Edge label placement (measured)
+
+- Horizontal arrow: label 14px above the line, centered on it.
+- Vertical arrow: label 15px to the right, vertically centered on the run.
+- Label width (chars x ~7px at 10px/1.5px tracking) must fit its gap with >=12px to every border, card, and line. If it cannot fit, widen the gap or drop the label.
 ## Placing labels on curves
 
 A label describing an arc or curve must not sit on the path itself (the line would run through the text) — put it on the convex or concave side of the curve:

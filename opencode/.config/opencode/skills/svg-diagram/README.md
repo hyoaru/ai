@@ -1,6 +1,6 @@
 # svg-diagram
 
-A house style for hand-written SVG diagrams your agent can follow — the layout arithmetic, the colour system, and a zero-dependency linter that proves it did.
+A house style for hand-written SVG diagrams your agent can follow — the layout arithmetic, a token-based colour system, and a zero-dependency linter that proves it did.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Agent Skills](https://img.shields.io/badge/Agent-Skills-7C3AED.svg)](https://github.com/vercel-labs/skills)
@@ -126,13 +126,13 @@ A dashed group box around exactly the steps that repeat. The return edge is pain
 | Connectors | A straight `L` only when the two ends are co-axial, a `C` or `Q` curve for anything that turns, and no right-angle elbows |
 | Arrowheads | A notched marker with `markerUnits="userSpaceOnUse"`, sized to the line's stroke width, starting 5px clear of the source and ending 11px short of the target |
 | Text | Baseline at `box y + height/2 + font-size × 0.35` to centre inside a box, and at least 10px of clearance from a straight connector — 15px from a curve, with the label above a downward bend and below an upward one |
-| Fonts | 16px titles, 12px box text, 10px annotations, over a stack that keeps `Noto Sans CJK SC` so Linux rendering doesn't fall back to tofu |
+| Fonts | a display face + workhorse face pair (any coherent choice), 24px titles, 12.5px body, 11px secondary, 10px labels, over a stack that keeps `Noto Sans CJK SC` so Linux rendering doesn't fall back to tofu |
 | Colours | Five semantic fill/stroke/text triples applied through presentation attributes — no CSS classes, no media queries |
 | Escaping | `&`, `<`, `>`, `"` and `'` escaped in text and attributes, and anything from a database or an API escaped before it's concatenated into the file |
 
 Every diagram also paints its own white canvas rect as the first element, so it reads as a light card on GitHub's dark theme instead of dark text on a dark background. That isn't theme switching. The diagram carries one colour set, and the rect exists only so that set stays readable wherever the file is embedded.
 
-The full rules — the character width tables, the six arrowhead colour variants, the coordinate bookkeeping, and a twenty-item verification checklist — are in [SKILL.md](SKILL.md), which is the single source of truth.
+The full rules — the character width tables, the role arrowheads (structural, accent, failure), the coordinate bookkeeping, and a twenty-item verification checklist — are in [SKILL.md](SKILL.md), which is the single source of truth.
 
 ## Why
 
