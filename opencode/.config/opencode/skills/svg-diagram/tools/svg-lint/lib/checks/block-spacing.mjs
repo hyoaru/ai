@@ -173,7 +173,17 @@ export const blockSpacing = {
       // reported as "is 25px, below the 25px minimum" — the reported number already satisfies
       // the reported threshold, leaving the reader to suspect the tool computed incorrectly.
       // The trade-off is a tolerance of ≤0.05px.
-      const tight = relevant(crowding) ? round(crowding.gap) : null;
+      // Segments of one bar (timeline stages, buffer vs remaining) share a y-interval and
+      // touch at their boundary on purpose: the bar is a single visual unit divided at the
+      // divider line, not two blocks competing for spacing. A pair that is contiguous this
+      // way is exempt; a genuine 25px-law violation never looks like a 0px gap between
+      // same-height rects.
+      const touchingSegments = (a, b) =>
+        Math.abs(a.bbox.minY - b.bbox.minY) < 0.5
+        && Math.abs((a.bbox.maxY - a.bbox.minY) - (b.bbox.maxY - b.bbox.minY)) < 0.5
+        && Math.abs(crowding.gap) <= 2;
+      const tight = relevant(crowding) && !touchingSegments(from, crowding.other)
+        ? round(crowding.gap) : null;
       if (tight !== null && tight < MIN_GAP) {
         out.push(error({
           check: ID, code: 'spacing-too-small', line: from.line, column: from.column,

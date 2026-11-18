@@ -92,9 +92,26 @@ export const baselineOffset = {
       }
     }
 
+    // Formula panels and timestamp tables keep left-aligned columns by design: a formula
+    // panel is a stack of >=3 start-anchored lines sharing one left edge, and a table row is
+    // a set of >=3 same-baseline texts spread across the panel. Centring either would
+    // destroy the column/grid alignment the panel exists to show, so both are exempt here
+    // exactly as panel frames are above.
+    const isListPanel = (rect) => {
+      const ts = rect.texts.filter((t) => (t.element.attrs['text-anchor'] ?? 'start') === 'start'
+        || t.textAnchor === 'start');
+      return ts.length >= 3 && new Set(ts.map((t) => Math.round(t.bbox.minX))).size === 1;
+    };
+    const isTableRow = (rect) => {
+      const rows = groupIntoLines(rect.texts);
+      return rows.some((ln) => ln.texts.length >= 3
+        && new Set(ln.texts.map((t) => Math.round(t.bbox.minX))).size >= 3);
+    };
+
     for (const t of doc.texts) {
       if (!t.container) continue;
       if (panels.has(t.container) || inLabelRow(t)) continue;
+      if (isListPanel(t.container) || isTableRow(t.container)) continue;
       if (t.textAnchor !== 'middle') {
         // Report whether the attribute was declared, not the effective value: t.textAnchor
         // defaults to start, so reporting start directly would send the reader to search for

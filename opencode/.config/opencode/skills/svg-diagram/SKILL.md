@@ -98,18 +98,18 @@ viewBox height = bottom y of content + margin
 - Boxes in the same column share a center line
 - An outer box fully encloses the inner boxes: `outer size = content size + padding × 2`
 
-### Dashed grouping boxes (containers)
+### Grouping panels (containers)
 
 Used to group related boxes together (e.g. "Server", "Client", "Employee instances").
 
-**Style consistency**: within one diagram, every dashed grouping box must share these attributes:
-- `stroke-dasharray` (recommended `6,4`)
-- `rx` (corner radius, recommended 8–12)
-- `fill` (recommended `#f8fafc` or `none`)
-- Inner padding (recommended 15–20px)
-- Title font size (recommended 11px, to distinguish it from the 12px box body text)
+**Preferred: soft-tinted panels with hairline borders** (dashed strokes are acceptable only for state semantics — a not-to-scale span, a failure loop):
 
-**Title placement**: put the group title inside the top-left corner of the box (`x = box x + 10, y = box y + 14`) using the secondary text color `#64748b`.
+- Panel fill: `panel` token (primary zone), `panel-nested` (nested zone), or none (outer zones)
+- Border: `#dbe1e8`-class hairline, 1px, radius 10–12
+- Inner padding: 20px left/right, 30px below the last card
+- Title: 10px, weight 600, uppercase, 0.5px letter-spacing, `muted` token, left-aligned to the panel's card column (same x as the inner cards)
+
+**Style consistency**: within one diagram, every grouping panel must share fill, border, radius, padding, and title treatment. Dashed grouping boxes, when used, must likewise share `stroke-dasharray` (6,4), radius, fill, and padding.
 
 **Vertical-centering trap**: compute the group box's vertical position from the combined height of **title + inner content**, not from the box alone. With a title, the top of the box is occupied for roughly 20–25px, and inner boxes start below it:
 
@@ -280,6 +280,7 @@ Keep detour paths at least 20px outside the obstacle's boundary:
 
 ### Block spacing (**single global standard**)
 Spacing between adjacent boxes/blocks is **≥25px, 25–30px recommended**.
+Documented exceptions live in "Documented exceptions" below: segmented bar segments may touch, and dense nested columns keep a >=24px rhythm inside their panel.
 
 Breakdown: 5px start clearance + 11px end clearance and arrowhead extension + ≥6px of visible line + safety margin ≈ 25px. **At least 6px of visible line**, otherwise the arrow degenerates into a dot.
 
@@ -289,6 +290,24 @@ Breakdown: 5px start clearance + 11px end clearance and arrowhead extension + �
 
 > This is the only block-spacing standard in this document; both "No overlapping elements" and the verification checklist refer back to it.
 
+### Documented exceptions (decoded from DESIGN-TASTE.md)
+
+The spacing and centering laws carry four deliberate exceptions. Each is implemented in
+`tools/svg-lint` and each exists because a pattern the eye accepts would otherwise fail the
+zero-error bar:
+
+1. **Segmented bars** -- contiguous rect segments that share a y-interval and touch at their
+   boundary (timeline stages, buffer vs remaining) are one visual unit divided at the divider
+   line. `block-spacing` exempts same-height, same-y rect pairs whose gap is <=2px.
+2. **Formula panels and timestamp tables** -- stacks of >=3 left-anchored lines sharing one left
+   edge, and rows of >=3 same-baseline texts spread across a panel, are columns/grids by
+   design. `baseline-offset` exempts both from the text-anchor=middle law.
+3. **Perpendicular arrivals** -- an up-and-over arc whose cp2 shares the tip's x (plumb landing
+   on a chord-horizontal arc) legitimately offsets cp2 along the chord's perpendicular.
+   `connector-geometry` classifies curves by their arrival tangent (cp2 to tip), not by the
+   chord, and stands the level/plumb arm down when the arrival is perpendicular to the chord.
+4. **Sequence header cards** -- 180x32 single-line actor headers are legal: the box-height law
+   reads as font-size x 2.5 minimum (12px -> 30px) with x3 recommended, not x3 required.
 ### SVG paint order (z-order)
 
 SVG has no z-index — **elements painted later sit on top**. Order them like this:
@@ -379,9 +398,11 @@ A label describing an arc or curve must not sit on the path itself (the line wou
 
 ## Style rules
 
-### Fonts (required)
+### Typography (role-based, font-agnostic)
 
-**Every SVG must declare a CJK-capable font stack in `<style>`** — this is non-negotiable:
+Use exactly two type roles per diagram set — one **display face** for titles, one **workhorse face** for everything else. Any coherent pair works (a serif display face reads editorial; a sans display face reads technical). Do not hardcode brand fonts; pick the pair once per document set and stay with it.
+
+**Every SVG must still declare a CJK-capable fallback chain in `<style>`** — this is a rendering requirement, not taste:
 
 ```xml
 <style>
@@ -391,27 +412,54 @@ A label describing an arc or curve must not sit on the path itself (the line wou
 
 Fallback order: macOS (PingFang SC) → Windows (Microsoft YaHei) → Linux (Noto Sans CJK SC) → system default. **`Noto Sans CJK SC` must be kept**, otherwise server-side rendering on Linux falls back to a font with no CJK coverage.
 
+Type scale (sizes are fixed; faces are swappable):
+
 | Element | Size |
 |---------|------|
-| Title | 16px |
-| Box body text | 12px |
-| Secondary text / annotations | 10px |
+| Title (display face) | 24px |
+| Subtitle | 12.5px |
+| Card name / body | 12.5px |
+| Secondary text / annotations | 11px |
+| Zone and edge labels | 10px, uppercase, letter-spaced |
+
+The width table must carry a row for every size the style sheet declares -- an untabled size falls back to the 0.58 ratio, which over- or under-estimates semibold text.
 
 Vertical text: `<text writing-mode="tb">vertical text</text>`
 
-### Colors
+### Title block structure
 
-**Base colors**: primary text `#1e293b`, secondary text `#64748b`, muted text / arrows `#94a3b8`
+- Title baseline at 40. Subtitle baseline = title + 24 — a tight lockup; the title block reads as one unit.
+- First content ink ≥ 16px below the subtitle ink. The title-block margin belongs to the subtitle, not the title.
+- If the subtitle-to-content gap exceeds 40px, compress the content up to a 25px gap instead of leaving a void.
+- Canvas height = lowest content ink + 25px, recomputed after every shift.
+- Never wrap content in `transform="translate()"` groups: file coordinates must equal rendered coordinates. Audits read attributes; hidden transforms hide real clipping. When inheriting a file that has one, unwrap it and fold the offset into the coordinates.
+- When editing paths programmatically, preserve command letters (`M`, `L`, `C`, `Q`, `Z`) — rebuilding a `d` string from numbers only yields invalid paths and invisible arrows.
 
-**Semantic colors**:
+### Color tokens (role-based, palette-agnostic)
 
-| Meaning | Fill | Stroke | Text |
-|---------|------|--------|------|
-| Input / primary | #dbeafe | #3b82f6 | #1e40af |
-| Processing / in progress | #fef3c7 | #f59e0b | #b45309 |
-| Data / output | #d1fae5 | #22c55e | #166534 |
-| AI / analysis | #f3e8ff | #a855f7 | #6b21a8 |
-| Sensitive / warning | #fce7f3 | #ec4899 | #9d174d |
+Express color as **roles**, not decorations. Any coherent palette works — the relationships (contrast, weight, rarity) are the design. If the target repo has a `DESIGN-TASTE.md`, adopt its tokens verbatim.
+
+| Role | Used for | Example value |
+|------|----------|---------------|
+| `ground` | page background | `#ffffff` |
+| `panel` | primary zone fill | `#eef1f5` |
+| `panel-nested` | nested zone fill | `#f1f4f8` |
+| `card` | card fill | `#ffffff` |
+| `hairline` | structural connectors, muted lines | `#94a3b8` |
+| `border` | ordinary card borders | `#d8dee6` |
+| `border-strong` | emphasized cards (boot chain) | `#c3ccd8` |
+| `ink` | primary text | `#0f172a` |
+| `secondary` | secondary text | `#64748b` |
+| `muted` | zone/edge labels | `#94a3b8` |
+| `accent` | data-flow edges, acquire markers, key verification lines | `#1d4ed8` |
+| `failure` | failure paths and labels | `#dc2626` |
+
+Palette discipline:
+
+- **One accent**, used only where meaning lives (data-flow edges, acquire markers, verification highlights). Nothing decorative touches it.
+- **Failure is semantic, not decorative**: red, dashed, red labels — it survives the one-accent rule.
+- Contrast: body text ≥4.5:1, large text and strokes ≥3:1 against their fill. Never encode meaning by color alone — add a label or shape difference so it survives grayscale.
+- Zones are soft-tinted panels with hairline borders — prefer tint over dashed strokes for grouping. Dashed strokes remain acceptable for state semantics (a not-to-scale span, a failure loop).
 
 ### Accessibility and output portability
 
@@ -446,39 +494,30 @@ Use a notched arrowhead rather than a plain triangle — it reads better:
 
 ```xml
 <defs>
-  <!-- Default gray arrow (markerUnits="userSpaceOnUse" is mandatory) -->
+  <!-- Structural arrow: fill with the `hairline` token (markerUnits="userSpaceOnUse" is mandatory) -->
   <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
-    <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#94a3b8"/>
   </marker>
-  <!-- Semantic-color arrows (matching the box stroke colors) -->
-  <marker id="arrow-blue" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
-    <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#3b82f6"/>
+  <!-- Accent arrow: fill with the `accent` token — data-flow edges only -->
+  <marker id="arrow-accent" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+    <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#1d4ed8"/>
   </marker>
-  <marker id="arrow-orange" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
-    <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#f59e0b"/>
-  </marker>
-  <marker id="arrow-green" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
-    <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#22c55e"/>
-  </marker>
-  <marker id="arrow-purple" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
-    <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#a855f7"/>
-  </marker>
-  <marker id="arrow-red" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
-    <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#ef4444"/>
+  <!-- Failure arrow: fill with the `failure` token — failure paths only -->
+  <marker id="arrow-fail" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+    <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#dc2626"/>
   </marker>
 </defs>
 ```
 
-**Arrow color reference**:
+**Arrow roles** (fills come from the color tokens, not a fixed set):
 
-| ID | Color | Use |
+| ID | Token | Use |
 |----|-------|-----|
-| `arrow` | #64748b | Default / neutral connection |
-| `arrow-blue` | #3b82f6 | Input / primary flow |
-| `arrow-orange` | #f59e0b | Processing / in progress |
-| `arrow-green` | #22c55e | Data / output / success |
-| `arrow-purple` | #a855f7 | AI / analysis / special |
-| `arrow-red` | #ef4444 | Warning / dangerous operation |
+| `arrow` | `hairline` | Structural connection |
+| `arrow-accent` | `accent` | Data-flow edge — the edges that tell the story |
+| `arrow-fail` | `failure` | Failure path |
+
+Do not add per-category arrow colors (orange/green/purple); category meaning belongs in labels and zone titles, not in arrow hue.
 
 **Key parameters**:
 - `orient="auto"` rotates the arrowhead to follow the path direction
@@ -491,10 +530,10 @@ Use a notched arrowhead rather than a plain triangle — it reads better:
 **Arrows on thick lines**: when stroke-width > 1.5 (e.g. heavy dashed lines), an 8×8 arrowhead looks too small. Define a proportionally larger marker:
 
 ```xml
-<!-- Large arrow for thick lines (1.5×): tip extends 12-3=9px -->
+<!-- Large failure arrow for thick lines (1.5×): tip extends 12-3=9px -->
 <marker id="arrow-red-lg" markerWidth="12" markerHeight="12" refX="3" refY="6"
         orient="auto" markerUnits="userSpaceOnUse">
-  <path d="M0,0 L12,6 L0,12 L3,6 z" fill="#ef4444"/>
+  <path d="M0,0 L12,6 L0,12 L3,6 z" fill="#dc2626"/>
 </marker>
 ```
 
@@ -578,8 +617,14 @@ svg += f'<text>{svg_escape(team_name)}</text>'
 - [ ] Diagrams that will be scaled declare `vector-effect="non-scaling-stroke"`
 - [ ] Every element inside the visible viewBox (bottom = bottom edge of the lowest element + 25px)
 - [ ] Every connector has a clear meaning (labeled, or its source and target are inferable from context)
-- [ ] Dashed grouping boxes styled consistently (dasharray, corner radius, fill, padding, title font size)
+- [ ] Grouping panels styled consistently (fill, border, radius, padding, title treatment)
 - [ ] No large blank regions (spacing within 30px, viewBox hugs the content)
+- [ ] Title block: subtitle = title + 24 (tight lockup), first content ink ≥16px below subtitle
+- [ ] Subtitle-to-content margin present (the title-block margin belongs to the subtitle)
+- [ ] No `transform="translate()"` groups — file coordinates equal rendered coordinates
+- [ ] Scripted path edits preserve command letters (`M`, `L`, `C`, `Q`, `Z`) — rebuilds from numbers only are invalid
+- [ ] Canvas height = lowest content ink + 25px
+- [ ] One accent token, used only on data-flow edges and semantic emphasis; failure paths use the failure token
 
 ## Editing workflow
 

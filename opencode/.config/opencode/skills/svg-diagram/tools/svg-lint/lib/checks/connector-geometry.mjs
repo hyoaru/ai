@@ -421,6 +421,15 @@ function tangentProblem(curve, at, guide = null) {
   // excused those arms for the other reason given above; the effect at these two sites is the same.
   const diagonal = guide !== null
     || (Math.abs(travelX) > AXIS_TOLERANCE && Math.abs(travelY) > AXIS_TOLERANCE);
+  // Up-and-over arcs dive to the target and land perpendicular to the chord: cp2 shares the tip's
+  // x (a plumb landing on a chord-horizontal arc) or the tip's y (a level landing on a
+  // chord-vertical arc). The perpendicular offset is then the arc *arriving* — SKILL.md's own
+  // direction table ("up: cp2.x = end.x") prescribes it — so the level/plumb arm stands down.
+  // A cp2 that matches the tip on both axes (a flat fan) is not an arrival and keeps the arm.
+  const perpArrival = Math.abs(end.x - cp2.x) <= TANGENT_TOLERANCE
+    && Math.abs(end.y - cp2.y) > TANGENT_TOLERANCE;
+  const parArrival = Math.abs(end.y - cp2.y) <= TANGENT_TOLERANCE
+    && Math.abs(end.x - cp2.x) > TANGENT_TOLERANCE;
   const past = (c, e, forward) => (forward ? c > e : c < e);
   const behind = (e, forward) => (forward ? `< ${round(e)}` : `> ${round(e)}`);
 
@@ -433,7 +442,7 @@ function tangentProblem(curve, at, guide = null) {
         repair: { attribute: 'd', actual: round(cp2.x), expected: behind(end.x, forward), hint: 'the last control point must lie behind the tip along the travel direction' },
       });
     }
-    if (!diagonal && Math.abs(cp2.y - end.y) > TANGENT_TOLERANCE) {
+    if (!diagonal && !perpArrival && Math.abs(cp2.y - end.y) > TANGENT_TOLERANCE) {
       return error({
         check: ID, code: 'curve-tangent-not-aligned', ...at,
         message: 'A horizontal arrow needs cp2.y to match the endpoint y so the arrowhead stays level',
@@ -451,7 +460,7 @@ function tangentProblem(curve, at, guide = null) {
       repair: { attribute: 'd', actual: round(cp2.y), expected: behind(end.y, forward), hint: 'the last control point must lie behind the tip along the travel direction' },
     });
   }
-  if (!diagonal && Math.abs(cp2.x - end.x) > TANGENT_TOLERANCE) {
+  if (!diagonal && !parArrival && Math.abs(cp2.x - end.x) > TANGENT_TOLERANCE) {
     return error({
       check: ID, code: 'curve-tangent-not-aligned', ...at,
       message: 'A vertical arrow needs cp2.x to match the endpoint x so the arrowhead stays plumb',

@@ -532,6 +532,11 @@ export function buildDocument(parsed) {
     // one by one.
     styleTexts: [],
     styleFontFamily: null,
+    // class name -> font-size (px) declared for that class in a <style> rule. Class-based
+    // sizing is how both the house style and DESIGN-TASTE style sheets size text; without
+    // this map every class-styled text would measure at the 12px default and overflow
+    // estimates would be wrong by up to 40%.
+    classFontSizes: Object.create(null),
     markers: new Map(),
     rects: [],
     texts: [],
@@ -637,11 +642,23 @@ export function buildDocument(parsed) {
     if (el.tag === 'text') {
       const rawContent = textContent(el);
       const content = decodeEntities(rawContent);
-      const fontSize = ctx.inherited.fontSize ?? 12;
+      // Size resolution order: inline font-size attribute, then the first class on the
+      // element that declares one in a <style> rule, then inheritance, then the 12px default.
+      // Class lists are read left to right because CSS specificity between same-specificity
+      // class rules is decided by document order, and the style sheet's own order is the only
+      // order the model can see.
+      let classFontSize;
+      const classList = String(A['class'] ?? '').split(/\s+/).filter(Boolean);
+      for (const cn of classList) {
+        if (doc.classFontSizes[cn] !== undefined) { classFontSize = doc.classFontSizes[cn]; break; }
+      }
+      const fontSize = el.attrs['font-size'] !== undefined ? Number(el.attrs['font-size'])
+        : classFontSize !== undefined ? classFontSize
+        : ctx.inherited.fontSize ?? 12;
       const x = num(A.x) + ctx.dx;
       const y = num(A.y) + ctx.dy;
       const textAnchor = ctx.inherited.textAnchor ?? 'start';
-      if (A['font-size'] === undefined && ctx.inherited.fontSize === undefined) {
+      if (A['font-size'] === undefined && classFontSize === undefined && ctx.inherited.fontSize === undefined) {
         note('missing-font-size', '<text> has no font-size and inherits none; assuming 12px', el);
       }
       const entry = {
@@ -714,6 +731,15 @@ export function buildDocument(parsed) {
       if (child.tag === 'style') {
         const styleSource = textContent(child);
         doc.styleTexts.push(styleSource);
+        // Flat class rules only: `.name { ... font-size: Npx ... }`. A block containing a
+        // nested `{` is skipped rather than half-parsed -- a nested rule's font-size belongs
+        // to the nested selector, and guessing the scope would attach the wrong size to the
+        // outer class. None of the style sheets this tool reads (house style, DESIGN-TASTE)
+        // nest rules.
+        for (const m of styleSource.matchAll(/\.([A-Za-z][\w-]*)\s*\{([^{}]*)\}/g)) {
+          const fs = /(?:^|[;\s])font-size:\s*([\d.]+)px/.exec(m[2]);
+          if (fs) doc.classFontSizes[m[1]] = Number(fs[1]);
+        }
         continue;
       }
       if (child.tag === 'defs') {

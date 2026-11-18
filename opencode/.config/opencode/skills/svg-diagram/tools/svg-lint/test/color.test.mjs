@@ -90,11 +90,15 @@ test('contrastRatio is symmetric and rejects unparseable input', () => {
   assert.equal(contrastRatio('#1e40af', 'url(#grad)'), null);
 });
 
-test('the palette carries exactly the five semantic triples from SKILL.md', () => {
-  assert.equal(SEMANTIC.length, 5);
+test('the palette carries the four editorial triples first, then the five legacy triples', () => {
+  assert.equal(SEMANTIC.length, 9);
   assert.deepEqual(
     SEMANTIC.map((s) => [s.fill, s.stroke, s.text]),
     [
+      ['#e9eef9', '#1d4ed8', '#1d4ed8'],
+      ['#eef1f5', '#dbe1e8', '#64748b'],
+      ['#f1f4f8', '#dbe1e8', '#64748b'],
+      ['#fef2f2', '#dc2626', '#dc2626'],
       ['#dbeafe', '#3b82f6', '#1e40af'],
       ['#fef3c7', '#f59e0b', '#b45309'],
       ['#d1fae5', '#22c55e', '#166534'],
@@ -104,26 +108,33 @@ test('the palette carries exactly the five semantic triples from SKILL.md', () =
   );
 });
 
-test('the palette carries the six arrow colors', () => {
+test('the palette carries the role arrow colors plus the legacy ids', () => {
   assert.deepEqual(ARROW_COLORS, {
-    arrow: '#64748b',
+    arrow: '#94a3b8',
+    'arrow-accent': '#1d4ed8',
+    'arrow-fail': '#dc2626',
     'arrow-blue': '#3b82f6',
-    'arrow-orange': '#f59e0b',
-    'arrow-green': '#22c55e',
-    'arrow-purple': '#a855f7',
     'arrow-red': '#ef4444',
   });
 });
 
-test('base text colors are the three SKILL.md values', () => {
-  assert.deepEqual(BASE_TEXT, { primary: '#1e293b', secondary: '#64748b', muted: '#94a3b8' });
+test('base text colors are the ink token plus secondary, muted and the legacy primary', () => {
+  assert.deepEqual(BASE_TEXT, {
+    primary: '#0f172a',
+    secondary: '#64748b',
+    muted: '#94a3b8',
+    legacy_primary: '#1e293b',
+  });
 });
 
 test('ALLOWED_COLORS covers palette members, none and white but not an arbitrary hex', () => {
   assert.equal(ALLOWED_COLORS.has('#f8fafc'), true);   // dashed grouping box fill
-  assert.equal(ALLOWED_COLORS.has('#ef4444'), true);   // arrow-red
+  assert.equal(ALLOWED_COLORS.has('#ef4444'), true);   // legacy arrow-red
   assert.equal(ALLOWED_COLORS.has('none'), true);
   assert.equal(ALLOWED_COLORS.has('#ffffff'), true);
+  assert.equal(ALLOWED_COLORS.has('#0f172a'), true);   // ink token
+  assert.equal(ALLOWED_COLORS.has('#d8dee6'), true);   // border token
+  assert.equal(ALLOWED_COLORS.has('#e9eef9'), true);   // accent tint
   assert.equal(ALLOWED_COLORS.has('#ff00ff'), false);
 });
 
@@ -144,9 +155,9 @@ test('semanticByStroke resolves a stroke back to its triple', () => {
 // name is a **short slug chosen here**, not the literal string from SKILL.md (the SKILL.md table header uses
 // human-readable labels with slashes like "Input / primary", "Data / output", "AI / analysis").
 // Pinned because downstream checks use name in error messages; changing it silently replaces the error text.
-test('the semantic entries carry their documented slugs in SKILL.md table order', () => {
+test('the semantic entries carry their documented slugs in palette order', () => {
   assert.deepEqual(SEMANTIC.map((s) => s.name),
-    ['input', 'processing', 'output', 'analysis', 'warning']);
+    ['accent', 'panel', 'panel-nested', 'failure', 'input', 'processing', 'output', 'analysis', 'warning']);
 });
 
 test('GROUP_BOX carries the dashed grouping-box style from SKILL.md', () => {

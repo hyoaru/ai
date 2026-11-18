@@ -1,0 +1,1524 @@
+<?xml version='1.0' encoding='utf-8'?>
+<RSRC FormatVersion="3" Type="LVIN" Encoding="mac_roman">
+  <LIBN>
+    <!-- Library Names -->
+    <Section Index="0" Format="inline">
+      <Library>Internal.lvlib</Library>
+      <Library>Shared.lvlib</Library>
+      <Library>Infrastructure.lvlib</Library>
+      <Library>DAQmx.lvlib</Library>
+      <Library>Resource Manager.lvlib</Library>
+      <Library>Adapters.lvlib</Library>
+      <Library>NI.lvlib</Library>
+      <Library>NI DAQmx Resource Manager.lvclass</Library>
+      </Section>
+    </LIBN>
+  <LVSR>
+    <!-- LabView Save Record -->
+    <Section Index="0" Name="Unregister Channel.vi" Format="inline">
+      <Version Major="25" Minor="0" Bugfix="0" Stage="release" Build="0" />
+      <Library Protected="0" PasswordHash="d41d8cd98f00b204e9800998ecf8427e" HashType="MD5" />
+      <Execution State="1" Priority="1" PrefExecSyst="-1" BadSignal="0" BadNode="0" BadSubVILink="0" BadSubVI="0" NotReservable="0" IsReentrant="0" CloseAfterCall="0" PooledReentrancy="0" LoadFP="0" HasNoBD="0" ShowFPOnLoad="0" DynamicDispatch="0" HasSetBP="0" RunOnOpen="0" ShowFPOnCall="0" BadCompile="0" IsSubroutine="0" DSRecord="0" CompilerBug="0" TypeDefVI="0" StrictTypeDefVI="0" BadDDO="0" CtlChanged="0" SaveParallel="0" LibIssuesNoRun="0" AllowAutoPrealloc="0" EvalWatermark="0" StdntWatermark="0" HasInsaneItems="0" PropTypesIssues="0" BrokenPolyVI="0" />
+      <Execution2 TaggedAndNotEdited="0" HideInstanceVICaption="0" SystemVI="0" VisibleVI="0" XDebugWindowVI="0" TemplateMask="0" SuppressXaction="0" AlwaysCallsParent="0" UndoRedoChangedNoTypes="0" InlinableDiagram="1" SourceOnly="1" InlineIfPossible="0" TransactionFailing="0" SSEOptiMask="0" StudentOnlyMask="0" EvalOnlyMask="0" AllowPolyTypeAdapt="0" ShouldInline="0" RecalcFPDSOs="0" MarkForPolyVI="0" VICanPassLVClassToDLL="0" UndoRedoInProgress="0" DrawInstanceIcon="0" ShowPolySelector="0" ClearIndMask="0" DefaultGrownView="0" DoNotClone="0" IsPrivateDataForUDClass="0" InstanceVI="0" DefaultErrorHandling="0" RemotePanel="0" SuppressInstanceHalo="0" />
+      <ButtonsHidden RunButton="0" ViBhBit1="0" ViBhBit2="0" ViBhBit3="0" ViBhBit4="0" FreeRunButton="0" ViBhBit6="0" AbortButton="0" ViBhBit8="0" ViBhBit9="0" ViBhBit10="0" ViBhBit11="0" ViBhBit12="0" ViBhBit13="0" ViBhBit14="0" ViBhBit15="0" />
+      <Instrument Type="Standard" Signature="fdac28a4198f2746af604ac5a3d4a3a3" InStBit0="0" InStBit1="0" InStBit2="0" InStBit3="0" InStBit4="1" InStBit5="0" InStBit6="0" InStBit7="0" InStBit8="0" DebugCapable="1" InStBit10="0" InStBit11="0" InStBit12="0" InStBit13="1" InStBit14="0" PrintAfterExec="0" InStBit16="0" InStBit17="0" InStBit18="0" InStBit19="0" InStBit20="0" InStBit21="0" InStBit22="0" InStBit23="1" InStBit24="0" InStBit25="0" InStBit26="0" InStBit27="0" InStBit28="0" InStBit29="0" InStBit30="1" InStBit31="0" />
+      <FrontPanel CtrlIndStyle="0" ShowScrollBar="3" ShowTitleBar="1" ToolBarVisible="1" ShowMenuBar="1" AutoCenter="0" SizeToScreen="0" NoRuntimePopUp="0" MarkReturnBtn="0" ViFpBit9="0" ScaleProportn="0" ViFpBit11="0" ViFpBit12="0" ViFpBit13="0" ViFpBit14="0" ViFpBit15="0" />
+      <Flags0C AutoHndlMenus="1" />
+      <Flags12 WndFloatUnk1="0" WndBit2="1" WndCanClose="1" WndCanResize="1" WndCanMinimize="1" WndTransparent="0" WndFloatUnk9="0" />
+      <Unknown Flags10="3" Field28="0" Field2C="0" Field30="0" AlignGridFP="12" AlignGridBD="16" Field4C="0" Field50Hash="90bf3427e85b3e45b9003c509878f0ea" Field70="0" Field74="0" Field78Hash="4c4ad9d0ea93f24e82ee9574bfab4ffe" InlineStg="1" Field8C="4294967295" />
+      <Field90 Format="bin" File="Unregister Channel_LVSR_Field90.bin" />
+      </Section>
+    </LVSR>
+  <RTSG>
+    <!-- Runtime Signature Guid -->
+    <Section Index="0" Format="inline">
+      <Guid>42fb2399944b05ba17fc51b6323816dd</Guid>
+      </Section>
+    </RTSG>
+  <vers>
+    <!-- Version block -->
+    <Section Index="4" Format="inline">
+      <Version Major="25" Minor="3" Bugfix="2" Stage="release" Build="2" Language="0" Info="25.3.2" Comment="" />
+      </Section>
+    </vers>
+  <CONP>
+    <!-- Connector Pane Type Map -->
+    <Section Index="0" Format="inline">
+      <TypeDesc TypeID="1" />
+      </Section>
+    </CONP>
+  <LIvi>
+    <!-- LinkObj Refs for VI -->
+    <Section Index="0" Format="inline">
+      <LVIN>
+        <!--  VI To Lib Object Ref  -->
+        <VILB LinkSaveFlag="2">
+          <LinkSaveQualName />
+          <LinkSavePathRef Ident="PTH0" TpVal="1">
+            <String />
+            <String>NI DAQmx Resource Manager.lvclass</String>
+            </LinkSavePathRef>
+          </VILB>
+        <!--  VI To UDClassAPI Link Object Ref  -->
+        <VIPI LinkSaveFlag="2" APILinkLibVersion="281474976710656" APILinkIsInternal="1" APILinkBool2="1" APILinkCallParentNodes="0">
+          <LinkSaveQualName>
+            <String><![CDATA[&#x07;&#x00;]]></String>
+            </LinkSaveQualName>
+          <LinkSavePathRef Ident="PTH0" TpVal="1">
+            <String />
+            <String>NI DAQmx Resource Manager.lvclass</String>
+            </LinkSavePathRef>
+          <APILinkContent><![CDATA[&#x00;&#x00;]]></APILinkContent>
+          </VIPI>
+        <!--  VI To CustCtl Link Object Ref  -->
+        <VICC LinkSaveFlag="2" VILinkLibVersion="281474976710664" VILinkFieldA="0" VILinkField4="1" VILinkFieldB="00000000" VILinkFieldC="00000000" VILinkFieldD="0" TypedLinkFlags="0">
+          <LinkSaveQualName>
+            <String>NI DAQmx Resource Manager.ctl</String>
+            </LinkSaveQualName>
+          <LinkSavePathRef Ident="PTH0" TpVal="1">
+            <String />
+            <String>NI DAQmx Resource Manager.lvclass</String>
+            <String>NI DAQmx Resource Manager.ctl</String>
+            </LinkSavePathRef>
+          <TypeDesc TypeID="2" />
+          </VICC>
+        <!--  VI To CustCtl Link Object Ref  -->
+        <VICC LinkSaveFlag="8" VILinkLibVersion="1" VILinkFieldA="0" VILinkField4="1" VILinkFieldB="" VILinkFieldC="" VILinkFieldD="0" TypedLinkFlags="0">
+          <LinkSaveQualName>
+            <String>Domain.lvlib</String>
+            <String>Value Objects.lvlib</String>
+            <String>Log Level.ctl</String>
+            </LinkSaveQualName>
+          <LinkSavePathRef Ident="PTH0" TpVal="1">
+            <String />
+            <String />
+            <String />
+            <String />
+            <String />
+            <String />
+            <String />
+            <String>domain</String>
+            <String>value-objects</String>
+            <String>Log Level.ctl</String>
+            </LinkSavePathRef>
+          <TypeDesc TypeID="3" />
+          </VICC>
+        <!--  VI To StdVI Link Object Ref  -->
+        <VIVI LinkSaveFlag="7" VILinkLibVersion="1" VILinkFieldA="0" VILinkField4="1" VILinkFieldB="" VILinkFieldC="" VILinkFieldD="0" TypedLinkFlags="0">
+          <LinkSaveQualName>
+            <String>Variant.lvlib</String>
+            <String>Cluster To Variant Attributes.vi</String>
+            </LinkSaveQualName>
+          <LinkSavePathRef Ident="PTH0" TpVal="1">
+            <String />
+            <String />
+            <String />
+            <String />
+            <String />
+            <String />
+            <String>variant</String>
+            <String>Cluster To Variant Attributes.vi</String>
+            </LinkSavePathRef>
+          <TypeDesc TypeID="4" />
+          </VIVI>
+        <!--  VI To StdVI Link Object Ref  -->
+        <VIVI LinkSaveFlag="7" VILinkLibVersion="1" VILinkFieldA="0" VILinkField4="1" VILinkFieldB="" VILinkFieldC="" VILinkFieldD="0" TypedLinkFlags="0">
+          <LinkSaveQualName>
+            <String>Logger.lvlib</String>
+            <String>Log.vi</String>
+            </LinkSaveQualName>
+          <LinkSavePathRef Ident="PTH0" TpVal="1">
+            <String />
+            <String />
+            <String />
+            <String />
+            <String />
+            <String />
+            <String>logger</String>
+            <String>Log.vi</String>
+            </LinkSavePathRef>
+          <TypeDesc TypeID="5" />
+          </VIVI>
+        <!--  VI To StdVI Link Object Ref  -->
+        <VIVI LinkSaveFlag="0" VILinkLibVersion="281474976710656" VILinkFieldA="0" VILinkField4="1" VILinkFieldB="44415178" VILinkFieldC="44415178" VILinkFieldD="424722726" TypedLinkFlags="0">
+          <LinkSaveQualName>
+            <String>DAQmx Stop Task.vi</String>
+            </LinkSaveQualName>
+          <LinkSavePathRef Ident="PTH0" TpVal="0">
+            <String>&lt;vilib&gt;</String>
+            <String>DAQmx</String>
+            <String>configure</String>
+            <String>task.llb</String>
+            <String>DAQmx Stop Task.vi</String>
+            </LinkSavePathRef>
+          <TypeDesc TypeID="6" />
+          </VIVI>
+        <!--  VI To StdVI Link Object Ref  -->
+        <VIVI LinkSaveFlag="7" VILinkLibVersion="1" VILinkFieldA="0" VILinkField4="1" VILinkFieldB="" VILinkFieldC="" VILinkFieldD="0" TypedLinkFlags="0">
+          <LinkSaveQualName>
+            <String>Errors.lvlib</String>
+            <String>Wrap.vi</String>
+            </LinkSaveQualName>
+          <LinkSavePathRef Ident="PTH0" TpVal="1">
+            <String />
+            <String />
+            <String />
+            <String />
+            <String />
+            <String />
+            <String>errors</String>
+            <String>Wrap.vi</String>
+            </LinkSavePathRef>
+          <TypeDesc TypeID="7" />
+          </VIVI>
+        <!--  VI To StdVI Link Object Ref  -->
+        <VIVI LinkSaveFlag="0" VILinkLibVersion="281474976710656" VILinkFieldA="0" VILinkField4="1" VILinkFieldB="44415178" VILinkFieldC="44415178" VILinkFieldD="424722726" TypedLinkFlags="0">
+          <LinkSaveQualName>
+            <String>DAQmx Clear Task.vi</String>
+            </LinkSaveQualName>
+          <LinkSavePathRef Ident="PTH0" TpVal="0">
+            <String>&lt;vilib&gt;</String>
+            <String>DAQmx</String>
+            <String>configure</String>
+            <String>task.llb</String>
+            <String>DAQmx Clear Task.vi</String>
+            </LinkSavePathRef>
+          <TypeDesc TypeID="8" />
+          </VIVI>
+        </LVIN>
+      </Section>
+    </LIvi>
+  <BDPW>
+    <!-- Block Diagram Password -->
+    <Section Index="0" Format="inline">
+      <Password Text="" SaltSource="CPC2" SaltFlatTypeID="42" />
+      </Section>
+    </BDPW>
+  <ICON>
+    <!-- Icon 32x32 1bpp -->
+    <Section Index="0" Format="bin" File="Unregister Channel_ICON.bin" />
+    </ICON>
+  <icl4>
+    <!-- Icon Large 32x32 4bpp -->
+    <Section Index="0" Format="bin" File="Unregister Channel_icl4.bin" />
+    </icl4>
+  <icl8>
+    <!-- Icon Large 32x32 8bpp -->
+    <Section Index="0" Format="bin" File="Unregister Channel_icl8.bin" />
+    </icl8>
+  <CPC2>
+    <!-- Connector Pane Content Type v2 -->
+    <Section Index="0" Format="inline">
+      <TypeDesc TypeID="9" />
+      </Section>
+    </CPC2>
+  <LIfp>
+    <!-- LinkObj Refs for Front Panel -->
+    <Section Index="0" Format="inline">
+      <FPHP>
+        <!--  UDClassDDO To UDClassAPI Link Object Ref  -->
+        <FPPI LinkSaveFlag="2" APILinkLibVersion="281474976710656" APILinkIsInternal="1" APILinkBool2="1" APILinkCallParentNodes="0">
+          <LinkSaveQualName>
+            <String><![CDATA[&#x07;&#x00;]]></String>
+            </LinkSaveQualName>
+          <LinkSavePathRef Ident="PTH0" TpVal="1">
+            <String />
+            <String>NI DAQmx Resource Manager.lvclass</String>
+            </LinkSavePathRef>
+          <APILinkContent><![CDATA[&#x00;&#x00;]]></APILinkContent>
+          <APILinkCacheList>
+            <Offset>0x007C</Offset>
+            <Offset>0x007A</Offset>
+            </APILinkCacheList>
+          </FPPI>
+        <!--  DDODefaultData To UDClassAPI Link Object Ref  -->
+        <DDPI LinkSaveFlag="2" APILinkLibVersion="281474976710656" APILinkIsInternal="1" APILinkBool2="1" APILinkCallParentNodes="0">
+          <LinkSaveQualName>
+            <String><![CDATA[&#x07;&#x00;]]></String>
+            </LinkSaveQualName>
+          <LinkSavePathRef Ident="PTH0" TpVal="1">
+            <String />
+            <String>NI DAQmx Resource Manager.lvclass</String>
+            </LinkSavePathRef>
+          <APILinkContent><![CDATA[&#x00;&#x00;]]></APILinkContent>
+          <APILinkCacheList>
+            <Offset>0x007C</Offset>
+            <Offset>0x007A</Offset>
+            </APILinkCacheList>
+          </DDPI>
+        </FPHP>
+      </Section>
+    </LIfp>
+  <FPEx>
+    <!-- Generic block -->
+    <Section Index="0" Format="bin" File="Unregister Channel_FPEx.bin" />
+    </FPEx>
+  <STR>
+    <!-- Short String / Input definition? -->
+    <Section Index="2" Format="inline">
+      <LVVariant HasVarItem2="1" VarType2="0" Version="auto">
+        <DataType Index="0" Type="Void" Format="inline" />
+        <Attributes>
+          <LVVariant Name="displayFilter" HasVarItem2="1" VarType2="0" Version="auto">
+            <DataType Index="0" Type="NumUInt32" Prop1="0" Format="inline" />
+            <DataFill>
+              <U32>33558528</U32>
+              </DataFill>
+            </LVVariant>
+          </Attributes>
+        <DataFill>
+          <Void />
+          </DataFill>
+        </LVVariant>
+      </Section>
+    </STR>
+  <FPHb>
+    <!-- Front Panel Heap ver b -->
+    <Section Index="0" Format="xml" File="Unregister Channel_FPHb.xml" />
+    </FPHb>
+  <FPSE>
+    <!-- Front Panel Size Estimate -->
+    <Section Index="0" Value="153" Format="inline" />
+    </FPSE>
+  <VPDP>
+    <!-- VI Primitive Dependency Flags -->
+    <Section Index="0" Format="bin" File="Unregister Channel_VPDP.bin" />
+    </VPDP>
+  <LIbd>
+    <!-- LinkObj Refs for Block diagram -->
+    <Section Index="0" Format="inline">
+      <BDHP>
+        <!--  IUse To VI Link Object Ref  -->
+        <IUVI LinkSaveFlag="0" VILinkLibVersion="281474976710656" VILinkFieldA="0" VILinkField4="1" VILinkFieldB="44415178" VILinkFieldC="44415178" VILinkFieldD="424722726" TypedLinkFlags="0">
+          <LinkSaveQualName>
+            <String>DAQmx Stop Task.vi</String>
+            </LinkSaveQualName>
+          <LinkSavePathRef Ident="PTH0" TpVal="0">
+            <String>&lt;vilib&gt;</String>
+            <String>DAQmx</String>
+            <String>configure</String>
+            <String>task.llb</String>
+            <String>DAQmx Stop Task.vi</String>
+            </LinkSavePathRef>
+          <TypeDesc TypeID="0" />
+          <LinkOffsetList>
+            <Offset>0x0444</Offset>
+            <Offset>0x1B02</Offset>
+            </LinkOffsetList>
+          <VILSPathRef Ident="PTH0" TpVal="0" ZeroFill="True" />
+          <IUseStr />
+          </IUVI>
+        <!--  IUse To VI Link Object Ref  -->
+        <IUVI LinkSaveFlag="7" VILinkLibVersion="1" VILinkFieldA="0" VILinkField4="1" VILinkFieldB="" VILinkFieldC="" VILinkFieldD="0" TypedLinkFlags="0">
+          <LinkSaveQualName>
+            <String>Errors.lvlib</String>
+            <String>Wrap.vi</String>
+            </LinkSaveQualName>
+          <LinkSavePathRef Ident="PTH0" TpVal="1">
+            <String />
+            <String />
+            <String />
+            <String />
+            <String />
+            <String />
+            <String>errors</String>
+            <String>Wrap.vi</String>
+            </LinkSavePathRef>
+          <TypeDesc TypeID="0" />
+          <LinkOffsetList>
+            <Offset>0x07B1</Offset>
+            <Offset>0x0F0F</Offset>
+            <Offset>0x1B89</Offset>
+            <Offset>0x1C47</Offset>
+            </LinkOffsetList>
+          <VILSPathRef Ident="PTH0" TpVal="1">
+            <String />
+            <String />
+            <String />
+            <String />
+            <String />
+            <String />
+            <String>errors</String>
+            <String>Errors.lvlib</String>
+            </VILSPathRef>
+          <IUseStr />
+          </IUVI>
+        <!--  IUse To VI Link Object Ref  -->
+        <IUVI LinkSaveFlag="0" VILinkLibVersion="281474976710656" VILinkFieldA="0" VILinkField4="1" VILinkFieldB="44415178" VILinkFieldC="44415178" VILinkFieldD="424722726" TypedLinkFlags="0">
+          <LinkSaveQualName>
+            <String>DAQmx Clear Task.vi</String>
+            </LinkSaveQualName>
+          <LinkSavePathRef Ident="PTH0" TpVal="0">
+            <String>&lt;vilib&gt;</String>
+            <String>DAQmx</String>
+            <String>configure</String>
+            <String>task.llb</String>
+            <String>DAQmx Clear Task.vi</String>
+            </LinkSavePathRef>
+          <TypeDesc TypeID="0" />
+          <LinkOffsetList>
+            <Offset>0x09C8</Offset>
+            <Offset>0x1BEB</Offset>
+            </LinkOffsetList>
+          <VILSPathRef Ident="PTH0" TpVal="0" ZeroFill="True" />
+          <IUseStr />
+          </IUVI>
+        <!--  IUse To VI Link Object Ref  -->
+        <IUVI LinkSaveFlag="7" VILinkLibVersion="1" VILinkFieldA="0" VILinkField4="1" VILinkFieldB="" VILinkFieldC="" VILinkFieldD="0" TypedLinkFlags="0">
+          <LinkSaveQualName>
+            <String>Logger.lvlib</String>
+            <String>Log.vi</String>
+            </LinkSaveQualName>
+          <LinkSavePathRef Ident="PTH0" TpVal="1">
+            <String />
+            <String />
+            <String />
+            <String />
+            <String />
+            <String />
+            <String>logger</String>
+            <String>Log.vi</String>
+            </LinkSavePathRef>
+          <TypeDesc TypeID="0" />
+          <LinkOffsetList>
+            <Offset>0x1F82</Offset>
+            <Offset>0x23A0</Offset>
+            </LinkOffsetList>
+          <VILSPathRef Ident="PTH0" TpVal="1">
+            <String />
+            <String />
+            <String />
+            <String />
+            <String />
+            <String />
+            <String>logger</String>
+            <String>Logger.lvlib</String>
+            </VILSPathRef>
+          <IUseStr />
+          </IUVI>
+        <!--  TypeDef To CustCtl Link Object Ref  -->
+        <TDCC LinkSaveFlag="8" VILinkLibVersion="1" VILinkFieldA="0" VILinkField4="1" VILinkFieldB="" VILinkFieldC="" VILinkFieldD="0" TypedLinkFlags="0">
+          <LinkSaveQualName>
+            <String>Domain.lvlib</String>
+            <String>Value Objects.lvlib</String>
+            <String>Log Level.ctl</String>
+            </LinkSaveQualName>
+          <LinkSavePathRef Ident="PTH0" TpVal="1">
+            <String />
+            <String />
+            <String />
+            <String />
+            <String />
+            <String />
+            <String />
+            <String>domain</String>
+            <String>value-objects</String>
+            <String>Log Level.ctl</String>
+            </LinkSavePathRef>
+          <TypeDesc TypeID="0" />
+          <LinkOffsetList>
+            <Offset>0x1F64</Offset>
+            <Offset>0x2382</Offset>
+            </LinkOffsetList>
+          <VILSPathRef Ident="PTH0" TpVal="1">
+            <String />
+            <String />
+            <String />
+            <String />
+            <String />
+            <String />
+            <String />
+            <String>domain</String>
+            <String>value-objects</String>
+            <String>Value Objects.lvlib</String>
+            </VILSPathRef>
+          </TDCC>
+        <!--  IUse To VI Link Object Ref  -->
+        <IUVI LinkSaveFlag="7" VILinkLibVersion="1" VILinkFieldA="0" VILinkField4="1" VILinkFieldB="" VILinkFieldC="" VILinkFieldD="0" TypedLinkFlags="0">
+          <LinkSaveQualName>
+            <String>Variant.lvlib</String>
+            <String>Cluster To Variant Attributes.vi</String>
+            </LinkSaveQualName>
+          <LinkSavePathRef Ident="PTH0" TpVal="1">
+            <String />
+            <String />
+            <String />
+            <String />
+            <String />
+            <String />
+            <String>variant</String>
+            <String>Cluster To Variant Attributes.vi</String>
+            </LinkSavePathRef>
+          <TypeDesc TypeID="0" />
+          <LinkOffsetList>
+            <Offset>0x1FAA</Offset>
+            <Offset>0x23C7</Offset>
+            </LinkOffsetList>
+          <VILSPathRef Ident="PTH0" TpVal="1">
+            <String />
+            <String />
+            <String />
+            <String />
+            <String />
+            <String />
+            <String>variant</String>
+            <String>Variant.lvlib</String>
+            </VILSPathRef>
+          <IUseStr />
+          </IUVI>
+        </BDHP>
+      </Section>
+    </LIbd>
+  <BDEx>
+    <!-- Generic block -->
+    <Section Index="0" Format="bin" File="Unregister Channel_BDEx.bin" />
+    </BDEx>
+  <BDHb>
+    <!-- Block Diagram Heap ver b -->
+    <Section Index="0" Format="xml" File="Unregister Channel_BDHb.xml" />
+    </BDHb>
+  <BDSE>
+    <!-- Block Diagram Size Estimate -->
+    <Section Index="0" Value="2042" Format="inline" />
+    </BDSE>
+  <VITS>
+    <!-- Virtual Instrument Tag Strings -->
+    <Section Index="0" SizePrefixed="1" Format="inline">
+      <LVVariant Name="NI.LV.ALL.VILastSavedTarget" HasVarItem2="1" VarType2="0" Version="auto">
+        <DataType Index="0" Type="String" Prop1="0xFFFFFFFF" Format="inline" />
+        <DataFill>
+          <String>Dflt</String>
+          </DataFill>
+        </LVVariant>
+      <LVVariant Name="NI.LV.All.SourceOnly" HasVarItem2="1" VarType2="0" Version="auto">
+        <DataType Index="0" Type="Boolean" Format="inline" />
+        <DataFill>
+          <Boolean>1</Boolean>
+          </DataFill>
+        </LVVariant>
+      <LVVariant Name="_ni_LastKnownOwningLVClassCluster" HasVarItem2="1" VarType2="0" Version="auto">
+        <DataType Index="0" Type="String" Prop1="0xFFFFFFFF" Format="inline" />
+        <DataFill>
+          <String><![CDATA[&#x00;&#x00;&#x00;&#x11;&#x00;&#x08;&#x00;0ˇˇˇˇ&#x00;&#x05;&#x00;&#x03;&#x00;&#x00;$@t&#x00;&#x02;&#x00;&#x00;&#x00;&#x01;&#x18;Analog Channel Index Map&#x00;&#x00;$@t&#x00;&#x02;&#x00;&#x00;&#x00;&#x01;&#x19;Digital Channel Index Map&#x00;&#x1E;&#x00;7ˇˇˇˇ&#x00;	%&#x00;Ä&#x00;&#x00;&#x00;&#x00;&#x01;&#x00;&#x04;&#x00;&#x00;&#x00;&#x01;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;<@p&#x00;&#x15;&#x04;Task&#x00;&#x00;&#x01;&#x00;&#x04;&#x05;NIDAQ%&#x00;Ä&#x00;&#x00;&#x00;&#x00;&#x01;&#x00;&#x04;&#x00;&#x00;&#x00;&#x01;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x11;Analog DAQmx Task&#x00;>@p&#x00;&#x15;&#x04;Task&#x00;&#x00;&#x01;&#x00;&#x04;&#x05;NIDAQ%&#x00;Ä&#x00;&#x00;&#x00;&#x00;&#x01;&#x00;&#x04;&#x00;&#x00;&#x00;&#x01;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x12;Digital DAQmx Task&#x00;&#x00;&#x13;@&#x07;&#x00;&#x0C;Cache TTL MS&#x00;&#x00;&#x05;&#x00;
+&#x00;&#x00;"@@&#x00;&#x01;ˇˇˇˇ&#x00;&#x08;&#x14;Cached Analog Output&#x00;&#x00;&#x04;&#x00;!&#x00;"@@&#x00;&#x01;ˇˇˇˇ&#x00;
+&#x15;Cached Digital Output&#x00;&#x1E;@T&#x00;&#x06;&#x17;Analog Output Cached At&#x00; @T&#x00;&#x06;&#x18;Digital Output Cached At&#x00;&#x00;&#x18;&#x00;P&#x00;	&#x00;&#x02;&#x00;&#x03;&#x00;&#x05;&#x00;&#x06;&#x00;&#x07;&#x00;	&#x00;&#x0B;&#x00;&#x0C;&#x00;&#x0D;&#x00;&#x11;@p&#x00; &#x00;&#x01;&#x00;&#x0E;&#x00;&#x04;Data&#x00;&#x00;d@P&#x00;&#x01;&#x00;&#x0F;[Internal:Shared:Infrastructure:DAQmx:Resource Manager:Adapters:NI:NI DAQmx Resource Manager&#x00;&#x01;&#x00;&#x10;]]></String>
+          </DataFill>
+        </LVVariant>
+      <LVVariant Name="NI_IconEditor" HasVarItem2="1" VarType2="0" Version="auto">
+        <DataType Index="0" Type="String" Prop1="0xFFFFFFFF" Format="inline" Label="data string" />
+        <DataFill>
+          <String><![CDATA[25328002&#x0D;&#x00;&#x00;&#x00;&#x00;&#x01;&#x17;&#x15;Load & Unload.lvclass&#x00;&#x00;&#x01;&#x00;&#x00;&#x00;&#x00;&#x00;	&#x00;&#x00;&#x19;ç&#x01;d&#x00;&#x00;PTH0&#x00;&#x00;&#x00;&#x04;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x02;&#x00;&#x00;&#x00;&#x01;&#x0F;&#x0D;Layer.lvclass&#x00;&#x00;&#x01;&#x00;&#x00;&#x00;&#x00;&#x00;&#x07;&#x00;&#x00;&#x0C;<&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x0C;&#x1E;&#x00;&#x1D;&#x00;&#x00;&#x0C;&#x18;&#x00;&#x00;&#x0C;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00; &#x00; &#x00;&#x18;&#x00;&#x00;&#x00;&#x00;&#x00;ˇˇˇ&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;Ã3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3Ã&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;Ã3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃˇˇˇÃ3ÃÃ3ÃˇˇˇÃ3ÃˇˇˇÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3Ã&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;Ã3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃˇˇˇˇˇˇÃ3ÃˇˇˇÃ3ÃˇˇˇÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3Ã&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;Ã3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃˇˇˇÃ3ÃˇˇˇˇˇˇÃ3ÃˇˇˇÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3Ã&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;Ã3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃˇˇˇÃ3ÃÃ3ÃˇˇˇÃ3ÃˇˇˇÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3Ã&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;Ã3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃˇˇˇÃ3ÃÃ3ÃˇˇˇÃ3ÃˇˇˇÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3Ã&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;Ã3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3ÃÃ3Ã&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;ˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇ&#x00;&#x00;&#x00;
+NI_Libraryd&#x01;&#x00;&#x00;&#x00;&#x00;&#x00;&#x01;&#x0F;&#x0D;Layer.lvclass&#x00;&#x00;&#x01;&#x00;&#x00;&#x00;&#x00;&#x00;&#x07;&#x00;&#x00;&#x0C;π&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x0C;û&#x00;(&#x00;&#x00;&#x0C;ò&#x00;&#x00;&#x0C;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00; &#x00; &#x00;&#x18;&#x00;&#x00;&#x00;&#x00;&#x00;ˇˇˇ&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;ˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇ&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;ˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇ&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;ˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇ&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;ˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇ&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;ˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇ&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;ˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇ&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;ˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇ&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;ˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇ&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;ˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇ&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;ˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇ&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;ˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇ&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;ˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇ&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;ˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇ&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;ˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇ&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;ˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇ&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;ˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇ&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;ˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇ&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;ˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇ&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;ˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇ&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;ˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇ&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;ˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇ&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;ˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇ&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;ˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇ&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;ˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇ&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;ˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇ&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;ˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇ&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;ˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇ&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;ˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇ&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;ˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇ&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;ˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇ&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;ˇˇˇˇÄ&#x00;&#x00;&#x01;Ä&#x00;&#x00;&#x01;Ä&#x00;&#x00;&#x01;Ä&#x00;&#x00;&#x01;Ä&#x00;&#x00;&#x01;Ä&#x00;&#x00;&#x01;Ä&#x00;&#x00;&#x01;Ä&#x00;&#x00;&#x01;Ä&#x00;&#x00;&#x01;Ä&#x00;&#x00;&#x01;Ä&#x00;&#x00;&#x01;Ä&#x00;&#x00;&#x01;Ä&#x00;&#x00;&#x01;Ä&#x00;&#x00;&#x01;Ä&#x00;&#x00;&#x01;Ä&#x00;&#x00;&#x01;Ä&#x00;&#x00;&#x01;Ä&#x00;&#x00;&#x01;Ä&#x00;&#x00;&#x01;Ä&#x00;&#x00;&#x01;Ä&#x00;&#x00;&#x01;Ä&#x00;&#x00;&#x01;Ä&#x00;&#x00;&#x01;Ä&#x00;&#x00;&#x01;Ä&#x00;&#x00;&#x01;Ä&#x00;&#x00;&#x01;Ä&#x00;&#x00;&#x01;Ä&#x00;&#x00;&#x01;Ä&#x00;&#x00;&#x01;Ä&#x00;&#x00;&#x01;ˇˇˇˇ&#x00;&#x00;&#x00;&#x07;VI Icond&#x01;&#x00;&#x00;&#x00;&#x00;&#x00;&#x06;UNREGI&#x00;&#x00;&#x00;&#x06;CHANNE&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x0B;Small Fonts&#x00;&#x01;&#x08;&#x01;&#x01;]]></String>
+          </DataFill>
+        </LVVariant>
+      </Section>
+    </VITS>
+  <DTHP>
+    <!-- Data Types for Heap -->
+    <Section Index="0" Format="inline">
+      <!-- Heap TypeID  1 = Consolidated TypeID 10: Tag -->
+      <!-- Heap TypeID  2 = Consolidated TypeID 11: Tag -->
+      <!-- Heap TypeID  3 = Consolidated TypeID 12: UnitUInt16 -->
+      <!-- Heap TypeID  4 = Consolidated TypeID 13: UnitUInt16 -->
+      <!-- Heap TypeID  5 = Consolidated TypeID 14: Refnum -->
+      <!-- Heap TypeID  6 = Consolidated TypeID 15: Refnum -->
+      <!-- Heap TypeID  7 = Consolidated TypeID 16: Refnum -->
+      <!-- Heap TypeID  8 = Consolidated TypeID 17: Refnum -->
+      <!-- Heap TypeID  9 = Consolidated TypeID 18: Cluster -->
+      <!-- Heap TypeID 10 = Consolidated TypeID 19: Cluster -->
+      <!-- Heap TypeID 11 = Consolidated TypeID 20: String -->
+      <!-- Heap TypeID 12 = Consolidated TypeID 21: NumInt32 -->
+      <!-- Heap TypeID 13 = Consolidated TypeID 22: Boolean -->
+      <!-- Heap TypeID 14 = Consolidated TypeID 23: Cluster -->
+      <!-- Heap TypeID 15 = Consolidated TypeID 24: Cluster -->
+      <!-- Heap TypeID 16 = Consolidated TypeID 25: String -->
+      <!-- Heap TypeID 17 = Consolidated TypeID 26: NumInt32 -->
+      <!-- Heap TypeID 18 = Consolidated TypeID 27: Boolean -->
+      <!-- Heap TypeID 19 = Consolidated TypeID 28: Cluster -->
+      <!-- Heap TypeID 20 = Consolidated TypeID 29: Cluster -->
+      <!-- Heap TypeID 21 = Consolidated TypeID 30: Refnum -->
+      <!-- Heap TypeID 22 = Consolidated TypeID 31: UnitUInt16 -->
+      <!-- Heap TypeID 23 = Consolidated TypeID 32: Tag -->
+      <!-- Heap TypeID 24 = Consolidated TypeID 33: Refnum -->
+      <!-- Heap TypeID 25 = Consolidated TypeID 34: Refnum -->
+      <!-- Heap TypeID 26 = Consolidated TypeID 35: Cluster -->
+      <!-- Heap TypeID 27 = Consolidated TypeID 36: Void -->
+      <!-- Heap TypeID 28 = Consolidated TypeID 37: Void -->
+      <!-- Heap TypeID 29 = Consolidated TypeID 38: LVVariant -->
+      <!-- Heap TypeID 30 = Consolidated TypeID 39: Void -->
+      <!-- Heap TypeID 31 = Consolidated TypeID 40: Void -->
+      <!-- Heap TypeID 32 = Consolidated TypeID 41: Void -->
+      <!-- Heap TypeID 33 = Consolidated TypeID 42: Void -->
+      <!-- Heap TypeID 34 = Consolidated TypeID 43: Cluster -->
+      <!-- Heap TypeID 35 = Consolidated TypeID 44: Void -->
+      <!-- Heap TypeID 36 = Consolidated TypeID 45: Void -->
+      <!-- Heap TypeID 37 = Consolidated TypeID 46: LVVariant -->
+      <!-- Heap TypeID 38 = Consolidated TypeID 47: Function -->
+      <!-- Heap TypeID 39 = Consolidated TypeID 48: Cluster -->
+      <!-- Heap TypeID 40 = Consolidated TypeID 49: Void -->
+      <!-- Heap TypeID 41 = Consolidated TypeID 50: Void -->
+      <!-- Heap TypeID 42 = Consolidated TypeID 51: Void -->
+      <!-- Heap TypeID 43 = Consolidated TypeID 52: Void -->
+      <!-- Heap TypeID 44 = Consolidated TypeID 53: Void -->
+      <!-- Heap TypeID 45 = Consolidated TypeID 54: Void -->
+      <!-- Heap TypeID 46 = Consolidated TypeID 55: Void -->
+      <!-- Heap TypeID 47 = Consolidated TypeID 56: Cluster -->
+      <!-- Heap TypeID 48 = Consolidated TypeID 57: LVVariant -->
+      <!-- Heap TypeID 49 = Consolidated TypeID 58: String -->
+      <!-- Heap TypeID 50 = Consolidated TypeID 59: TypeDef -->
+      <!-- Heap TypeID 51 = Consolidated TypeID 60: Function -->
+      <!-- Heap TypeID 52 = Consolidated TypeID 61: TypeDef -->
+      <!-- Heap TypeID 53 = Consolidated TypeID 62: UnitUInt16 -->
+      <!-- Heap TypeID 54 = Consolidated TypeID 63: TypeDef -->
+      <!-- Heap TypeID 55 = Consolidated TypeID 64: String -->
+      <!-- Heap TypeID 56 = Consolidated TypeID 65: String -->
+      <!-- Heap TypeID 57 = Consolidated TypeID 66: Refnum -->
+      <!-- Heap TypeID 58 = Consolidated TypeID 67: Cluster -->
+      <!-- Heap TypeID 59 = Consolidated TypeID 68: Void -->
+      <!-- Heap TypeID 60 = Consolidated TypeID 69: Void -->
+      <!-- Heap TypeID 61 = Consolidated TypeID 70: LVVariant -->
+      <!-- Heap TypeID 62 = Consolidated TypeID 71: Void -->
+      <!-- Heap TypeID 63 = Consolidated TypeID 72: Void -->
+      <!-- Heap TypeID 64 = Consolidated TypeID 73: Void -->
+      <!-- Heap TypeID 65 = Consolidated TypeID 74: Void -->
+      <!-- Heap TypeID 66 = Consolidated TypeID 75: Cluster -->
+      <!-- Heap TypeID 67 = Consolidated TypeID 76: Void -->
+      <!-- Heap TypeID 68 = Consolidated TypeID 77: Void -->
+      <!-- Heap TypeID 69 = Consolidated TypeID 78: LVVariant -->
+      <!-- Heap TypeID 70 = Consolidated TypeID 79: Function -->
+      <!-- Heap TypeID 71 = Consolidated TypeID 80: Cluster -->
+      <!-- Heap TypeID 72 = Consolidated TypeID 81: Void -->
+      <!-- Heap TypeID 73 = Consolidated TypeID 82: Void -->
+      <!-- Heap TypeID 74 = Consolidated TypeID 83: Void -->
+      <!-- Heap TypeID 75 = Consolidated TypeID 84: Void -->
+      <!-- Heap TypeID 76 = Consolidated TypeID 85: Void -->
+      <!-- Heap TypeID 77 = Consolidated TypeID 86: Void -->
+      <!-- Heap TypeID 78 = Consolidated TypeID 87: Void -->
+      <!-- Heap TypeID 79 = Consolidated TypeID 88: Cluster -->
+      <!-- Heap TypeID 80 = Consolidated TypeID 89: LVVariant -->
+      <!-- Heap TypeID 81 = Consolidated TypeID 90: String -->
+      <!-- Heap TypeID 82 = Consolidated TypeID 91: TypeDef -->
+      <!-- Heap TypeID 83 = Consolidated TypeID 92: Function -->
+      <!-- Heap TypeID 84 = Consolidated TypeID 93: TypeDef -->
+      <!-- Heap TypeID 85 = Consolidated TypeID 94: UnitUInt16 -->
+      <!-- Heap TypeID 86 = Consolidated TypeID 95: TypeDef -->
+      <!-- Heap TypeID 87 = Consolidated TypeID 96: String -->
+      <!-- Heap TypeID 88 = Consolidated TypeID 97: String -->
+      <!-- Heap TypeID 89 = Consolidated TypeID 98: Refnum -->
+      <!-- Heap TypeID 90 = Consolidated TypeID 99: Refnum -->
+      <!-- Heap TypeID 91 = Consolidated TypeID 100: Cluster -->
+      <!-- Heap TypeID 92 = Consolidated TypeID 101: Cluster -->
+      <!-- Heap TypeID 93 = Consolidated TypeID 102: Cluster -->
+      <!-- Heap TypeID 94 = Consolidated TypeID 103: Refnum -->
+      <!-- Heap TypeID 95 = Consolidated TypeID 104: Refnum -->
+      <!-- Heap TypeID 96 = Consolidated TypeID 105: UnitUInt16 -->
+      <!-- Heap TypeID 97 = Consolidated TypeID 106: Tag -->
+      <!-- Heap TypeID 98 = Consolidated TypeID 107: Cluster -->
+      <!-- Heap TypeID 99 = Consolidated TypeID 108: Cluster -->
+      <!-- Heap TypeID 100 = Consolidated TypeID 109: Cluster -->
+      <!-- Heap TypeID 101 = Consolidated TypeID 110: Cluster -->
+      <!-- Heap TypeID 102 = Consolidated TypeID 111: Cluster -->
+      <!-- Heap TypeID 103 = Consolidated TypeID 112: UnitUInt16 -->
+      <!-- Heap TypeID 104 = Consolidated TypeID 113: Cluster -->
+      <!-- Heap TypeID 105 = Consolidated TypeID 114: Tag -->
+      <!-- Heap TypeID 106 = Consolidated TypeID 115: Cluster -->
+      <!-- Heap TypeID 107 = Consolidated TypeID 116: Cluster -->
+      <!-- Heap TypeID 108 = Consolidated TypeID 117: Cluster -->
+      <!-- Heap TypeID 109 = Consolidated TypeID 118: Boolean -->
+      <!-- Heap TypeID 110 = Consolidated TypeID 119: Cluster -->
+      <!-- Heap TypeID 111 = Consolidated TypeID 120: Cluster -->
+      <!-- Heap TypeID 112 = Consolidated TypeID 121: Cluster -->
+      <!-- Heap TypeID 113 = Consolidated TypeID 122: Cluster -->
+      <!-- Heap TypeID 114 = Consolidated TypeID 123: Cluster -->
+      <!-- Heap TypeID 115 = Consolidated TypeID 124: Cluster -->
+      <!-- Heap TypeID 116 = Consolidated TypeID 125: Cluster -->
+      <!-- Heap TypeID 117 = Consolidated TypeID 126: Cluster -->
+      <!-- Heap TypeID 118 = Consolidated TypeID 127: Cluster -->
+      <!-- Heap TypeID 119 = Consolidated TypeID 128: Refnum -->
+      <!-- Heap TypeID 120 = Consolidated TypeID 129: Cluster -->
+      <!-- Heap TypeID 121 = Consolidated TypeID 130: Cluster -->
+      <!-- Heap TypeID 122 = Consolidated TypeID 131: Cluster -->
+      <!-- Heap TypeID 123 = Consolidated TypeID 132: Void -->
+      <!-- Heap TypeID 124 = Consolidated TypeID 133: Void -->
+      <!-- Heap TypeID 125 = Consolidated TypeID 134: Void -->
+      <!-- Heap TypeID 126 = Consolidated TypeID 135: Void -->
+      <!-- Heap TypeID 127 = Consolidated TypeID 136: Void -->
+      <!-- Heap TypeID 128 = Consolidated TypeID 137: Void -->
+      <!-- Heap TypeID 129 = Consolidated TypeID 138: Void -->
+      <!-- Heap TypeID 130 = Consolidated TypeID 139: Cluster -->
+      <!-- Heap TypeID 131 = Consolidated TypeID 140: Void -->
+      <!-- Heap TypeID 132 = Consolidated TypeID 141: Void -->
+      <!-- Heap TypeID 133 = Consolidated TypeID 142: String -->
+      <!-- Heap TypeID 134 = Consolidated TypeID 143: Function -->
+      <!-- Heap TypeID 135 = Consolidated TypeID 144: String -->
+      <!-- Heap TypeID 136 = Consolidated TypeID 145: String -->
+      <!-- Heap TypeID 137 = Consolidated TypeID 146: Refnum -->
+      <!-- Heap TypeID 138 = Consolidated TypeID 147: Void -->
+      <!-- Heap TypeID 139 = Consolidated TypeID 148: Void -->
+      <!-- Heap TypeID 140 = Consolidated TypeID 149: Void -->
+      <!-- Heap TypeID 141 = Consolidated TypeID 150: Void -->
+      <!-- Heap TypeID 142 = Consolidated TypeID 151: Void -->
+      <!-- Heap TypeID 143 = Consolidated TypeID 152: Void -->
+      <!-- Heap TypeID 144 = Consolidated TypeID 153: Void -->
+      <!-- Heap TypeID 145 = Consolidated TypeID 154: Void -->
+      <!-- Heap TypeID 146 = Consolidated TypeID 155: Void -->
+      <!-- Heap TypeID 147 = Consolidated TypeID 156: Void -->
+      <!-- Heap TypeID 148 = Consolidated TypeID 157: Cluster -->
+      <!-- Heap TypeID 149 = Consolidated TypeID 158: Void -->
+      <!-- Heap TypeID 150 = Consolidated TypeID 159: Void -->
+      <!-- Heap TypeID 151 = Consolidated TypeID 160: Void -->
+      <!-- Heap TypeID 152 = Consolidated TypeID 161: Cluster -->
+      <!-- Heap TypeID 153 = Consolidated TypeID 162: Function -->
+      <!-- Heap TypeID 154 = Consolidated TypeID 163: Cluster -->
+      <!-- Heap TypeID 155 = Consolidated TypeID 164: Cluster -->
+      <!-- Heap TypeID 156 = Consolidated TypeID 165: Refnum -->
+      <!-- Heap TypeID 157 = Consolidated TypeID 166: Cluster -->
+      <!-- Heap TypeID 158 = Consolidated TypeID 167: Cluster -->
+      <!-- Heap TypeID 159 = Consolidated TypeID 168: Cluster -->
+      <!-- Heap TypeID 160 = Consolidated TypeID 169: Refnum -->
+      <!-- Heap TypeID 161 = Consolidated TypeID 170: Cluster -->
+      <!-- Heap TypeID 162 = Consolidated TypeID 171: Refnum -->
+      <!-- Heap TypeID 163 = Consolidated TypeID 172: Cluster -->
+      <!-- Heap TypeID 164 = Consolidated TypeID 173: Void -->
+      <!-- Heap TypeID 165 = Consolidated TypeID 174: Void -->
+      <!-- Heap TypeID 166 = Consolidated TypeID 175: Void -->
+      <!-- Heap TypeID 167 = Consolidated TypeID 176: Void -->
+      <!-- Heap TypeID 168 = Consolidated TypeID 177: Void -->
+      <!-- Heap TypeID 169 = Consolidated TypeID 178: Void -->
+      <!-- Heap TypeID 170 = Consolidated TypeID 179: Void -->
+      <!-- Heap TypeID 171 = Consolidated TypeID 180: Cluster -->
+      <!-- Heap TypeID 172 = Consolidated TypeID 181: Void -->
+      <!-- Heap TypeID 173 = Consolidated TypeID 182: Void -->
+      <!-- Heap TypeID 174 = Consolidated TypeID 183: String -->
+      <!-- Heap TypeID 175 = Consolidated TypeID 184: Function -->
+      <!-- Heap TypeID 176 = Consolidated TypeID 185: String -->
+      <!-- Heap TypeID 177 = Consolidated TypeID 186: String -->
+      <!-- Heap TypeID 178 = Consolidated TypeID 187: Cluster -->
+      <!-- Heap TypeID 179 = Consolidated TypeID 188: Refnum -->
+      <!-- Heap TypeID 180 = Consolidated TypeID 189: Refnum -->
+      <!-- Heap TypeID 181 = Consolidated TypeID 190: Void -->
+      <!-- Heap TypeID 182 = Consolidated TypeID 191: Void -->
+      <!-- Heap TypeID 183 = Consolidated TypeID 192: Void -->
+      <!-- Heap TypeID 184 = Consolidated TypeID 193: Refnum -->
+      <!-- Heap TypeID 185 = Consolidated TypeID 194: Void -->
+      <!-- Heap TypeID 186 = Consolidated TypeID 195: Void -->
+      <!-- Heap TypeID 187 = Consolidated TypeID 196: Void -->
+      <!-- Heap TypeID 188 = Consolidated TypeID 197: Void -->
+      <!-- Heap TypeID 189 = Consolidated TypeID 198: Void -->
+      <!-- Heap TypeID 190 = Consolidated TypeID 199: Void -->
+      <!-- Heap TypeID 191 = Consolidated TypeID 200: Cluster -->
+      <!-- Heap TypeID 192 = Consolidated TypeID 201: Void -->
+      <!-- Heap TypeID 193 = Consolidated TypeID 202: Void -->
+      <!-- Heap TypeID 194 = Consolidated TypeID 203: Void -->
+      <!-- Heap TypeID 195 = Consolidated TypeID 204: Cluster -->
+      <!-- Heap TypeID 196 = Consolidated TypeID 205: Function -->
+      <!-- Heap TypeID 197 = Consolidated TypeID 206: Boolean -->
+      <!-- Heap TypeID 198 = Consolidated TypeID 207: NumInt32 -->
+      <!-- Heap TypeID 199 = Consolidated TypeID 208: NumInt32 -->
+      <!-- Heap TypeID 200 = Consolidated TypeID 209: Map -->
+      <!-- Heap TypeID 201 = Consolidated TypeID 210: Cluster -->
+      <!-- Heap TypeID 202 = Consolidated TypeID 211: Map -->
+      <!-- Heap TypeID 203 = Consolidated TypeID 212: NumInt32 -->
+      <!-- Heap TypeID 204 = Consolidated TypeID 213: Boolean -->
+      <!-- Heap TypeID 205 = Consolidated TypeID 214: Map -->
+      <!-- Heap TypeID 206 = Consolidated TypeID 215: String -->
+      <!-- Heap TypeID 207 = Consolidated TypeID 216: Map -->
+      <!-- Heap TypeID 208 = Consolidated TypeID 217: Cluster -->
+      <!-- Heap TypeID 209 = Consolidated TypeID 218: Map -->
+      <!-- Heap TypeID 210 = Consolidated TypeID 219: Boolean -->
+      <!-- Heap TypeID 211 = Consolidated TypeID 220: Cluster -->
+      <!-- Heap TypeID 212 = Consolidated TypeID 221: Cluster -->
+      <!-- Heap TypeID 213 = Consolidated TypeID 222: Cluster -->
+      <!-- Heap TypeID 214 = Consolidated TypeID 223: Cluster -->
+      <!-- Heap TypeID 215 = Consolidated TypeID 224: Refnum -->
+      <!-- Heap TypeID 216 = Consolidated TypeID 225: Void -->
+      <!-- Heap TypeID 217 = Consolidated TypeID 226: Void -->
+      <!-- Heap TypeID 218 = Consolidated TypeID 227: Void -->
+      <!-- Heap TypeID 219 = Consolidated TypeID 228: Refnum -->
+      <!-- Heap TypeID 220 = Consolidated TypeID 229: Void -->
+      <!-- Heap TypeID 221 = Consolidated TypeID 230: Void -->
+      <!-- Heap TypeID 222 = Consolidated TypeID 231: Void -->
+      <!-- Heap TypeID 223 = Consolidated TypeID 232: Void -->
+      <!-- Heap TypeID 224 = Consolidated TypeID 233: Void -->
+      <!-- Heap TypeID 225 = Consolidated TypeID 234: Void -->
+      <!-- Heap TypeID 226 = Consolidated TypeID 235: Cluster -->
+      <!-- Heap TypeID 227 = Consolidated TypeID 236: Void -->
+      <!-- Heap TypeID 228 = Consolidated TypeID 237: Void -->
+      <!-- Heap TypeID 229 = Consolidated TypeID 238: Void -->
+      <!-- Heap TypeID 230 = Consolidated TypeID 239: Cluster -->
+      <!-- Heap TypeID 231 = Consolidated TypeID 240: Function -->
+      <!-- Heap TypeID 232 = Consolidated TypeID 241: Cluster -->
+      <!-- Heap TypeID 233 = Consolidated TypeID 242: Cluster -->
+      <!-- Heap TypeID 234 = Consolidated TypeID 243: Cluster -->
+      <!-- Heap TypeID 235 = Consolidated TypeID 244: Cluster -->
+      <!-- Heap TypeID 236 = Consolidated TypeID 245: Cluster -->
+      <!-- Heap TypeID 237 = Consolidated TypeID 246: Refnum -->
+      <!-- Heap TypeID 238 = Consolidated TypeID 247: Cluster -->
+      <!-- Heap TypeID 239 = Consolidated TypeID 248: Cluster -->
+      <!-- Heap TypeID 240 = Consolidated TypeID 249: Cluster -->
+      <!-- Heap TypeID 241 = Consolidated TypeID 250: Void -->
+      <!-- Heap TypeID 242 = Consolidated TypeID 251: Void -->
+      <!-- Heap TypeID 243 = Consolidated TypeID 252: Void -->
+      <!-- Heap TypeID 244 = Consolidated TypeID 253: Void -->
+      <!-- Heap TypeID 245 = Consolidated TypeID 254: Void -->
+      <!-- Heap TypeID 246 = Consolidated TypeID 255: Void -->
+      <!-- Heap TypeID 247 = Consolidated TypeID 256: Void -->
+      <!-- Heap TypeID 248 = Consolidated TypeID 257: Cluster -->
+      <!-- Heap TypeID 249 = Consolidated TypeID 258: Void -->
+      <!-- Heap TypeID 250 = Consolidated TypeID 259: Void -->
+      <!-- Heap TypeID 251 = Consolidated TypeID 260: String -->
+      <!-- Heap TypeID 252 = Consolidated TypeID 261: Function -->
+      <!-- Heap TypeID 253 = Consolidated TypeID 262: String -->
+      <!-- Heap TypeID 254 = Consolidated TypeID 263: String -->
+      <!-- Heap TypeID 255 = Consolidated TypeID 264: Refnum -->
+      <!-- Heap TypeID 256 = Consolidated TypeID 265: Void -->
+      <!-- Heap TypeID 257 = Consolidated TypeID 266: Void -->
+      <!-- Heap TypeID 258 = Consolidated TypeID 267: Void -->
+      <!-- Heap TypeID 259 = Consolidated TypeID 268: Void -->
+      <!-- Heap TypeID 260 = Consolidated TypeID 269: Void -->
+      <!-- Heap TypeID 261 = Consolidated TypeID 270: Void -->
+      <!-- Heap TypeID 262 = Consolidated TypeID 271: Void -->
+      <!-- Heap TypeID 263 = Consolidated TypeID 272: Void -->
+      <!-- Heap TypeID 264 = Consolidated TypeID 273: Void -->
+      <!-- Heap TypeID 265 = Consolidated TypeID 274: Void -->
+      <!-- Heap TypeID 266 = Consolidated TypeID 275: Cluster -->
+      <!-- Heap TypeID 267 = Consolidated TypeID 276: Void -->
+      <!-- Heap TypeID 268 = Consolidated TypeID 277: Void -->
+      <!-- Heap TypeID 269 = Consolidated TypeID 278: Void -->
+      <!-- Heap TypeID 270 = Consolidated TypeID 279: Cluster -->
+      <!-- Heap TypeID 271 = Consolidated TypeID 280: Function -->
+      <!-- Heap TypeID 272 = Consolidated TypeID 281: Cluster -->
+      <!-- Heap TypeID 273 = Consolidated TypeID 282: Cluster -->
+      <!-- Heap TypeID 274 = Consolidated TypeID 283: Refnum -->
+      <!-- Heap TypeID 275 = Consolidated TypeID 284: Cluster -->
+      <!-- Heap TypeID 276 = Consolidated TypeID 285: Cluster -->
+      <!-- Heap TypeID 277 = Consolidated TypeID 286: Cluster -->
+      <!-- Heap TypeID 278 = Consolidated TypeID 287: Refnum -->
+      <!-- Heap TypeID 279 = Consolidated TypeID 288: Cluster -->
+      <!-- Heap TypeID 280 = Consolidated TypeID 289: Refnum -->
+      <!-- Heap TypeID 281 = Consolidated TypeID 290: Cluster -->
+      <!-- Heap TypeID 282 = Consolidated TypeID 291: Void -->
+      <!-- Heap TypeID 283 = Consolidated TypeID 292: Void -->
+      <!-- Heap TypeID 284 = Consolidated TypeID 293: Void -->
+      <!-- Heap TypeID 285 = Consolidated TypeID 294: Void -->
+      <!-- Heap TypeID 286 = Consolidated TypeID 295: Void -->
+      <!-- Heap TypeID 287 = Consolidated TypeID 296: Void -->
+      <!-- Heap TypeID 288 = Consolidated TypeID 297: Void -->
+      <!-- Heap TypeID 289 = Consolidated TypeID 298: Cluster -->
+      <!-- Heap TypeID 290 = Consolidated TypeID 299: Void -->
+      <!-- Heap TypeID 291 = Consolidated TypeID 300: Void -->
+      <!-- Heap TypeID 292 = Consolidated TypeID 301: String -->
+      <!-- Heap TypeID 293 = Consolidated TypeID 302: Function -->
+      <!-- Heap TypeID 294 = Consolidated TypeID 303: String -->
+      <!-- Heap TypeID 295 = Consolidated TypeID 304: String -->
+      <!-- Heap TypeID 296 = Consolidated TypeID 305: Cluster -->
+      <!-- Heap TypeID 297 = Consolidated TypeID 306: Refnum -->
+      <!-- Heap TypeID 298 = Consolidated TypeID 307: Boolean -->
+      <!-- Heap TypeID 299 = Consolidated TypeID 308: NumInt32 -->
+      <!-- Heap TypeID 300 = Consolidated TypeID 309: NumInt32 -->
+      <!-- Heap TypeID 301 = Consolidated TypeID 310: Map -->
+      <!-- Heap TypeID 302 = Consolidated TypeID 311: Cluster -->
+      <!-- Heap TypeID 303 = Consolidated TypeID 312: Map -->
+      <!-- Heap TypeID 304 = Consolidated TypeID 313: NumInt32 -->
+      <!-- Heap TypeID 305 = Consolidated TypeID 314: Boolean -->
+      <!-- Heap TypeID 306 = Consolidated TypeID 315: Map -->
+      <!-- Heap TypeID 307 = Consolidated TypeID 316: String -->
+      <!-- Heap TypeID 308 = Consolidated TypeID 317: Map -->
+      <!-- Heap TypeID 309 = Consolidated TypeID 318: Cluster -->
+      <!-- Heap TypeID 310 = Consolidated TypeID 319: Map -->
+      <!-- Heap TypeID 311 = Consolidated TypeID 320: Refnum -->
+      <!-- Heap TypeID 312 = Consolidated TypeID 321: Cluster -->
+      <!-- Heap TypeID 313 = Consolidated TypeID 322: Cluster -->
+      <!-- Heap TypeID 314 = Consolidated TypeID 323: Cluster -->
+      <!-- Heap TypeID 315 = Consolidated TypeID 324: Refnum -->
+      <!-- Heap TypeID 316 = Consolidated TypeID 325: Cluster -->
+      <TypeDescSlice IndexShift="10" Count="316" />
+      </Section>
+    </DTHP>
+  <MUID>
+    <!-- Map Unique Identifier -->
+    <Section Index="0" Value="9299" Format="inline" />
+    </MUID>
+  <HIST>
+    <!-- Changes History -->
+    <Section Index="0" Format="bin" File="Unregister Channel_HIST.bin" />
+    </HIST>
+  <PRT>
+    <!-- Print settings -->
+    <Section Index="0" Format="inline">
+      <Options1 Field00="0" Field04="16777216" Field08="0" Field0C="0" Field10="0" Field14="4162329619" Field18="0" Field1C="4278340354" Field20="1431635265" Flags="5111816" Field28="2" Orientation="0" MarginUnit="0" Field44="0" Field48="0" />
+      <Margins Top="0" Left="0" Bottom="0" Right="0" />
+      <Options2 Field5C="0" Field60="0" Field64="0" Field68="0" Field6C="3964745790" Field70="2880055870" HeaderContents="2880055870" Field78="3964745790" Field7C="0" DriverPaperSize="4278340354" Field84="63" Field88="0" Field8C="0" />
+      </Section>
+    </PRT>
+  <VCTP>
+    <!-- VI Consolidated Data Types -->
+    <Section Index="0" Format="inline">
+      <!-- FlatTypeID 0: Type Descriptor with Boolean data -->
+      <TypeDesc Type="Boolean" Format="inline" Label="status" />
+      <!-- FlatTypeID 1: Type Descriptor with single number as data -->
+      <TypeDesc Type="NumInt32" Prop1="0" Format="inline" Label="code" />
+      <!-- FlatTypeID 2: Type Descriptor with String data -->
+      <TypeDesc Type="String" Prop1="0xFFFFFFFF" Format="inline" Label="source" />
+      <!-- FlatTypeID 3: Type Descriptor which Clusters together other TDs into a struct -->
+      <TypeDesc Type="Cluster" Format="inline" Label="error out">
+        <TypeDesc TypeID="0" />
+        <TypeDesc TypeID="1" />
+        <TypeDesc TypeID="2" />
+        </TypeDesc>
+      <!-- FlatTypeID 4: Type Descriptor with Void data -->
+      <TypeDesc Type="Void" Format="inline" />
+      <!-- FlatTypeID 5: Type Descriptor with Reference data -->
+      <TypeDesc Type="Refnum" RefType="UDClassInst" Field0="0x0000" MultiItem="1" Format="inline" Label="NI DAQmx Resource Manager out">
+        <Item Text="Internal.lvlib" />
+        <Item Text="Shared.lvlib" />
+        <Item Text="Infrastructure.lvlib" />
+        <Item Text="DAQmx.lvlib" />
+        <Item Text="Resource Manager.lvlib" />
+        <Item Text="Adapters.lvlib" />
+        <Item Text="NI.lvlib" />
+        <Item Text="NI DAQmx Resource Manager.lvclass" />
+        </TypeDesc>
+      <!-- FlatTypeID 6: Type Descriptor which Clusters together other TDs into a struct -->
+      <TypeDesc Type="Cluster" Format="inline" Label="error in (no error)">
+        <TypeDesc TypeID="0" />
+        <TypeDesc TypeID="1" />
+        <TypeDesc TypeID="2" />
+        </TypeDesc>
+      <!-- FlatTypeID 7: Type Descriptor with Tag data -->
+      <TypeDesc Type="Tag" Prop1="0xFFFFFFFF" TagType="DAQmxPhysChannel" Format="inline" Label="DAQmx Physical Channel">
+        <LVVariant Index="0" HasVarItem2="1" VarType2="0" Version="auto">
+          <DataType Index="0" Type="Void" Format="inline" />
+          </LVVariant>
+        </TypeDesc>
+      <!-- FlatTypeID 8: Type Descriptor with single number as data -->
+      <TypeDesc Type="UnitUInt16" Prop1="0" Format="inline" Label="Type">
+        <EnumLabel>ANALOG</EnumLabel>
+        <EnumLabel>DIGITAL</EnumLabel>
+        </TypeDesc>
+      <!-- FlatTypeID 9: Type Descriptor with Reference data -->
+      <TypeDesc Type="Refnum" RefType="UDClassInst" Field0="0x0000" MultiItem="1" Format="inline" Label="NI DAQmx Resource Manager in">
+        <Item Text="Internal.lvlib" />
+        <Item Text="Shared.lvlib" />
+        <Item Text="Infrastructure.lvlib" />
+        <Item Text="DAQmx.lvlib" />
+        <Item Text="Resource Manager.lvlib" />
+        <Item Text="Adapters.lvlib" />
+        <Item Text="NI.lvlib" />
+        <Item Text="NI DAQmx Resource Manager.lvclass" />
+        </TypeDesc>
+      <!-- FlatTypeID 10: Type Descriptor with Function data -->
+      <TypeDesc Type="Function" FuncFlags="0x300" Pattern="0x78" HasThrall="0" Format="inline">
+        <TypeDesc TypeID="3" Flags="0x0D08" />
+        <TypeDesc TypeID="4" Flags="0x0000" />
+        <TypeDesc TypeID="4" Flags="0x0000" />
+        <TypeDesc TypeID="5" Flags="0x8D0B" />
+        <TypeDesc TypeID="4" Flags="0x0000" />
+        <TypeDesc TypeID="4" Flags="0x0000" />
+        <TypeDesc TypeID="4" Flags="0x0000" />
+        <TypeDesc TypeID="4" Flags="0x0000" />
+        <TypeDesc TypeID="6" Flags="0x0A00" />
+        <TypeDesc TypeID="7" Flags="0x1000" />
+        <TypeDesc TypeID="8" Flags="0x1000" />
+        <TypeDesc TypeID="9" Flags="0x9200" />
+        </TypeDesc>
+      <!-- FlatTypeID 11: Type Descriptor with String data -->
+      <TypeDesc Type="String" Prop1="0xFFFFFFFF" Format="inline" />
+      <!-- FlatTypeID 12: Type Descriptor with single number as data -->
+      <TypeDesc Type="NumInt32" Prop1="0" Format="inline" />
+      <!-- FlatTypeID 13: Type Descriptor which Clusters together other TDs into a struct -->
+      <TypeDesc Type="Map" Format="inline" Label="Analog Channel Index Map">
+        <TypeDesc TypeID="11" />
+        <TypeDesc TypeID="12" />
+        </TypeDesc>
+      <!-- FlatTypeID 14: Type Descriptor which Clusters together other TDs into a struct -->
+      <TypeDesc Type="Map" Format="inline" Label="Digital Channel Index Map">
+        <TypeDesc TypeID="11" />
+        <TypeDesc TypeID="12" />
+        </TypeDesc>
+      <!-- FlatTypeID 15: Type Descriptor with Tag data -->
+      <TypeDesc Type="Tag" Prop1="0xFFFFFFFF" TagType="DAQmxTaskName" Format="inline">
+        <LVVariant Index="0" HasVarItem2="1" VarType2="0" Version="auto">
+          <DataType Index="0" Type="Void" Format="inline" />
+          </LVVariant>
+        </TypeDesc>
+      <!-- FlatTypeID 16: Type Descriptor with Reference data -->
+      <TypeDesc Type="Refnum" RefType="UsrDefndTag" Ident="Task" FirstClient="1" TypeName="NIDAQ" Format="inline" Label="Analog DAQmx Task">
+        <TypeDesc TypeID="15" />
+        <LVVariant Index="0" HasVarItem2="1" VarType2="0" Version="auto">
+          <DataType Index="0" Type="Void" Format="inline" />
+          </LVVariant>
+        </TypeDesc>
+      <!-- FlatTypeID 17: Type Descriptor with Reference data -->
+      <TypeDesc Type="Refnum" RefType="UsrDefndTag" Ident="Task" FirstClient="1" TypeName="NIDAQ" Format="inline" Label="Digital DAQmx Task">
+        <TypeDesc TypeID="15" />
+        <LVVariant Index="0" HasVarItem2="1" VarType2="0" Version="auto">
+          <DataType Index="0" Type="Void" Format="inline" />
+          </LVVariant>
+        </TypeDesc>
+      <!-- FlatTypeID 18: Type Descriptor with single number as data -->
+      <TypeDesc Type="NumUInt32" Prop1="0" Format="inline" Label="Cache TTL MS" />
+      <!-- FlatTypeID 19: Type Descriptor with single number as data -->
+      <TypeDesc Type="NumFloat64" Prop1="0" Format="inline" />
+      <!-- FlatTypeID 20: Type Descriptor with Multidimentional Array data -->
+      <TypeDesc Type="Array" Format="inline" Label="Cached Analog Output">
+        <Dimension Flags="0x00FF" FixedSize="0xFFFFFF" />
+        <TypeDesc TypeID="19" />
+        </TypeDesc>
+      <!-- FlatTypeID 21: Type Descriptor with Boolean data -->
+      <TypeDesc Type="Boolean" Format="inline" />
+      <!-- FlatTypeID 22: Type Descriptor with Multidimentional Array data -->
+      <TypeDesc Type="Array" Format="inline" Label="Cached Digital Output">
+        <Dimension Flags="0x00FF" FixedSize="0xFFFFFF" />
+        <TypeDesc TypeID="21" />
+        </TypeDesc>
+      <!-- FlatTypeID 23: Type Descriptor with Measurement data -->
+      <TypeDesc Type="MeasureData" Flavor="TimeStamp" Format="inline" Label="Analog Output Cached At" />
+      <!-- FlatTypeID 24: Type Descriptor with Measurement data -->
+      <TypeDesc Type="MeasureData" Flavor="TimeStamp" Format="inline" Label="Digital Output Cached At" />
+      <!-- FlatTypeID 25: Type Descriptor which Clusters together other TDs into a struct -->
+      <TypeDesc Type="Cluster" Format="inline">
+        <TypeDesc TypeID="13" />
+        <TypeDesc TypeID="14" />
+        <TypeDesc TypeID="16" />
+        <TypeDesc TypeID="17" />
+        <TypeDesc TypeID="18" />
+        <TypeDesc TypeID="20" />
+        <TypeDesc TypeID="22" />
+        <TypeDesc TypeID="23" />
+        <TypeDesc TypeID="24" />
+        </TypeDesc>
+      <!-- FlatTypeID 26: Type Descriptor with Reference data -->
+      <TypeDesc Type="Refnum" RefType="DataValueRef" IsExternal="0x00" Format="inline" Label="Data">
+        <TypeDesc TypeID="25" />
+        </TypeDesc>
+      <!-- FlatTypeID 27: Type Descriptor which stores type definition -->
+      <TypeDesc Type="TypeDef" Flag1="0xE707788E" Format="inline">
+        <TypeDesc Type="Cluster" Nested="True" Format="inline" Label="Cluster of class private data">
+          <TypeDesc TypeID="26" />
+          </TypeDesc>
+        <Label Text="Internal.lvlib" />
+        <Label Text="Shared.lvlib" />
+        <Label Text="Infrastructure.lvlib" />
+        <Label Text="DAQmx.lvlib" />
+        <Label Text="Resource Manager.lvlib" />
+        <Label Text="Adapters.lvlib" />
+        <Label Text="NI.lvlib" />
+        <Label Text="NI DAQmx Resource Manager.lvclass" />
+        <Label Text="NI DAQmx Resource Manager.ctl" />
+        </TypeDesc>
+      <!-- FlatTypeID 28: Type Descriptor which stores type definition -->
+      <TypeDesc Type="TypeDef" Flag1="0x0" Format="inline">
+        <TypeDesc Type="UnitUInt16" Nested="True" Prop1="0" Format="inline" Label="Log Level">
+          <EnumLabel>INFO</EnumLabel>
+          <EnumLabel>DEBUG</EnumLabel>
+          <EnumLabel>WARN</EnumLabel>
+          <EnumLabel>ERROR</EnumLabel>
+          </TypeDesc>
+        <Label Text="Internal.lvlib" />
+        <Label Text="Shared.lvlib" />
+        <Label Text="Domain.lvlib" />
+        <Label Text="Value Objects.lvlib" />
+        <Label Text="Log Level.ctl" />
+        </TypeDesc>
+      <!-- FlatTypeID 29: Type Descriptor with data supporting multiple types(variant type) -->
+      <TypeDesc Type="LVVariant" Format="inline" Label="Variant" />
+      <!-- FlatTypeID 30: Type Descriptor with data supporting multiple types(variant type) -->
+      <TypeDesc Type="LVVariant" Format="inline" Label="Cluster" />
+      <!-- FlatTypeID 31: Type Descriptor with Function data -->
+      <TypeDesc Type="Function" FuncFlags="0x300" Pattern="0x78" HasThrall="0" Format="inline">
+        <TypeDesc TypeID="3" Flags="0x0900" />
+        <TypeDesc TypeID="4" Flags="0x0000" />
+        <TypeDesc TypeID="4" Flags="0x0000" />
+        <TypeDesc TypeID="29" Flags="0x0900" />
+        <TypeDesc TypeID="4" Flags="0x0000" />
+        <TypeDesc TypeID="4" Flags="0x0000" />
+        <TypeDesc TypeID="4" Flags="0x0000" />
+        <TypeDesc TypeID="4" Flags="0x0000" />
+        <TypeDesc TypeID="6" Flags="0x0A00" />
+        <TypeDesc TypeID="4" Flags="0x0000" />
+        <TypeDesc TypeID="4" Flags="0x0000" />
+        <TypeDesc TypeID="30" Flags="0x1000" />
+        </TypeDesc>
+      <!-- FlatTypeID 32: Type Descriptor with data supporting multiple types(variant type) -->
+      <TypeDesc Type="LVVariant" Format="inline" Label="Extras" />
+      <!-- FlatTypeID 33: Type Descriptor with String data -->
+      <TypeDesc Type="String" Prop1="0xFFFFFFFF" Format="inline" Label="Message" />
+      <!-- FlatTypeID 34: Type Descriptor with Function data -->
+      <TypeDesc Type="Function" FuncFlags="0x300" Pattern="0x78" HasThrall="0" Format="inline">
+        <TypeDesc TypeID="3" Flags="0x0D08" />
+        <TypeDesc TypeID="4" Flags="0x0000" />
+        <TypeDesc TypeID="4" Flags="0x0000" />
+        <TypeDesc TypeID="4" Flags="0x0000" />
+        <TypeDesc TypeID="4" Flags="0x0000" />
+        <TypeDesc TypeID="4" Flags="0x0000" />
+        <TypeDesc TypeID="4" Flags="0x0000" />
+        <TypeDesc TypeID="4" Flags="0x0000" />
+        <TypeDesc TypeID="6" Flags="0x0A00" />
+        <TypeDesc TypeID="32" Flags="0x0000" />
+        <TypeDesc TypeID="33" Flags="0x21000" />
+        <TypeDesc TypeID="28" Flags="0x1000" />
+        </TypeDesc>
+      <!-- FlatTypeID 35: Type Descriptor with Reference data -->
+      <TypeDesc Type="Refnum" RefType="UsrDefndTag" Ident="Task" FirstClient="1" TypeName="NIDAQ" Format="inline" Label="task/channels in">
+        <TypeDesc TypeID="15" />
+        <LVVariant Index="0" HasVarItem2="1" VarType2="0" Version="auto">
+          <DataType Index="0" Type="Void" Format="inline" />
+          </LVVariant>
+        </TypeDesc>
+      <!-- FlatTypeID 36: Type Descriptor with Reference data -->
+      <TypeDesc Type="Refnum" RefType="UsrDefndTag" Ident="Task" FirstClient="1" TypeName="NIDAQ" Format="inline" Label="task out">
+        <TypeDesc TypeID="15" />
+        <LVVariant Index="0" HasVarItem2="1" VarType2="0" Version="auto">
+          <DataType Index="0" Type="Void" Format="inline" />
+          </LVVariant>
+        </TypeDesc>
+      <!-- FlatTypeID 37: Type Descriptor which Clusters together other TDs into a struct -->
+      <TypeDesc Type="Cluster" Format="inline" Label="error in">
+        <TypeDesc TypeID="0" />
+        <TypeDesc TypeID="1" />
+        <TypeDesc TypeID="2" />
+        </TypeDesc>
+      <!-- FlatTypeID 38: Type Descriptor with Function data -->
+      <TypeDesc Type="Function" FuncFlags="0x300" Pattern="0x108" HasThrall="0" Format="inline">
+        <TypeDesc TypeID="35" Flags="0x1000" />
+        <TypeDesc TypeID="4" Flags="0x0000" />
+        <TypeDesc TypeID="4" Flags="0x0000" />
+        <TypeDesc TypeID="4" Flags="0x0000" />
+        <TypeDesc TypeID="36" Flags="0x0D00" />
+        <TypeDesc TypeID="4" Flags="0x0000" />
+        <TypeDesc TypeID="4" Flags="0x0000" />
+        <TypeDesc TypeID="4" Flags="0x0000" />
+        <TypeDesc TypeID="4" Flags="0x0000" />
+        <TypeDesc TypeID="4" Flags="0x0000" />
+        <TypeDesc TypeID="4" Flags="0x0000" />
+        <TypeDesc TypeID="37" Flags="0x0A00" />
+        <TypeDesc TypeID="4" Flags="0x0000" />
+        <TypeDesc TypeID="4" Flags="0x0000" />
+        <TypeDesc TypeID="4" Flags="0x0000" />
+        <TypeDesc TypeID="3" Flags="0x0D0B" />
+        </TypeDesc>
+      <!-- FlatTypeID 39: Type Descriptor with Function data -->
+      <TypeDesc Type="Function" FuncFlags="0x200" Pattern="0x78" HasThrall="0" Format="inline">
+        <TypeDesc TypeID="3" Flags="0x0D08" />
+        <TypeDesc TypeID="4" Flags="0x0000" />
+        <TypeDesc TypeID="4" Flags="0x0000" />
+        <TypeDesc TypeID="4" Flags="0x0000" />
+        <TypeDesc TypeID="4" Flags="0x0000" />
+        <TypeDesc TypeID="4" Flags="0x0000" />
+        <TypeDesc TypeID="4" Flags="0x0000" />
+        <TypeDesc TypeID="4" Flags="0x0000" />
+        <TypeDesc TypeID="6" Flags="0x0A00" />
+        <TypeDesc TypeID="4" Flags="0x0000" />
+        <TypeDesc TypeID="4" Flags="0x0000" />
+        <TypeDesc TypeID="33" Flags="0x21000" />
+        </TypeDesc>
+      <!-- FlatTypeID 40: Type Descriptor with Reference data -->
+      <TypeDesc Type="Refnum" RefType="UsrDefndTag" Ident="Task" FirstClient="1" TypeName="NIDAQ" Format="inline" Label="task in">
+        <TypeDesc TypeID="15" />
+        <LVVariant Index="0" HasVarItem2="1" VarType2="0" Version="auto">
+          <DataType Index="0" Type="Void" Format="inline" />
+          </LVVariant>
+        </TypeDesc>
+      <!-- FlatTypeID 41: Type Descriptor with Function data -->
+      <TypeDesc Type="Function" FuncFlags="0x300" Pattern="0x108" HasThrall="0" Format="inline">
+        <TypeDesc TypeID="40" Flags="0x1200" />
+        <TypeDesc TypeID="4" Flags="0x0000" />
+        <TypeDesc TypeID="4" Flags="0x0000" />
+        <TypeDesc TypeID="4" Flags="0x0000" />
+        <TypeDesc TypeID="4" Flags="0x0000" />
+        <TypeDesc TypeID="4" Flags="0x0000" />
+        <TypeDesc TypeID="4" Flags="0x0000" />
+        <TypeDesc TypeID="4" Flags="0x0000" />
+        <TypeDesc TypeID="4" Flags="0x0000" />
+        <TypeDesc TypeID="4" Flags="0x0000" />
+        <TypeDesc TypeID="4" Flags="0x0000" />
+        <TypeDesc TypeID="37" Flags="0x0A00" />
+        <TypeDesc TypeID="4" Flags="0x0000" />
+        <TypeDesc TypeID="4" Flags="0x0000" />
+        <TypeDesc TypeID="4" Flags="0x0000" />
+        <TypeDesc TypeID="3" Flags="0x0D0B" />
+        </TypeDesc>
+      <!-- FlatTypeID 42: Type Descriptor with Function data -->
+      <TypeDesc Type="Function" FuncFlags="0x0" Pattern="0x78" HasThrall="0" Format="inline">
+        <TypeDesc TypeID="3" Flags="0x0900" />
+        <TypeDesc TypeID="4" Flags="0x0000" />
+        <TypeDesc TypeID="4" Flags="0x0000" />
+        <TypeDesc TypeID="5" Flags="0x8900" />
+        <TypeDesc TypeID="4" Flags="0x0000" />
+        <TypeDesc TypeID="4" Flags="0x0000" />
+        <TypeDesc TypeID="4" Flags="0x0000" />
+        <TypeDesc TypeID="4" Flags="0x0000" />
+        <TypeDesc TypeID="6" Flags="0x0800" />
+        <TypeDesc TypeID="7" Flags="0x1000" />
+        <TypeDesc TypeID="8" Flags="0x1000" />
+        <TypeDesc TypeID="9" Flags="0x9000" />
+        </TypeDesc>
+      <!-- FlatTypeID 43: Type Descriptor which Clusters together other TDs into a struct -->
+      <TypeDesc Type="Cluster" Format="inline" Label="error IO">
+        <TypeDesc TypeID="0" />
+        <TypeDesc TypeID="1" />
+        <TypeDesc TypeID="2" />
+        </TypeDesc>
+      <!-- FlatTypeID 44: Type Descriptor with single number as data -->
+      <TypeDesc Type="UnitUInt16" Prop1="0" Format="inline">
+        <EnumLabel>INFO</EnumLabel>
+        <EnumLabel>DEBUG</EnumLabel>
+        <EnumLabel>WARN</EnumLabel>
+        <EnumLabel>ERROR</EnumLabel>
+        </TypeDesc>
+      <!-- FlatTypeID 45: Type Descriptor with single number as data -->
+      <TypeDesc Type="NumInt32" Prop1="0" Format="inline" Label="size" />
+      <!-- FlatTypeID 46: Type Descriptor with Boolean data -->
+      <TypeDesc Type="Boolean" Format="inline" Label="key not found?" />
+      <TopLevel>
+        <!-- When Consolidated Type is referred to in other blocks, the TypeID is Index from this list -->
+        <TypeDesc Index="1" FlatTypeID="10" />
+        <TypeDesc Index="2" FlatTypeID="27" />
+        <TypeDesc Index="3" FlatTypeID="28" />
+        <TypeDesc Index="4" FlatTypeID="31" />
+        <TypeDesc Index="5" FlatTypeID="34" />
+        <TypeDesc Index="6" FlatTypeID="38" />
+        <TypeDesc Index="7" FlatTypeID="39" />
+        <TypeDesc Index="8" FlatTypeID="41" />
+        <TypeDesc Index="9" FlatTypeID="42" />
+        <TypeDesc Index="10" FlatTypeID="7" />
+        <TypeDesc Index="11" FlatTypeID="7" />
+        <TypeDesc Index="12" FlatTypeID="8" />
+        <TypeDesc Index="13" FlatTypeID="8" />
+        <TypeDesc Index="14" FlatTypeID="5" />
+        <TypeDesc Index="15" FlatTypeID="5" />
+        <TypeDesc Index="16" FlatTypeID="9" />
+        <TypeDesc Index="17" FlatTypeID="9" />
+        <TypeDesc Index="18" FlatTypeID="3" />
+        <TypeDesc Index="19" FlatTypeID="3" />
+        <TypeDesc Index="20" FlatTypeID="2" />
+        <TypeDesc Index="21" FlatTypeID="1" />
+        <TypeDesc Index="22" FlatTypeID="0" />
+        <TypeDesc Index="23" FlatTypeID="6" />
+        <TypeDesc Index="24" FlatTypeID="6" />
+        <TypeDesc Index="25" FlatTypeID="2" />
+        <TypeDesc Index="26" FlatTypeID="1" />
+        <TypeDesc Index="27" FlatTypeID="0" />
+        <TypeDesc Index="28" FlatTypeID="43" />
+        <TypeDesc Index="29" FlatTypeID="43" />
+        <TypeDesc Index="30" FlatTypeID="9" />
+        <TypeDesc Index="31" FlatTypeID="8" />
+        <TypeDesc Index="32" FlatTypeID="7" />
+        <TypeDesc Index="33" FlatTypeID="9" />
+        <TypeDesc Index="34" FlatTypeID="26" />
+        <TypeDesc Index="35" FlatTypeID="3" />
+        <TypeDesc Index="36" FlatTypeID="4" />
+        <TypeDesc Index="37" FlatTypeID="4" />
+        <TypeDesc Index="38" FlatTypeID="29" />
+        <TypeDesc Index="39" FlatTypeID="4" />
+        <TypeDesc Index="40" FlatTypeID="4" />
+        <TypeDesc Index="41" FlatTypeID="4" />
+        <TypeDesc Index="42" FlatTypeID="4" />
+        <TypeDesc Index="43" FlatTypeID="6" />
+        <TypeDesc Index="44" FlatTypeID="4" />
+        <TypeDesc Index="45" FlatTypeID="4" />
+        <TypeDesc Index="46" FlatTypeID="30" />
+        <TypeDesc Index="47" FlatTypeID="31" />
+        <TypeDesc Index="48" FlatTypeID="3" />
+        <TypeDesc Index="49" FlatTypeID="4" />
+        <TypeDesc Index="50" FlatTypeID="4" />
+        <TypeDesc Index="51" FlatTypeID="4" />
+        <TypeDesc Index="52" FlatTypeID="4" />
+        <TypeDesc Index="53" FlatTypeID="4" />
+        <TypeDesc Index="54" FlatTypeID="4" />
+        <TypeDesc Index="55" FlatTypeID="4" />
+        <TypeDesc Index="56" FlatTypeID="6" />
+        <TypeDesc Index="57" FlatTypeID="32" />
+        <TypeDesc Index="58" FlatTypeID="33" />
+        <TypeDesc Index="59" FlatTypeID="28" />
+        <TypeDesc Index="60" FlatTypeID="34" />
+        <TypeDesc Index="61" FlatTypeID="28" />
+        <TypeDesc Index="62" FlatTypeID="44" />
+        <TypeDesc Index="63" FlatTypeID="28" />
+        <TypeDesc Index="64" FlatTypeID="33" />
+        <TypeDesc Index="65" FlatTypeID="33" />
+        <TypeDesc Index="66" FlatTypeID="26" />
+        <TypeDesc Index="67" FlatTypeID="3" />
+        <TypeDesc Index="68" FlatTypeID="4" />
+        <TypeDesc Index="69" FlatTypeID="4" />
+        <TypeDesc Index="70" FlatTypeID="29" />
+        <TypeDesc Index="71" FlatTypeID="4" />
+        <TypeDesc Index="72" FlatTypeID="4" />
+        <TypeDesc Index="73" FlatTypeID="4" />
+        <TypeDesc Index="74" FlatTypeID="4" />
+        <TypeDesc Index="75" FlatTypeID="6" />
+        <TypeDesc Index="76" FlatTypeID="4" />
+        <TypeDesc Index="77" FlatTypeID="4" />
+        <TypeDesc Index="78" FlatTypeID="30" />
+        <TypeDesc Index="79" FlatTypeID="31" />
+        <TypeDesc Index="80" FlatTypeID="3" />
+        <TypeDesc Index="81" FlatTypeID="4" />
+        <TypeDesc Index="82" FlatTypeID="4" />
+        <TypeDesc Index="83" FlatTypeID="4" />
+        <TypeDesc Index="84" FlatTypeID="4" />
+        <TypeDesc Index="85" FlatTypeID="4" />
+        <TypeDesc Index="86" FlatTypeID="4" />
+        <TypeDesc Index="87" FlatTypeID="4" />
+        <TypeDesc Index="88" FlatTypeID="6" />
+        <TypeDesc Index="89" FlatTypeID="32" />
+        <TypeDesc Index="90" FlatTypeID="33" />
+        <TypeDesc Index="91" FlatTypeID="28" />
+        <TypeDesc Index="92" FlatTypeID="34" />
+        <TypeDesc Index="93" FlatTypeID="28" />
+        <TypeDesc Index="94" FlatTypeID="44" />
+        <TypeDesc Index="95" FlatTypeID="28" />
+        <TypeDesc Index="96" FlatTypeID="33" />
+        <TypeDesc Index="97" FlatTypeID="33" />
+        <TypeDesc Index="98" FlatTypeID="9" />
+        <TypeDesc Index="99" FlatTypeID="26" />
+        <TypeDesc Index="100" FlatTypeID="43" />
+        <TypeDesc Index="101" FlatTypeID="43" />
+        <TypeDesc Index="102" FlatTypeID="43" />
+        <TypeDesc Index="103" FlatTypeID="9" />
+        <TypeDesc Index="104" FlatTypeID="26" />
+        <TypeDesc Index="105" FlatTypeID="8" />
+        <TypeDesc Index="106" FlatTypeID="7" />
+        <TypeDesc Index="107" FlatTypeID="43" />
+        <TypeDesc Index="108" FlatTypeID="43" />
+        <TypeDesc Index="109" FlatTypeID="43" />
+        <TypeDesc Index="110" FlatTypeID="43" />
+        <TypeDesc Index="111" FlatTypeID="43" />
+        <TypeDesc Index="112" FlatTypeID="8" />
+        <TypeDesc Index="113" FlatTypeID="25" />
+        <TypeDesc Index="114" FlatTypeID="7" />
+        <TypeDesc Index="115" FlatTypeID="43" />
+        <TypeDesc Index="116" FlatTypeID="25" />
+        <TypeDesc Index="117" FlatTypeID="43" />
+        <TypeDesc Index="118" FlatTypeID="21" />
+        <TypeDesc Index="119" FlatTypeID="25" />
+        <TypeDesc Index="120" FlatTypeID="43" />
+        <TypeDesc Index="121" FlatTypeID="43" />
+        <TypeDesc Index="122" FlatTypeID="25" />
+        <TypeDesc Index="123" FlatTypeID="43" />
+        <TypeDesc Index="124" FlatTypeID="25" />
+        <TypeDesc Index="125" FlatTypeID="43" />
+        <TypeDesc Index="126" FlatTypeID="25" />
+        <TypeDesc Index="127" FlatTypeID="25" />
+        <TypeDesc Index="128" FlatTypeID="17" />
+        <TypeDesc Index="129" FlatTypeID="43" />
+        <TypeDesc Index="130" FlatTypeID="3" />
+        <TypeDesc Index="131" FlatTypeID="3" />
+        <TypeDesc Index="132" FlatTypeID="4" />
+        <TypeDesc Index="133" FlatTypeID="4" />
+        <TypeDesc Index="134" FlatTypeID="4" />
+        <TypeDesc Index="135" FlatTypeID="4" />
+        <TypeDesc Index="136" FlatTypeID="4" />
+        <TypeDesc Index="137" FlatTypeID="4" />
+        <TypeDesc Index="138" FlatTypeID="4" />
+        <TypeDesc Index="139" FlatTypeID="6" />
+        <TypeDesc Index="140" FlatTypeID="4" />
+        <TypeDesc Index="141" FlatTypeID="4" />
+        <TypeDesc Index="142" FlatTypeID="33" />
+        <TypeDesc Index="143" FlatTypeID="39" />
+        <TypeDesc Index="144" FlatTypeID="33" />
+        <TypeDesc Index="145" FlatTypeID="33" />
+        <TypeDesc Index="146" FlatTypeID="40" />
+        <TypeDesc Index="147" FlatTypeID="4" />
+        <TypeDesc Index="148" FlatTypeID="4" />
+        <TypeDesc Index="149" FlatTypeID="4" />
+        <TypeDesc Index="150" FlatTypeID="4" />
+        <TypeDesc Index="151" FlatTypeID="4" />
+        <TypeDesc Index="152" FlatTypeID="4" />
+        <TypeDesc Index="153" FlatTypeID="4" />
+        <TypeDesc Index="154" FlatTypeID="4" />
+        <TypeDesc Index="155" FlatTypeID="4" />
+        <TypeDesc Index="156" FlatTypeID="4" />
+        <TypeDesc Index="157" FlatTypeID="37" />
+        <TypeDesc Index="158" FlatTypeID="4" />
+        <TypeDesc Index="159" FlatTypeID="4" />
+        <TypeDesc Index="160" FlatTypeID="4" />
+        <TypeDesc Index="161" FlatTypeID="3" />
+        <TypeDesc Index="162" FlatTypeID="41" />
+        <TypeDesc Index="163" FlatTypeID="43" />
+        <TypeDesc Index="164" FlatTypeID="3" />
+        <TypeDesc Index="165" FlatTypeID="36" />
+        <TypeDesc Index="166" FlatTypeID="25" />
+        <TypeDesc Index="167" FlatTypeID="25" />
+        <TypeDesc Index="168" FlatTypeID="25" />
+        <TypeDesc Index="169" FlatTypeID="17" />
+        <TypeDesc Index="170" FlatTypeID="25" />
+        <TypeDesc Index="171" FlatTypeID="17" />
+        <TypeDesc Index="172" FlatTypeID="3" />
+        <TypeDesc Index="173" FlatTypeID="4" />
+        <TypeDesc Index="174" FlatTypeID="4" />
+        <TypeDesc Index="175" FlatTypeID="4" />
+        <TypeDesc Index="176" FlatTypeID="4" />
+        <TypeDesc Index="177" FlatTypeID="4" />
+        <TypeDesc Index="178" FlatTypeID="4" />
+        <TypeDesc Index="179" FlatTypeID="4" />
+        <TypeDesc Index="180" FlatTypeID="6" />
+        <TypeDesc Index="181" FlatTypeID="4" />
+        <TypeDesc Index="182" FlatTypeID="4" />
+        <TypeDesc Index="183" FlatTypeID="33" />
+        <TypeDesc Index="184" FlatTypeID="39" />
+        <TypeDesc Index="185" FlatTypeID="33" />
+        <TypeDesc Index="186" FlatTypeID="33" />
+        <TypeDesc Index="187" FlatTypeID="25" />
+        <TypeDesc Index="188" FlatTypeID="17" />
+        <TypeDesc Index="189" FlatTypeID="35" />
+        <TypeDesc Index="190" FlatTypeID="4" />
+        <TypeDesc Index="191" FlatTypeID="4" />
+        <TypeDesc Index="192" FlatTypeID="4" />
+        <TypeDesc Index="193" FlatTypeID="36" />
+        <TypeDesc Index="194" FlatTypeID="4" />
+        <TypeDesc Index="195" FlatTypeID="4" />
+        <TypeDesc Index="196" FlatTypeID="4" />
+        <TypeDesc Index="197" FlatTypeID="4" />
+        <TypeDesc Index="198" FlatTypeID="4" />
+        <TypeDesc Index="199" FlatTypeID="4" />
+        <TypeDesc Index="200" FlatTypeID="37" />
+        <TypeDesc Index="201" FlatTypeID="4" />
+        <TypeDesc Index="202" FlatTypeID="4" />
+        <TypeDesc Index="203" FlatTypeID="4" />
+        <TypeDesc Index="204" FlatTypeID="3" />
+        <TypeDesc Index="205" FlatTypeID="38" />
+        <TypeDesc Index="206" FlatTypeID="21" />
+        <TypeDesc Index="207" FlatTypeID="12" />
+        <TypeDesc Index="208" FlatTypeID="45" />
+        <TypeDesc Index="209" FlatTypeID="14" />
+        <TypeDesc Index="210" FlatTypeID="25" />
+        <TypeDesc Index="211" FlatTypeID="14" />
+        <TypeDesc Index="212" FlatTypeID="12" />
+        <TypeDesc Index="213" FlatTypeID="46" />
+        <TypeDesc Index="214" FlatTypeID="14" />
+        <TypeDesc Index="215" FlatTypeID="11" />
+        <TypeDesc Index="216" FlatTypeID="14" />
+        <TypeDesc Index="217" FlatTypeID="25" />
+        <TypeDesc Index="218" FlatTypeID="14" />
+        <TypeDesc Index="219" FlatTypeID="21" />
+        <TypeDesc Index="220" FlatTypeID="25" />
+        <TypeDesc Index="221" FlatTypeID="43" />
+        <TypeDesc Index="222" FlatTypeID="43" />
+        <TypeDesc Index="223" FlatTypeID="25" />
+        <TypeDesc Index="224" FlatTypeID="35" />
+        <TypeDesc Index="225" FlatTypeID="4" />
+        <TypeDesc Index="226" FlatTypeID="4" />
+        <TypeDesc Index="227" FlatTypeID="4" />
+        <TypeDesc Index="228" FlatTypeID="36" />
+        <TypeDesc Index="229" FlatTypeID="4" />
+        <TypeDesc Index="230" FlatTypeID="4" />
+        <TypeDesc Index="231" FlatTypeID="4" />
+        <TypeDesc Index="232" FlatTypeID="4" />
+        <TypeDesc Index="233" FlatTypeID="4" />
+        <TypeDesc Index="234" FlatTypeID="4" />
+        <TypeDesc Index="235" FlatTypeID="37" />
+        <TypeDesc Index="236" FlatTypeID="4" />
+        <TypeDesc Index="237" FlatTypeID="4" />
+        <TypeDesc Index="238" FlatTypeID="4" />
+        <TypeDesc Index="239" FlatTypeID="3" />
+        <TypeDesc Index="240" FlatTypeID="38" />
+        <TypeDesc Index="241" FlatTypeID="43" />
+        <TypeDesc Index="242" FlatTypeID="25" />
+        <TypeDesc Index="243" FlatTypeID="43" />
+        <TypeDesc Index="244" FlatTypeID="25" />
+        <TypeDesc Index="245" FlatTypeID="25" />
+        <TypeDesc Index="246" FlatTypeID="16" />
+        <TypeDesc Index="247" FlatTypeID="43" />
+        <TypeDesc Index="248" FlatTypeID="3" />
+        <TypeDesc Index="249" FlatTypeID="3" />
+        <TypeDesc Index="250" FlatTypeID="4" />
+        <TypeDesc Index="251" FlatTypeID="4" />
+        <TypeDesc Index="252" FlatTypeID="4" />
+        <TypeDesc Index="253" FlatTypeID="4" />
+        <TypeDesc Index="254" FlatTypeID="4" />
+        <TypeDesc Index="255" FlatTypeID="4" />
+        <TypeDesc Index="256" FlatTypeID="4" />
+        <TypeDesc Index="257" FlatTypeID="6" />
+        <TypeDesc Index="258" FlatTypeID="4" />
+        <TypeDesc Index="259" FlatTypeID="4" />
+        <TypeDesc Index="260" FlatTypeID="33" />
+        <TypeDesc Index="261" FlatTypeID="39" />
+        <TypeDesc Index="262" FlatTypeID="33" />
+        <TypeDesc Index="263" FlatTypeID="33" />
+        <TypeDesc Index="264" FlatTypeID="40" />
+        <TypeDesc Index="265" FlatTypeID="4" />
+        <TypeDesc Index="266" FlatTypeID="4" />
+        <TypeDesc Index="267" FlatTypeID="4" />
+        <TypeDesc Index="268" FlatTypeID="4" />
+        <TypeDesc Index="269" FlatTypeID="4" />
+        <TypeDesc Index="270" FlatTypeID="4" />
+        <TypeDesc Index="271" FlatTypeID="4" />
+        <TypeDesc Index="272" FlatTypeID="4" />
+        <TypeDesc Index="273" FlatTypeID="4" />
+        <TypeDesc Index="274" FlatTypeID="4" />
+        <TypeDesc Index="275" FlatTypeID="37" />
+        <TypeDesc Index="276" FlatTypeID="4" />
+        <TypeDesc Index="277" FlatTypeID="4" />
+        <TypeDesc Index="278" FlatTypeID="4" />
+        <TypeDesc Index="279" FlatTypeID="3" />
+        <TypeDesc Index="280" FlatTypeID="41" />
+        <TypeDesc Index="281" FlatTypeID="43" />
+        <TypeDesc Index="282" FlatTypeID="3" />
+        <TypeDesc Index="283" FlatTypeID="36" />
+        <TypeDesc Index="284" FlatTypeID="25" />
+        <TypeDesc Index="285" FlatTypeID="25" />
+        <TypeDesc Index="286" FlatTypeID="25" />
+        <TypeDesc Index="287" FlatTypeID="16" />
+        <TypeDesc Index="288" FlatTypeID="25" />
+        <TypeDesc Index="289" FlatTypeID="16" />
+        <TypeDesc Index="290" FlatTypeID="3" />
+        <TypeDesc Index="291" FlatTypeID="4" />
+        <TypeDesc Index="292" FlatTypeID="4" />
+        <TypeDesc Index="293" FlatTypeID="4" />
+        <TypeDesc Index="294" FlatTypeID="4" />
+        <TypeDesc Index="295" FlatTypeID="4" />
+        <TypeDesc Index="296" FlatTypeID="4" />
+        <TypeDesc Index="297" FlatTypeID="4" />
+        <TypeDesc Index="298" FlatTypeID="6" />
+        <TypeDesc Index="299" FlatTypeID="4" />
+        <TypeDesc Index="300" FlatTypeID="4" />
+        <TypeDesc Index="301" FlatTypeID="33" />
+        <TypeDesc Index="302" FlatTypeID="39" />
+        <TypeDesc Index="303" FlatTypeID="33" />
+        <TypeDesc Index="304" FlatTypeID="33" />
+        <TypeDesc Index="305" FlatTypeID="25" />
+        <TypeDesc Index="306" FlatTypeID="16" />
+        <TypeDesc Index="307" FlatTypeID="21" />
+        <TypeDesc Index="308" FlatTypeID="12" />
+        <TypeDesc Index="309" FlatTypeID="45" />
+        <TypeDesc Index="310" FlatTypeID="13" />
+        <TypeDesc Index="311" FlatTypeID="25" />
+        <TypeDesc Index="312" FlatTypeID="13" />
+        <TypeDesc Index="313" FlatTypeID="12" />
+        <TypeDesc Index="314" FlatTypeID="46" />
+        <TypeDesc Index="315" FlatTypeID="13" />
+        <TypeDesc Index="316" FlatTypeID="11" />
+        <TypeDesc Index="317" FlatTypeID="13" />
+        <TypeDesc Index="318" FlatTypeID="25" />
+        <TypeDesc Index="319" FlatTypeID="13" />
+        <TypeDesc Index="320" FlatTypeID="26" />
+        <TypeDesc Index="321" FlatTypeID="25" />
+        <TypeDesc Index="322" FlatTypeID="43" />
+        <TypeDesc Index="323" FlatTypeID="25" />
+        <TypeDesc Index="324" FlatTypeID="26" />
+        <TypeDesc Index="325" FlatTypeID="43" />
+        </TopLevel>
+      </Section>
+    </VCTP>
+  <FTAB>
+    <!-- Font Table -->
+    <Section Index="128" Prop1="0x10002" Prop3="3" Format="inline">
+      <Font Prop2="15" Prop3="1024" Prop4="0" Prop6="15" Prop7="216" Prop8="213">
+        <Name>Segoe UI</Name>
+        </Font>
+      <Font Prop2="15" Prop3="1024" Prop4="0" Prop6="15" Prop7="216" Prop8="213">
+        <Name>Segoe UI</Name>
+        </Font>
+      <Font Prop2="15" Prop3="1024" Prop4="0" Prop6="15" Prop7="216" Prop8="213">
+        <Name>Segoe UI</Name>
+        </Font>
+      <Font Prop2="32768" Prop3="33792" Prop4="32768" Prop6="15" Prop7="216" Prop8="213">
+        <Name>0</Name>
+        </Font>
+      <Font Prop2="32768" Prop3="33792" Prop4="32768" Prop6="15" Prop7="216" Prop8="213">
+        <Name>2</Name>
+        </Font>
+      </Section>
+    </FTAB>
+  </RSRC>
