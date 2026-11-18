@@ -333,7 +333,7 @@ SVG has no z-index — **elements painted later sit on top**. Order them like th
 <!-- 2. ordinary connectors -->
 <!-- 3. boxes and text -->
 <!-- 4. cross-layer loop-back lines (topmost, painted over the boxes) -->
-<path d="..." stroke-dasharray="6,4" marker-end="url(#arrow-purple)"/>
+<path d="..." stroke-dasharray="6,4" marker-end="url(#arrow-accent)"/>
 ```
 
 ## Estimating text width (overflow protection)
