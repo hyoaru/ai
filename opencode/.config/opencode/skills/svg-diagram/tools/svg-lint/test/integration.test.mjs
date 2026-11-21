@@ -14,9 +14,9 @@ function run(...args) {
 }
 const at = (rel) => FIXTURES + rel;
 
-test('the registry holds twelve checks with unique ids', () => {
-  assert.equal(CHECKS.length, 11);
-  assert.equal(new Set(CHECKS.map((c) => c.id)).size, 11);
+test('the registry holds fourteen checks with unique ids', () => {
+  assert.equal(CHECKS.length, 13);
+  assert.equal(new Set(CHECKS.map((c) => c.id)).size, 13);
 });
 
 test('every check declares an id and a title', () => {

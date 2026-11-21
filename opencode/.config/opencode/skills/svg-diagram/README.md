@@ -4,7 +4,7 @@ A house style for hand-written SVG diagrams your agent can follow — the layout
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Agent Skills](https://img.shields.io/badge/Agent-Skills-7C3AED.svg)](https://github.com/vercel-labs/skills)
-[![svg-lint: 11 checks](https://img.shields.io/badge/svg--lint-11%20checks-22c55e.svg)](#the-lint-gate)
+[![svg-lint: 13 checks](https://img.shields.io/badge/svg--lint-13%20checks-22c55e.svg)](#the-lint-gate)
 
 ![A Markdown doc goes through the svg-diagram skill and comes out as assets/arch.svg](assets/house-style.svg)
 
@@ -161,7 +161,7 @@ That reports 2 errors and 7 warnings and exits 1: the unescaped `&`, the missing
          repair: & → &amp; · an unescaped & makes the whole SVG fail to render
 ```
 
-The 11 checks cover XML escaping, viewBox clipping, box height, baseline offset, block spacing, arrow markers, text overflow, overlap, light-background fallback, palette conformance and connector geometry. A twelfth id, `document-model`, raises no findings of its own. It's how the model layer reports what it couldn't read, so the geometry checks never draw conclusions from coordinates they got wrong.
+The 13 checks cover XML escaping, viewBox clipping, box height, baseline offset, block spacing, arrow markers, text overflow, overlap, light-background fallback, palette conformance, connector geometry, box padding and arrow alignment. A fourteenth id, `document-model`, raises no findings of its own. It's how the model layer reports what it couldn't read, so the geometry checks never draw conclusions from coordinates they got wrong.
 
 > `0 errors, 0 warnings` is the only pass; a warning is a failure.
 

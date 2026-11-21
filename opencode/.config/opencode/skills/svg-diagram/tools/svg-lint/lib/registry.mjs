@@ -14,6 +14,8 @@ import { overlap } from './checks/overlap.mjs';
 import { lightBgFallback } from './checks/light-bg-fallback.mjs';
 import { paletteConformance } from './checks/palette-conformance.mjs';
 import { connectorGeometry } from './checks/connector-geometry.mjs';
+import { boxPadding } from './checks/box-padding.mjs';
+import { arrowAlignment } from './checks/arrow-alignment.mjs';
 
 export const CHECKS = [
   xmlEscaping,
@@ -27,4 +29,6 @@ export const CHECKS = [
   lightBgFallback,
   paletteConformance,
   connectorGeometry,
+  boxPadding,
+  arrowAlignment,
 ];
