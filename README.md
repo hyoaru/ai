@@ -29,7 +29,7 @@ opencode/.config/opencode/
 ├── agents/                    # 3 subagents (cavecrew)
 ├── commands/                  # 9 custom slash commands
 ├── plugins/caveman/           # local caveman plugin
-└── skills/                    # 47 skills
+└── skills/                    # 48 skills
 ```
 
 ### Agents
@@ -79,7 +79,7 @@ ponytail is registered by package name rather than by file.
 
 ### Skills
 
-47 skill directories in `skills/<name>/SKILL.md`. Skills are loaded by the
+48 skill directories in `skills/<name>/SKILL.md`. Skills are loaded by the
 model through the `skill` tool, on demand. They are not slash commands.
 
 Three sources:
@@ -92,7 +92,7 @@ Three sources:
 | [taste-skill](https://github.com/Leonxlnx/taste-skill) | 1 | page design with browser checks |
 | [impeccable](https://github.com/pbakaus/impeccable) | 1 | design vocabulary, critique and slop detector |
 | [svg-diagram](https://github.com/bybit-exchange/svg-diagram) | 1 | hand-written SVG diagrams plus a zero-dependency linter |
-| local | 1 | `labview-project-reader`, vendors [junior941230/labview-vi-reader](https://github.com/junior941230/labview-vi-reader) |
+| local | 2 | `labview-project-reader`, `screenshot-annotation`; the former vendors [junior941230/labview-vi-reader](https://github.com/junior941230/labview-vi-reader) |
 | [awesome-copilot](https://github.com/github/awesome-copilot) | 1 | ImageMagick recipes for resize, convert, metadata |
 
 All are MIT except `impeccable` (Apache-2.0). All vendored here as plain files.
@@ -184,6 +184,7 @@ Catalogue below lists every skill.
 | Skill | What | When |
 |---|---|---|
 | `svg-diagram` | House style for hand-written SVG: layout, colour, `svg-lint` | flowchart or architecture figure |
+| `screenshot-annotation` | Crop, overlay, render and sync annotated app screenshots | add or refresh handbook screenshots |
 
 **Context and research**
 
