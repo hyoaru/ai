@@ -443,6 +443,7 @@ Keep the declaration even when every renderer you test has a good default: chat 
 
 - Body line height: `1.5` (18px at 12px). Compact labels: `1.25`. Title: `1.1`.
 - Use one baseline rhythm per block: 18px for body lines, 22px for compact lists, 28px for title blocks.
+- Section name to first body line: 24–26px. Do not leave the same 30px gap used above a 24px title.
 - Do not stretch 12px text over 22px lines unless the block is deliberately airy. That is the usual cause of “the text looks spaced too far”.
 - Space paragraphs by `0.75em–1em`. Do not add first-line indent as well.
 - Align baselines across cards in the same row, even when the cards hold different line counts.
