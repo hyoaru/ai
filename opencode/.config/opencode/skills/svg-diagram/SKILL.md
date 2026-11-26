@@ -347,6 +347,9 @@ Before placing text, estimate its right edge and confirm it does not intrude on 
 | 10px | 5.5px |
 | 11px | 6.0px |
 | 12px | 7.0px |
+| 14px | 8.0px |
+| 16px | 9.0px |
+| 24px | 13.0px |
 
 **Estimation formulas**:
 - `text-anchor="start"`: right edge ≈ x + char count × char width
@@ -405,31 +408,87 @@ A label describing an arc or curve must not sit on the path itself (the line wou
 
 ### Typography (role-based, font-agnostic)
 
-Use exactly two type roles per diagram set — one **display face** for titles, one **workhorse face** for everything else. Any coherent pair works (a serif display face reads editorial; a sans display face reads technical). Do not hardcode brand fonts; pick the pair once per document set and stay with it.
+Use at most two faces: one **display serif** for titles, one **workhorse sans** for everything else. Do not add a third face. Pick the pair once per document set and keep it.
 
-**Every SVG declares its font in `<style>`** so text renders with the intended face instead of the renderer default:
+**Every SVG declares its fonts in `<style>`** so text renders with the intended face instead of the renderer default:
 
 ```xml
 <style>
-  text { font-family: system-ui, sans-serif; }
+  text { font-family: system-ui, -apple-system, 'Segoe UI', sans-serif; }
+  .title { font-family: Georgia, 'Times New Roman', serif; }
 </style>
 ```
 
-Keep the declaration even when every renderer you test has a good default — chat previews and office converters strip attributes first and `<style>` second, and the strip order is not the same everywhere.
+Keep the declaration even when every renderer you test has a good default: chat previews and office converters strip attributes first and `<style>` second, and the strip order is not the same everywhere. Use system faces only. Do not load a webfont or an external font file.
 
-Type scale (sizes are fixed; faces are swappable):
+#### Roles and scale
 
-| Element | Size |
-|---------|------|
-| Title (display face) | 24px |
-| Subtitle | 12.5px |
-| Card name / body | 12.5px |
-| Secondary text / annotations | 11px |
-| Zone and edge labels | 10px, uppercase, letter-spaced |
+| Role | Size | Weight | Case | Color |
+|------|------|--------|------|-------|
+| Title (display serif) | 24px | 400 | sentence | `ink` |
+| Subtitle | 12.5px | 400 | sentence | `secondary` |
+| Card / section name | 14px | 600 | sentence | `ink` |
+| Body / card detail | 12px | 400 | sentence | `ink` or `secondary` |
+| Secondary / annotation | 11px | 400 | sentence | `secondary` |
+| Zone / edge label | 10px | 600 | uppercase | `muted` |
 
-The width table must carry a row for every size the style sheet declares -- an untabled size falls back to the 0.58 ratio, which over- or under-estimates semibold text.
+- Use five sizes, not a dozen. Every size must have a job.
+- Adjacent roles must differ by at least 1.5px **and** one other axis: weight, color, or case.
+- Never use 13px and 14px for different roles. That reads as a mistake.
+- Minimum size is 10px, and 10px is for labels only. Body text is 12px or larger.
+- If the target repo has a `DESIGN-TASTE.md`, adopt its sizes and faces verbatim.
 
-Vertical text: `<text writing-mode="tb">vertical text</text>`
+#### Rhythm
+
+- Body line height: `1.5` (18px at 12px). Compact labels: `1.25`. Title: `1.1`.
+- Use one baseline rhythm per block: 18px for body lines, 22px for compact lists, 28px for title blocks.
+- Do not stretch 12px text over 22px lines unless the block is deliberately airy. That is the usual cause of “the text looks spaced too far”.
+- Space paragraphs by `0.75em–1em`. Do not add first-line indent as well.
+- Align baselines across cards in the same row, even when the cards hold different line counts.
+
+#### Weight and tone
+
+- Regular `400` for body; semibold `600` for emphasis, card names, and labels.
+- Avoid `700` for long text. Reserve it for a single number or a very short label.
+- Never fake bold or italic. If the face lacks the weight, use color or space instead.
+- Use weight, color, and space before adding another size.
+- On dark surfaces, add leading or one weight step rather than adding tracking.
+
+#### Tracking and case
+
+- Title: `0` to `-0.01em`.
+- Body: `0`. Never letter-space lowercase body text.
+- Uppercase zone labels at 10px: `+0.5px` tracking. Edge labels: `+1.5px`.
+- Sentence case for card names, body, annotations, and step text.
+- Uppercase only zone/edge labels and short acronyms. No all-caps sentences.
+- Do not use fake small caps. Uppercase plus tracking is the only allowed substitute.
+
+#### Alignment and numerals
+
+- Titles and zone labels align left to the content column.
+- Center text inside node, state, and metric cards. Left-align lists, tables, and annotations.
+- Do not mix centered and left-aligned text inside the same block.
+- Right-align numeric table columns. Use `font-variant-numeric: tabular-nums` for tables, metrics, and step numbers.
+- Optical vertical center: `y = box center + font-size × 0.35`.
+- Do not stretch, condense, or outline text to fit. Shorten the copy or widen the box.
+
+#### Fit and fallback
+
+- A label should be at most `1.2 ×` its card width. Break at phrase boundaries, not mid-phrase.
+- Avoid orphan words. If a second line has one short word, rewrite the label.
+- Allow 30% expansion for localization. Shorten copy before shrinking type.
+- Test at 100%, 50%, and grayscale. Roles must stay recognizable; labels must stay at 10px or above.
+- Body text contrast is at least 4.5:1; large text and strokes at least 3:1.
+
+#### Typography checklist
+
+- [ ] At most two faces, one display and one workhorse.
+- [ ] Five sizes or fewer, each with a distinct job.
+- [ ] Line height is 1.5 for body, not 1.8 or more.
+- [ ] Sentence case everywhere except zone and edge labels.
+- [ ] Numbers are tabular in tables and metrics.
+- [ ] No clipped, orphaned, or manually hyphenated labels.
+- [ ] No text smaller than 10px.
 
 ### Title block structure
 
