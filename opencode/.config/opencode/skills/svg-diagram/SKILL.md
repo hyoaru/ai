@@ -1,17 +1,33 @@
 ---
 name: svg-diagram
-description: Hand-authored SVG diagrams — architecture, flowchart, sequence, data-flow, lifecycle, org chart, timeline. Load this skill whenever you draw, sketch, plot, or visualize anything as a figure, and always before writing SVG XML. Triggers - "draw a diagram", "svg", "diagram", "flowchart", "architecture diagram", "sequence diagram", "make a chart", "visualize this", "picture of the flow", "replace this ascii art", "figure for the README/docs". Never answer a diagram request with ASCII art or Mermaid prose. Ships a bundled SVG linter. For one-shot generation, prefer invoking it from a subagent so the main context does not carry this skill plus the SVG XML; for multi-round tweaking, use it directly in the main context.
+description: Hand-authored SVG graphics — diagrams, icons, illustrations, charts, and figures. Load this skill whenever you draw, sketch, plot, or visualize anything as SVG, and always before writing SVG XML. Triggers - "draw a diagram", "make an icon", "svg", "illustration", "figure", "chart", "visualize this", "replace this ascii art". Never answer a diagram request with ASCII art or Mermaid prose. Ships a bundled SVG linter, tuned for diagrams. For one-shot generation, prefer invoking it from a subagent so the main context does not carry this skill plus the SVG XML; for multi-round tweaking, use it directly in the main context.
 ---
 
-# SVG Diagramming Conventions
+# SVG Graphics Conventions
+
+This skill covers hand-authored SVG as a family: diagrams, icons, illustrations, charts, and figures. The name is kept for compatibility; the rules are not limited to diagrams.
+
+Most rules are universal. Sections marked **diagrams only** do not apply to icons or illustrations.
+
+## Choose the graphic mode
+
+| **Mode** | **Examples** | **Apply** |
+| --- | --- | --- |
+| Diagram | Architecture, flowchart, sequence, lifecycle, org chart, timeline | Layout rules, connector rules, arrowheads, block spacing, title block. |
+| Icon | App icon, mark, favicon, badge | Silhouette, safe area, small-size test, export set. Skip connectors and box layout. |
+| Illustration | Cover, explainer, poster, spot art | Composition, focal point, negative space, typography, colour. Skip connector math. |
+| Chart | Bar, line, scatter, gauge | Diagram layout plus data marks, axes, labels, and legend placement. |
+
+If one SVG mixes modes, apply the stricter rule for each part. Do not force flowchart boxes onto an icon or illustration.
 
 ## Output location and referencing
 
-> Diagrams go in SVG, never ASCII art. That rule decides *whether* to draw; this skill covers *how*, starting with where the file lands.
+> Visual work goes in SVG, never ASCII art. That rule decides *whether* to draw; this skill covers *how*, starting with where the file lands.
 
-- Put the file in an `assets/` directory next to the document (e.g. `docs/foo.md` → `docs/assets/foo-arch.svg`)
+- Put a figure in an `assets/` directory next to the document (e.g. `docs/foo.md` → `docs/assets/foo-arch.svg`).
+- Put an icon next to the app assets (e.g. `assets/app-icon.svg`) with its exported PNG and ICO set.
 - Reference it from markdown with a relative path, `![title](assets/xxx.svg)`. Do not inline SVG XML.
-- When data in the document changes, the corresponding SVG must be updated too. A figure that contradicts the prose beside it is worse than no figure
+- When data in the document changes, the corresponding SVG must be updated too. A figure that contradicts the prose beside it is worse than no figure.
 
 ## Core principles
 
@@ -37,7 +53,7 @@ The first SVG you generate must already satisfy every item in the verification c
 ### Visual balance
 The left and right halves should carry similar visual weight; add or remove annotation boxes to even them out.
 
-## Layout rules
+## Layout rules (diagrams only)
 
 ### Centering
 ```
@@ -177,7 +193,7 @@ The 0.35 factor is an empirical value for "optical glyph center to baseline" (ro
 | Flowchart | 600–700px |
 | Architecture diagram | 700–800px |
 
-## Connector rules
+## Connector rules (diagrams only)
 
 ### Choosing a connector
 Use a straight `L` line for co-axial connections; use smooth `C`/`Q` curves whenever the path **turns or routes around** something. Never use right-angle elbows.
@@ -335,6 +351,31 @@ SVG has no z-index — **elements painted later sit on top**. Order them like th
 <!-- 4. cross-layer loop-back lines (topmost, painted over the boxes) -->
 <path d="..." stroke-dasharray="6,4" marker-end="url(#arrow-accent)"/>
 ```
+
+## Icon rules
+
+App icons and marks are not small diagrams. Remove connectors, boxes, and labels unless they are part of the mark.
+
+- Use a `1024×1024` canvas for an app icon. Keep it square; the rounded-square mask is a platform choice, not a universal rule.
+- Keep at least a 10% safe margin. The mark must survive a circular or rounded-square crop.
+- Design the silhouette first. If the shape is unclear in one colour, the icon is not finished.
+- Use two or three colours. One accent is enough for a mark.
+- No stroke thinner than 24px at 1024 scale. Thin detail disappears at 16–32px.
+- No small text. A single letterform is fine; words are not.
+- Optically centre the mark, not just the geometric bounds.
+- Test at 16, 32, 64, and 256px. Drop any detail that turns to noise at 16–32.
+- Export SVG plus 1024, 512, and 256 PNG. For Windows, export a multi-size ICO at 16, 24, 32, 48, 64, 128, 256.
+- The bundled linter is diagram-oriented. For icons, render at target sizes and inspect. Its palette and connector warnings do not apply.
+
+## Illustration rules
+
+- Establish one focal point and a clear reading order.
+- Use a grid. Align edges and baselines even when the composition is loose.
+- Negative space is part of the composition, not leftover room.
+- Do not import flowchart connectors or node-card layout unless the illustration is explaining a flow.
+- Typography rules still apply. A display title can carry more weight than a diagram title, but keep the role scale.
+- Check the illustration in grayscale and at 50%. If the hierarchy collapses, the contrast is doing too much work.
+- Prefer one strong idea over many decorative details.
 
 ## Estimating text width (overflow protection)
 
@@ -554,7 +595,7 @@ Renderer compatibility — order of trust is presentation attributes > inline `<
 
 Never use `<foreignObject>`; it is the least supported feature in SVG.
 
-## Arrowhead definitions
+## Arrowhead definitions (diagrams only)
 
 Use a notched arrowhead rather than a plain triangle — it reads better:
 
@@ -661,36 +702,55 @@ svg += f'<text>{svg_escape(team_name)}</text>'
 
 ## Verification checklist
 
-- [ ] No overlapping elements (text, boxes, lines)
-- [ ] No text right edge intrudes on a neighbor (estimated from character widths)
-- [ ] ≥15px between a curve label and the nearest point on the curve
-- [ ] Symmetric arrow clearance at both ends (5px), visible line segment ≥6px
-- [ ] Markers declare `markerUnits="userSpaceOnUse"`
-- [ ] Thick lines (stroke-width > 1.5) use the enlarged marker
-- [ ] Connectors use C/Q curves, no right angles
-- [ ] Labels centered (`text-anchor="middle"`)
-- [ ] Detour paths stay outside obstacles
-- [ ] Block spacing ≥25px (25–30px recommended, see "Block spacing")
-- [ ] Title centered, boxes in a row similar in size
-- [ ] `width` attribute present, viewBox matches the content
-- [ ] Box heights sufficient (one line ≥ font-size × 3)
-- [ ] Top and bottom viewBox margins comparable (20–25px, measured from the top of the title)
-- [ ] Left and right viewBox padding symmetric (use `<g transform="translate(dx,0)">` to shift if not)
-- [ ] Special characters escaped (`&` → `&amp;`, `<` → `&lt;`)
-- [ ] `<title>` is the first child of `<svg>`, with `role="img"` and matching `aria-labelledby`
-- [ ] Body text ≥4.5:1 contrast, large text and strokes ≥3:1, meaning survives grayscale
-- [ ] No `<foreignObject>`; critical styling duplicated as presentation attributes for renderers that drop `<style>`
-- [ ] Diagrams that will be scaled declare `vector-effect="non-scaling-stroke"`
-- [ ] Every element inside the visible viewBox (bottom = bottom edge of the lowest element + 25px)
-- [ ] Every connector has a clear meaning (labeled, or its source and target are inferable from context)
-- [ ] Grouping panels styled consistently (fill, border, radius, padding, title treatment)
-- [ ] No large blank regions (spacing within 30px, viewBox hugs the content)
-- [ ] Title block: subtitle = title + 24 (tight lockup), first content ink ≥16px below subtitle
-- [ ] Subtitle-to-content margin present (the title-block margin belongs to the subtitle)
-- [ ] No `transform="translate()"` groups — file coordinates equal rendered coordinates
-- [ ] Scripted path edits preserve command letters (`M`, `L`, `C`, `Q`, `Z`) — rebuilds from numbers only are invalid
-- [ ] Canvas height = lowest content ink + 25px
-- [ ] One accent token, used only on data-flow edges and semantic emphasis; failure paths use the failure token
+### All SVG
+
+- [ ] `width` attribute present; viewBox matches the content.
+- [ ] `<title>` is the first child, with `role="img"` and matching `aria-labelledby`.
+- [ ] Special characters escaped (`&` → `&amp;`, `<` → `&lt;`).
+- [ ] No `<foreignObject>`.
+- [ ] Body text ≥4.5:1 contrast, large text and strokes ≥3:1, meaning survives grayscale.
+- [ ] Text is real `<text>`, not outlined paths, and stays at 10px or above.
+- [ ] Fonts are declared in `<style>` and use system faces.
+- [ ] Every element sits inside the visible viewBox.
+- [ ] No clipped text and no unexplained `<g transform>` offsets.
+
+### Diagrams
+
+- [ ] No overlapping elements (text, boxes, lines).
+- [ ] No text right edge intrudes on a neighbor (estimated from character widths).
+- [ ] ≥15px between a curve label and the nearest point on the curve.
+- [ ] Symmetric arrow clearance at both ends (5px), visible line segment ≥6px.
+- [ ] Markers declare `markerUnits="userSpaceOnUse"`.
+- [ ] Thick lines (stroke-width > 1.5) use the enlarged marker.
+- [ ] Connectors use C/Q curves, no right angles.
+- [ ] Labels centered (`text-anchor="middle"`).
+- [ ] Detour paths stay outside obstacles.
+- [ ] Block spacing ≥25px (25–30px recommended).
+- [ ] Title centered, boxes in a row similar in size.
+- [ ] Box heights sufficient (one line ≥ font-size × 3).
+- [ ] Top and bottom viewBox margins comparable (20–25px, measured from the top of the title).
+- [ ] Left and right viewBox padding symmetric.
+- [ ] Diagrams that will be scaled declare `vector-effect="non-scaling-stroke"`.
+- [ ] Every connector has a clear meaning.
+- [ ] Grouping panels styled consistently (fill, border, radius, padding, title treatment).
+- [ ] No large blank regions; viewBox hugs the content.
+- [ ] Title block: subtitle = title + 24; first content ink ≥16px below subtitle.
+- [ ] Canvas height = lowest content ink + 25px.
+- [ ] One accent token, used only for data-flow edges and semantic emphasis.
+- [ ] Scripted path edits preserve command letters (`M`, `L`, `C`, `Q`, `Z`).
+
+### Icons and illustrations
+
+- [ ] The mark still reads at 16px and 32px.
+- [ ] A 10% safe margin survives a rounded-square or circular crop.
+- [ ] The silhouette works in one colour.
+- [ ] Two or three colours; no stroke thinner than 24px at 1024 scale.
+- [ ] No text besides a single letterform.
+- [ ] The mark is optically centred, not only geometrically centred.
+- [ ] Detail that turns to noise at 16–32px is removed.
+- [ ] SVG, 1024/512/256 PNG, and ICO 16–256 exported when the target is an app icon.
+- [ ] The illustration has one focal point and a clear reading order.
+- [ ] Grayscale and 50% renders keep the hierarchy.
 
 ## Editing workflow
 
