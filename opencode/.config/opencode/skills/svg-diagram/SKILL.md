@@ -427,13 +427,13 @@ Keep the declaration even when every renderer you test has a good default: chat 
 |------|------|--------|------|-------|
 | Title (display serif) | 24px | 400 | sentence | `ink` |
 | Subtitle | 12.5px | 400 | sentence | `secondary` |
-| Section / phase name | 20px | 600 | sentence | `ink` |
+| Section / phase name | 18px | 600 | sentence | `ink` |
 | Card name / body | 12.5px | 600 / 400 | sentence | `ink` or `secondary` |
 | Secondary / annotation | 11px | 400 | sentence | `secondary` |
 | Zone / edge label | 10px | 600 | uppercase | `muted` |
 
-- Use five sizes: 24, 20, 12.5, 11, 10. Every size must have a job.
-- Section and phase names are the leading words in a card. Set them at 20px; do not leave them at body size inside a large card.
+- Use five sizes: 24, 18, 12.5, 11, 10. Every size must have a job.
+- Section and phase names are the leading words in a card. Set them at 18px; do not leave them at body size inside a large card, and do not let them compete with the 24px title.
 - Adjacent roles must differ by at least 1.5px **and** one other axis: weight, color, or case.
 - Never use 13px and 14px for different roles. That reads as a mistake.
 - Minimum size is 10px, and 10px is for labels only. Body text is 12px or larger.
